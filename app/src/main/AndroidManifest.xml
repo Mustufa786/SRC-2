@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.LoginActivity"></activity>
+        <activity android:name=".ui.form9.F9SectionBActivity"></activity>
+        <activity android:name=".ui.form9.F9SectionAActivity" />
+        <activity android:name=".ui.form7.F7SectionAActivity" />
+        <activity android:name=".ui.form8.F8SectionAActivity" />
+        <activity android:name=".ui.form2.F2SectionBActivity" />
+        <activity android:name=".ui.form2.F2SectionAActivity" />
+        <activity android:name=".ui.LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

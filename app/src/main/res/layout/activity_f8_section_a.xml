@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.form8.F8SectionAActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+            <!--f8a01-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_Continue"
+                    style="@style/button"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection" />
+
+                <Button
+                    android:id="@+id/btn_End"
+                    style="@style/button"
+                    android:layout_marginRight="10dp"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview" />
+
+                <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+            </LinearLayout>
+
+
+            <!--f8a02-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <LinearLayout
+                        android:id="@+id/f8a02check"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <CheckBox
+                            android:id="@+id/f8a02a"
+                            style="@style/checkbox"
+                            android:text="@string/f8a02a" />
+
+                        <CheckBox
+                            android:id="@+id/f8a02b"
+                            style="@style/checkbox"
+                            android:text="@string/f8a02b" />
+
+                        <CheckBox
+                            android:id="@+id/f8a02c"
+                            style="@style/checkbox"
+                            android:text="@string/f8a02c" />
+
+                        <CheckBox
+                            android:id="@+id/f8a02d"
+                            style="@style/checkbox"
+                            android:text="@string/f8a02d" />
+
+                        <CheckBox
+                            android:id="@+id/f8a02e"
+                            style="@style/checkbox"
+                            android:text="@string/f8a02e" />
+
+                        <CheckBox
+                            android:id="@+id/f8a02f"
+                            style="@style/checkbox"
+                            android:text="@string/f8a02f" />
+
+                        <CheckBox
+                            android:id="@+id/f8a02g"
+                            style="@style/checkbox"
+                            android:text="@string/f8a02g" />
+
+                        <CheckBox
+                            android:id="@+id/f8a02h"
+                            style="@style/checkbox"
+                            android:text="@string/f8a02h" />
+
+                        <CheckBox
+                            android:id="@+id/f8a02i"
+                            style="@style/checkbox"
+                            android:text="@string/f8a02i" />
+
+                        <CheckBox
+                            android:id="@+id/f8a02j"
+                            style="@style/checkbox"
+                            android:text="@string/f8a02j" />
+
+                        <CheckBox
+                            android:id="@+id/f8a0296"
+                            style="@style/checkbox"
+                            android:text="@string/other" />
+
+
+                        <EditText
+                            android:id="@+id/f8a0296x"
+                            style="@style/textInput"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/other"
+                            android:inputType="text"
+                            android:tag="f8a0296"
+                            android:text='@{f8a0296.checked? f8a0296x.getText.toString : ""}'
+                            android:visibility='@{f8a0296.checked? View.VISIBLE : View.GONE}' />
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f8a02" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--f8a03-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <RadioGroup
+                        android:id="@+id/f8a03"
+                        style="@style/radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/f8a03a"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a03a" />
+
+                        <RadioButton
+                            android:id="@+id/f8a03b"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a03b" />
+
+                        <RadioButton
+                            android:id="@+id/f8a03c"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a03c" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f8a03" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--f8a04-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <CheckBox
+                        android:id="@+id/f8a04b"
+                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/f8a04b" />
+
+                    <CheckBox
+                        android:id="@+id/f8a04c"
+                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/f8a04c" />
+
+                    <RadioGroup
+                        android:id="@+id/f8a04a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/f8a04a96x"
+                            style="@style/textInput"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/other"
+                            android:inputType="text"
+                            android:tag="f8a04a96"
+                            android:text='@{f8a04a96.checked? f8a04a96x.getText.toString : ""}'
+                            android:visibility='@{f8a04a96.checked? View.VISIBLE : View.GONE}' />
+
+                        <RadioButton
+                            android:id="@+id/f8a04a01"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a04a" />
+
+                        <RadioButton
+                            android:id="@+id/f8a04a02"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a04b" />
+
+                        <RadioButton
+                            android:id="@+id/f8a04a03"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a04c" />
+
+                        <RadioButton
+                            android:id="@+id/f8a04a04"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a04d" />
+
+                        <RadioButton
+                            android:id="@+id/f8a04a05"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a04e" />
+
+                        <RadioButton
+                            android:id="@+id/f8a04a06"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a04f" />
+
+                        <RadioButton
+                            android:id="@+id/f8a04a07"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a04g" />
+
+                        <RadioButton
+                            android:id="@+id/f8a04a08"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a04h" />
+
+                        <RadioButton
+                            android:id="@+id/f8a04a09"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a04i" />
+
+                        <RadioButton
+                            android:id="@+id/f8a04a10"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a04j" />
+
+
+                        <RadioButton
+                            android:id="@+id/f8a04a96"
+                            style="@style/radiobutton"
+                            android:text="@string/other" />
+                    </RadioGroup>
+
+                    <TextView
+                        style="@style/textView3Head"
+                        android:text="@string/f8a04a" />
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f8a04" />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <!--f8a05-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <RadioGroup
+                        android:id="@+id/f8a05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/f8a0596x"
+                            style="@style/textInput"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/other"
+                            android:inputType="text"
+                            android:tag="f8a0596"
+                            android:text='@{f8a0596.checked? f8a0596x.getText.toString : ""}'
+                            android:visibility='@{f8a0596.checked? View.VISIBLE : View.GONE}' />
+
+                        <RadioButton
+                            android:id="@+id/f8a05b"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a05b" />
+
+                        <RadioButton
+                            android:id="@+id/f8a05c"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a04c" />
+
+                        <RadioButton
+                            android:id="@+id/f8a05d"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a05d" />
+
+                        <RadioButton
+                            android:id="@+id/f8a05e"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a05e" />
+
+                        <RadioButton
+                            android:id="@+id/f8a05f"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a05f" />
+
+                        <RadioButton
+                            android:id="@+id/f8a05g"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a05g" />
+
+
+                        <RadioButton
+                            android:id="@+id/f8a0596"
+                            style="@style/radiobutton"
+                            android:text="@string/other" />
+
+
+                        <RadioButton
+                            android:id="@+id/f8a05a"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a05a" />
+
+
+                    </RadioGroup>
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f8a05" />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--f8a06-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <CheckBox
+                        android:id="@+id/f8a06b"
+                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/no" />
+
+                    <RadioGroup
+                        android:id="@+id/f8a06a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/f8a06a96x"
+                            style="@style/textInput"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/other"
+                            android:inputType="text"
+                            android:tag="f8a06a96"
+                            android:text='@{f8a06a96.checked? f8a06a96x.getText.toString : ""}'
+                            android:visibility='@{f8a06a96.checked? View.VISIBLE : View.GONE}' />
+
+                        <RadioButton
+                            android:id="@+id/f8a06a01"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a06a01" />
+
+                        <RadioButton
+                            android:id="@+id/f8a06a02"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a06a02" />
+
+                        <RadioButton
+                            android:id="@+id/f8a06a03"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a06a03" />
+
+                        <RadioButton
+                            android:id="@+id/f8a06a04"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a06a04" />
+
+                        <RadioButton
+                            android:id="@+id/f8a06a05"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a06a05" />
+
+                        <RadioButton
+                            android:id="@+id/f8a06a06"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a06a06" />
+
+                        <RadioButton
+                            android:id="@+id/f8a06a07"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a06a07" />
+
+                        <RadioButton
+                            android:id="@+id/f8a06a08"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a06a08" />
+
+                        <RadioButton
+                            android:id="@+id/f8a06a09"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a06a09" />
+
+                        <RadioButton
+                            android:id="@+id/f8a06a10"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a06a10" />
+
+
+                        <RadioButton
+                            android:id="@+id/f8a06a11"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a06a11" />
+
+
+                        <RadioButton
+                            android:id="@+id/f8a06a96"
+                            style="@style/radiobutton"
+                            android:text="@string/other" />
+
+
+                    </RadioGroup>
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f8a06" />
+
+                    <TextView
+                        style="@style/textView3Head"
+                        android:text="@string/f8a06a" />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <!--f8a07-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <RadioGroup
+                        android:id="@+id/f8a07"
+                        style="@style/radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/f8a07a"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a07a" />
+
+                        <RadioButton
+                            android:id="@+id/f8a07b"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a07b" />
+
+                        <RadioButton
+                            android:id="@+id/f8a07c"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a07c" />
+
+                        <RadioButton
+                            android:id="@+id/f8a07d"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a07d" />
+
+                        <RadioButton
+                            android:id="@+id/f8a07e"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a07e" />
+
+                        <RadioButton
+                            android:id="@+id/f8a07f"
+                            style="@style/radiobutton"
+                            android:text="@string/f8a07f" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f8a07" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <RadioGroup
+                        android:id="@+id/f8a01"
+                        style="@style/radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/f8a01a"
+                            style="@style/radiobutton"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/f8a01b"
+                            style="@style/radiobutton"
+                            android:text="@string/no" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f8a01" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</layout>

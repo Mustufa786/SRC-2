@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">SRC-2</string>
+
+    <string name="yes"> ھا </string>
+    <string name="no"> نہ </string>
+    <string name="dkn"> خبر نه آھي </string>
+    <string name="not_applicable">	غير موضوع</string>
+    <string name="sometimes">	ڪڏهن ڪڏهن   </string>
+
+    <string name="istatus">انٹروہو کا نتیجہ</string>
+    <string name="istatusa">مکمل</string>
+    <string name="istatusb">نا مکمل</string>
+    <string name="istatusc">انکار کردیا</string>
+    <string name="istatusd">گھر بند ہے</string>
+    <string name="nextSection">ايندڙ سيڪشن</string>
+    <string name="end_interview">ختم ڪيو</string>
+
+    <string name="correct"> صحيح </string>
+    <string name="incorrect"> غلط </string>
+    <string name="nores"> جواب نه ڏنو </string>
+    <string name="skp"> ڇڏي ڏنو </string>
+
+    <string name="almostN">ڪڏهن به نه</string>
+    <string name="some">ڪڏهن ڪڏهن</string>
+    <string name="often">اڪثر ڪري</string>
+    <string name="almostA">هميشه</string>
+
+    <string name="other"> ٻيو ڪجھ </string>
+    <string name="month"> مهينا </string>
+    <string name="year"> سال </string>
+    <string name="day"> دن </string>
 </resources>
