@@ -3,9 +3,12 @@
 
     <string name="yes"> ھا </string>
     <string name="no"> نہ </string>
+    <string name="no_answer"> ڪو به جواب نه ڏنو ويو </string>
+    <string name="none"> هنن جوابن مان ڪو به نه </string>
     <string name="dkn"> خبر نه آھي </string>
     <string name="not_applicable">	غير موضوع</string>
     <string name="sometimes">	ڪڏهن ڪڏهن   </string>
+
 
     <string name="istatus">انٹروہو کا نتیجہ</string>
     <string name="istatusa">مکمل</string>
@@ -29,4 +32,47 @@
     <string name="month"> مهينا </string>
     <string name="year"> سال </string>
     <string name="day"> دن </string>
+
+
+    <string name="f2ah"> صاف پيئڻ جو پاڻي </string>
+    <string name="f2ah1"> بنيادي معلومات </string>
+    <string name="f2a01"> توهان جي گهر ۾ گهرڀاتين ۾ پيئڻ جي پاڻي جو اهم ذريعوڪهڙو آهي؟ </string>
+    <string name="f2a01a"> گهر جو نلڪو </string>
+    <string name="f2a01b"> ٻاهريون نلڪو </string>
+    <string name="f2a01c"> گهٽي ۾ لڳل نلڪو </string>
+    <string name="f2a01d"> ٽيوب ويل </string>
+    <string name="f2a01e"> نلڪوهت وارو </string>
+    <string name="f2a01f"> ڍڪيل کوهه </string>
+    <string name="f2a01g"> اڻ ڍڪيل کوهه </string>
+    <string name="f2a01h"> محفوظ چشمو </string>
+    <string name="f2a01i"> غير محفوظ چشمو </string>
+    <string name="f2a01j"> برساتي پاڻي </string>
+    <string name="f2a01k"> ٽينڪر يا ٽرڪ </string>
+    <string name="f2a01l"> فلٽر ٿيل پاڻي </string>
+    <string name="f2a01m"> ريڙهي واري ٽانڪي </string>
+    <string name="f2a01n"> زميني سطح وارو پاڻي (ندي، ڊيم، ڍنڍ ، تلا، وهندڙ پاڻي، ڪينال </string>
+    <string name="f2a01o"> گهگهي وارو پاڻي </string>
+    <string name="f2a02"> ڇا گذريل 6 مهينن ۾ توهان جي گهر کي اهم ذريعي مان پاڻيء جي فراهمي معطل ٿي؟ </string>
+    <string name="f2a03"> پاڻيءَ جي اهم ذريعي مان معطليءَ دوران ڪيترا ڏينهن پاڻي موجود نه هيو؟ </string>
+    <string name="f2a04"> توهان جي گهر ۾ ٻين ڪم ڪارين جهڙوڪ رڌ پچاءُ ، هٿن ڌوئڻ جي لاءِ استعمال ٿيندڙ پاڻيءَ جو اهم ذريعو ڪهڙوآهي؟ </string>
+    <string name="f2a04a"> گهر جو نلڪو </string>
+    <string name="f2a04b"> آڳر ۾ نلڪو </string>
+    <string name="f2a04c"> گهٽي ۾ لڳل نلڪو </string>
+    <string name="f2a04d"> ٽيوب ويل </string>
+    <string name="f2a04e"> نلڪوهٿ وارو </string>
+    <string name="f2a04f"> ڍڪيل کوهه </string>
+    <string name="f2a04g"> ڻ ڍڪيل کوهه </string>
+    <string name="f2a04h"> محفوظ چشمو </string>
+    <string name="f2a04i"> غير محفوظ چشمو </string>
+    <string name="f2a04j"> برساتي پاڻي </string>
+    <string name="f2a04k"> ٽينڪر يا ٽرڪ </string>
+    <string name="f2a04l"> فلٽر ٿيل پاڻي </string>
+    <string name="f2a04m"> ريڙهي واري ٽانڪي </string>
+    <string name="f2a04n"> زميني سطح وارو پاڻي (ندي، ڊيم، ڍنڍ ، تلا، وهندڙ پاڻي، ڪينال </string>
+    <string name="f2a04o"> گهگهي وارو پاڻي </string>
+    <string name="f2a05"> پاڻيءَجي اهم ذريعي تائين پهچڻ، پاڻي حاصل ڪرڻ ۽ کڻي اچڻ ۾ ڪيترو وقت لڳندو آهي؟ پيئڻ واري پاڻيءَ جي متعلق </string>
+    <string name="f2a05a">منٽن ۾</string>
+    <string name="f2a05b">گھر ۾ موجود آهي / گهر ۾ پهچايو ويندو آهي</string>
+
+
 </resources>

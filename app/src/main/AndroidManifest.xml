@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.form9.F9SectionBActivity"></activity>
+        <activity android:name=".ui.form3.F3SectionA01Activity"></activity>
+        <activity android:name=".ui.form6.F6SectionAActivity" />
+        <activity android:name=".ui.form5.F5SectionAActivity" />
+        <activity android:name=".ui.form4.F4SectionBActivity" />
+        <activity android:name=".ui.form4.F4SectionAActivity" />
+        <activity android:name=".ui.form9.F9SectionBActivity" />
         <activity android:name=".ui.form9.F9SectionAActivity" />
         <activity android:name=".ui.form7.F7SectionAActivity" />
         <activity android:name=".ui.form8.F8SectionAActivity" />

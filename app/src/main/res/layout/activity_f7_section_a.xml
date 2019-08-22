@@ -11,18 +11,128 @@
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layoutDirection="rtl"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
 
             <!--f7a01-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f7a01" />
+
+
+                    <EditText
+                        android:hint="@string/f7a01"
+                        style="@style/textInput"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:id="@+id/f7a01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--f7a02-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f7a02" />
+
+
+                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                        android:hint="@string/f7a02"
+                        app:dateFormat="dd-MM-yyyy"
+                        style="@style/textInput"
+                        android:id="@+id/f7a02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--f7a03-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f7a03" />
+
+                    <RadioGroup
+                        android:id="@+id/f7a03"
+                        style="@style/radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/f7a03a"
+                            style="@style/radiobutton"
+                            android:text="@string/f7a03a" />
+
+                        <RadioButton
+                            android:id="@+id/f7a03b"
+                            style="@style/radiobutton"
+                            android:text="@string/f7a03b" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                style="@style/textView3Head"
+                android:text="@string/f7a01Heading" />
+
+            <!--f7a04-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f7a04" />
+
+                    <RadioGroup
+                        android:id="@+id/f7a04"
+                        style="@style/radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/f7a04a"
+                            style="@style/radiobutton"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/f7a04b"
+                            style="@style/radiobutton"
+                            android:text="@string/no" />
+
+                        <RadioButton
+                            android:id="@+id/f7a0498"
+                            style="@style/radiobutton"
+                            android:text="@string/dkn" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:visibility='@{f7a04a.checked? View.VISIBLE : View.GONE}'
                 android:orientation="vertical"
-                android:visibility='@{f7a04a.checked? View.VISIBLE : View.GONE}'>
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
 
                 <!--f7a05-->
@@ -30,6 +140,10 @@
 
 
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f7a05" />
 
                         <RadioGroup
                             android:id="@+id/f7a05"
@@ -52,10 +166,6 @@
 
                         </RadioGroup>
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/f7a05" />
-
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -64,6 +174,10 @@
 
 
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f7a06" />
 
                         <RadioGroup
                             android:id="@+id/f7a06"
@@ -86,10 +200,6 @@
 
                         </RadioGroup>
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/f7a06" />
-
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -99,19 +209,17 @@
 
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f7a07" />
+
                         <RadioGroup
                             android:id="@+id/f7a07"
                             style="@style/radiogroup">
 
-                            <EditText
-                                android:id="@+id/f7a0796x"
-                                style="@style/textInput"
-                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                                android:hint="@string/other"
-                                android:inputType="text"
-                                android:tag="f7a0796"
-                                android:text='@{f7a0796.checked? f7a0796x.getText.toString : ""}'
-                                android:visibility='@{f7a0796.checked? View.VISIBLE : View.GONE}' />
+                            <TextView
+                                style="@style/textView2"
+                                android:text="@string/f7a07h1" />
 
                             <RadioButton
                                 android:id="@+id/f7a07a"
@@ -132,6 +240,10 @@
                                 android:id="@+id/f7a07d"
                                 style="@style/radiobutton"
                                 android:text="@string/f7a07d" />
+
+                            <TextView
+                                style="@style/textView2"
+                                android:text="@string/f7a07h2" />
 
                             <RadioButton
                                 android:id="@+id/f7a07e"
@@ -168,6 +280,10 @@
                                 style="@style/radiobutton"
                                 android:text="@string/f7a07k" />
 
+                            <TextView
+                                style="@style/textView2"
+                                android:text="@string/f7a07h3" />
+
                             <RadioButton
                                 android:id="@+id/f7a07l"
                                 style="@style/radiobutton"
@@ -193,30 +309,24 @@
                                 style="@style/radiobutton"
                                 android:text="@string/other" />
 
+                            <EditText
+                                android:id="@+id/f7a0796x"
+                                style="@style/textInput"
+                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                android:hint="@string/other"
+                                android:inputType="text"
+                                android:tag="f7a0796"
+                                android:visibility='@{f7a0796.checked? View.VISIBLE : View.GONE}'
+                                android:text='@{f7a0796.checked? f7a0796x.getText.toString : ""}' />
+
+
                             <RadioButton
                                 android:id="@+id/f7a0798"
                                 style="@style/radiobutton"
                                 android:text="@string/dkn" />
 
-                            <TextView
-                                style="@style/textView2"
-                                android:text="@string/f7a07h1" />
-
-                            <TextView
-                                style="@style/textView2"
-                                android:text="@string/f7a07h2" />
-
-
-                            <TextView
-                                style="@style/textView2"
-                                android:text="@string/f7a07h3" />
-
 
                         </RadioGroup>
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/f7a07" />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -227,19 +337,18 @@
 
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f7a08" />
+
                         <RadioGroup
                             android:id="@+id/f7a08"
                             style="@style/radiogroup">
 
-                            <EditText
-                                android:id="@+id/f7a0896x"
-                                style="@style/textInput"
-                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                                android:hint="@string/other"
-                                android:inputType="text"
-                                android:tag="f7a0896"
-                                android:text='@{f7a0896.checked? f7a0896x.getText.toString : ""}'
-                                android:visibility='@{f7a0896.checked? View.VISIBLE : View.GONE}' />
+                            <RadioButton
+                                android:id="@+id/f7a08a"
+                                style="@style/radiobutton"
+                                android:text="@string/f7a08a" />
 
                             <RadioButton
                                 android:id="@+id/f7a08b"
@@ -251,17 +360,18 @@
                                 style="@style/radiobutton"
                                 android:text="@string/other" />
 
-                            <RadioButton
-                                android:id="@+id/f7a08a"
-                                style="@style/radiobutton"
-                                android:text="@string/f7a08a" />
+                            <EditText
+                                android:id="@+id/f7a0896x"
+                                style="@style/textInput"
+                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                android:hint="@string/other"
+                                android:inputType="text"
+                                android:tag="f7a0896"
+                                android:visibility='@{f7a0896.checked? View.VISIBLE : View.GONE}'
+                                android:text='@{f7a0896.checked? f7a0896x.getText.toString : ""}' />
 
 
                         </RadioGroup>
-
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/f7a08" />
 
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -269,7 +379,8 @@
 
             </LinearLayout>
 
-            <!--f7a02-->
+
+            <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -292,117 +403,6 @@
 
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>
-
-            <!--f7a03-->
-            <TextView
-                style="@style/textView3Head"
-                android:text="@string/f7a01Heading" />
-
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
-
-                    <EditText
-                        android:id="@+id/f7a01"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/f7a01" />
-
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/f7a01" />
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <!--f7a04-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
-
-                    <RadioGroup
-                        android:id="@+id/f7a04"
-                        style="@style/radiogroup">
-
-                        <RadioButton
-                            android:id="@+id/f7a04a"
-                            style="@style/radiobutton"
-                            android:text="@string/yes" />
-
-                        <RadioButton
-                            android:id="@+id/f7a04b"
-                            style="@style/radiobutton"
-                            android:text="@string/no" />
-
-                        <RadioButton
-                            android:id="@+id/f7a0498"
-                            style="@style/radiobutton"
-                            android:text="@string/dkn" />
-
-                    </RadioGroup>
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/f7a04" />
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/f7a02" />
-
-
-                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
-                        android:id="@+id/f7a02"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/f7a02"
-                        app:dateFormat="dd-MM-yyyy" />
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-
-            <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
-
-                    <RadioGroup
-                        android:id="@+id/f7a03"
-                        style="@style/radiogroup">
-
-                        <RadioButton
-                            android:id="@+id/f7a03a"
-                            style="@style/radiobutton"
-                            android:text="@string/f7a03a" />
-
-                        <RadioButton
-                            android:id="@+id/f7a03b"
-                            style="@style/radiobutton"
-                            android:text="@string/f7a03b" />
-
-                    </RadioGroup>
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/f7a03" />
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
 
 
         </LinearLayout>
