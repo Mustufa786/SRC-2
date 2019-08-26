@@ -11,5 +11,7 @@ public class F7SectionAActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f7_section_a);
+
+        setTitle(R.string.f7Form);
     }
 }

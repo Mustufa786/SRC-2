@@ -11,5 +11,7 @@ public class F8SectionAActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f8_section_a);
+
+        setTitle(R.string.form8Heading);
     }
 }

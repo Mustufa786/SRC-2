@@ -222,7 +222,7 @@
                             style="@style/radiogroup">
 
                             <TextView
-                                style="@style/textView3Head"
+                                style="@style/textView2"
                                 android:text="@string/f4a05h1" />
 
 
@@ -297,7 +297,7 @@
                             style="@style/radiogroup">
 
                             <TextView
-                                style="@style/textView3Head"
+                                style="@style/textView2"
                                 android:text="@string/f4a06h1" />
 
 
@@ -331,7 +331,7 @@
                                 android:text="@string/f4a06e" />
 
                             <TextView
-                                style="@style/textView3Head"
+                                style="@style/textView2"
                                 android:text="@string/f4a06h3" />
 
                             <RadioButton
@@ -747,7 +747,7 @@
                             <RadioButton
                                 android:id="@+id/f4a14e"
                                 style="@style/radiobutton"
-                                android:text="@string/f4a14e" />
+                                android:text="@string/f4a12e" />
 
                         </RadioGroup>
 

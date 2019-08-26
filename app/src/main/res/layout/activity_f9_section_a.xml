@@ -15,6 +15,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                style="@style/textView3Head"
+                android:text="@string/f9sectionA" />
+
+            <TextView
+                style="@style/textView2"
+                android:text="@string/f9anh" />
+
+            <TextView
+                style="@style/textView2"
+                android:text="@string/f9ah2" />
+
+
             <!--f9a01-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -62,6 +75,7 @@
                             android:text="@string/f9a02" />
 
                         <EditText
+                            android:hint="@string/number"
                             style="@style/textInput"
                             android:maxLength="2"
                             android:inputType="number"
@@ -271,7 +285,6 @@
 
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>
-
 
 
         </LinearLayout>

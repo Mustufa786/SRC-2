@@ -1,17 +1,15 @@
-package edu.aku.hassannaqvi.src_2.ui.form6;
+package edu.aku.hassannaqvi.src_2.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import edu.aku.hassannaqvi.src_2.R;
 
-public class F6SectionAActivity extends AppCompatActivity {
+public class InfoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_f6_section_a);
-
-        setTitle(R.string.f6h1);
+        setContentView(R.layout.activity_info);
     }
 }

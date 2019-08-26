@@ -17,11 +17,37 @@
 
 
         <LinearLayout
-            android:layoutDirection="rtl"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
 
+            <TextView
+                style="@style/textView2"
+                android:text="@string/f6h2" />
+
+            <TextView
+                style="@style/textView2"
+                android:text="@string/f6h3" />
+
+            <!--f6a00-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f6ah1" />
+
+
+                    <Spinner
+                        android:id="@+id/f6a00"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
             <!--f6a01-->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -68,7 +94,7 @@
                         android:text="@string/f6a02" />
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/textView2"
                         android:text="DISCHARGE CARD AVAILABLE" />
 
                     <RadioGroup
@@ -83,14 +109,14 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f6a02ax"
                             style="@style/textInput"
-                            app:type="range"
-                            app:pattern="^(\\d{1,1}\\.\\d{3,3})$"
-                            app:mask="^(\\d{1,1}\\.\\d{3,3})$"
-                            android:maxLength="5"
                             android:hint="#.### kg"
                             android:inputType="number"
+                            android:maxLength="5"
+                            android:text='@{f6a02a.checked? f6a02ax.getText.toString : ""}'
                             android:visibility='@{f6a02a.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f6a02a.checked? f6a02ax.getText.toString : ""}' />
+                            app:mask="^(\\d{1,1}\\.\\d{3,3})$"
+                            app:pattern="^(\\d{1,1}\\.\\d{3,3})$"
+                            app:type="range" />
 
                         <RadioButton
                             android:id="@+id/f6a02b"
@@ -105,8 +131,8 @@
 
             <!--f6a03-->
             <android.support.v7.widget.CardView
-                android:visibility='@{f6a02b.checked? View.VISIBLE : View.GONE}'
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{f6a02b.checked? View.VISIBLE : View.GONE}'>
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">
@@ -116,19 +142,19 @@
                         android:text="@string/f6a03" />
 
                     <TextView
-                        style="@style/textView3Head"
+                        style="@style/textView2"
                         android:text="FROM RECALL" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/f6a03"
                         style="@style/textInput"
-                        app:type="range"
-                        app:pattern="^(\\d{1,1}\\.\\d{3,3})$"
-                        app:mask="^(\\d{1,1}\\.\\d{3,3})$"
-                        android:maxLength="5"
                         android:hint="#.### kg"
                         android:inputType="number"
-                        android:text='@{f6a02b.checked? f6a03.getText.toString : ""}' />
+                        android:maxLength="5"
+                        android:text='@{f6a02b.checked? f6a03.getText.toString : ""}'
+                        app:mask="^(\\d{1,1}\\.\\d{3,3})$"
+                        app:pattern="^(\\d{1,1}\\.\\d{3,3})$"
+                        app:type="range" />
 
 
                 </LinearLayout>
@@ -172,7 +198,7 @@
                         <RadioButton
                             android:id="@+id/f6a04e"
                             style="@style/radiobutton"
-                            android:text="@string/f6a04ce" />
+                            android:text="@string/f6a04e" />
 
                         <RadioButton
                             android:id="@+id/f6a0498"
@@ -305,8 +331,8 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f6a0796"
-                            android:visibility='@{f6a0796.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f6a0796.checked? f6a0796x.getText.toString : ""}' />
+                            android:text='@{f6a0796.checked? f6a0796x.getText.toString : ""}'
+                            android:visibility='@{f6a0796.checked? View.VISIBLE : View.GONE}' />
 
 
                     </RadioGroup>
@@ -353,8 +379,8 @@
 
             <!--f6a09-->
             <android.support.v7.widget.CardView
-                android:visibility='@{f6a08a.checked? View.VISIBLE : View.GONE}'
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{f6a08a.checked? View.VISIBLE : View.GONE}'>
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">
@@ -365,51 +391,51 @@
 
                     <LinearLayout
                         android:id="@+id/f6a09check"
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <CheckBox
-                            android:text="@string/f6a09a"
                             android:id="@+id/f6a09a"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f6a09a" />
 
                         <CheckBox
-                            android:text="@string/f6a09b"
                             android:id="@+id/f6a09b"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f6a09b" />
 
                         <CheckBox
-                            android:text="@string/f6a09c"
                             android:id="@+id/f6a09c"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f6a09c" />
 
                         <CheckBox
-                            android:text="@string/f6a09d"
                             android:id="@+id/f6a09d"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f6a09d" />
 
                         <CheckBox
-                            android:text="@string/f6a09e"
                             android:id="@+id/f6a09e"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f6a09e" />
 
                         <CheckBox
-                            android:text="@string/f6a09f"
                             android:id="@+id/f6a09f"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f6a09f" />
 
                         <CheckBox
-                            android:text="@string/other"
                             android:id="@+id/f6a0996"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/other" />
 
                         <EditText
                             android:id="@+id/f6a0996x"
@@ -418,18 +444,18 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f6a0996"
-                            android:visibility='@{f6a0996.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f6a0996.checked? f6a0796x.getText.toString : ""}' />
+                            android:text='@{f6a0996.checked? f6a0796x.getText.toString : ""}'
+                            android:visibility='@{f6a0996.checked? View.VISIBLE : View.GONE}' />
 
 
                     </LinearLayout>
 
                     <CheckBox
-                        android:text="@string/dkn"
                         android:id="@+id/f6a0998"
-                        android:tag="-1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/dkn" />
 
 
                 </LinearLayout>
@@ -473,8 +499,8 @@
 
             <!--f6a11-->
             <android.support.v7.widget.CardView
-                android:visibility='@{f6a10b.checked? View.VISIBLE : View.GONE}'
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{f6a10b.checked? View.VISIBLE : View.GONE}'>
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">
@@ -519,8 +545,8 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f6a1196"
-                            android:visibility='@{f6a1196.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f6a1196.checked? f6a1196x.getText.toString : ""}' />
+                            android:text='@{f6a1196.checked? f6a1196x.getText.toString : ""}'
+                            android:visibility='@{f6a1196.checked? View.VISIBLE : View.GONE}' />
 
 
                     </RadioGroup>
@@ -594,8 +620,8 @@
                             android:inputType="number"
                             android:maxLength="2"
                             android:tag="f6a13b"
-                            android:visibility='@{f6a13b.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f6a13b.checked? f6a13bx.getText.toString : ""}' />
+                            android:text='@{f6a13b.checked? f6a13bx.getText.toString : ""}'
+                            android:visibility='@{f6a13b.checked? View.VISIBLE : View.GONE}' />
 
 
                         <RadioButton
@@ -611,8 +637,8 @@
                             android:inputType="number"
                             android:maxLength="2"
                             android:tag="f6a13b"
-                            android:visibility='@{f6a13c.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f6a13c.checked? f6a13cx.getText.toString : ""}' />
+                            android:text='@{f6a13c.checked? f6a13cx.getText.toString : ""}'
+                            android:visibility='@{f6a13c.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
                             android:id="@+id/f6a13d"
@@ -633,7 +659,7 @@
 
             <TextView
                 style="@style/textView3Head"
-                android:text="@string/f6bHeading" />
+                android:text="@string/f6bh" />
 
             <!--f6b01-->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -672,8 +698,8 @@
 
             <!--f6b02-->
             <android.support.v7.widget.CardView
-                android:visibility='@{f6b01a.checked? View.VISIBLE : View.GONE}'
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{f6b01a.checked? View.VISIBLE : View.GONE}'>
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">

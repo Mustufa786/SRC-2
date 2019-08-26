@@ -15,6 +15,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                style="@style/textView2"
+                android:text="@string/f8anh" />
+
+            <TextView
+                style="@style/textView2"
+                android:text="@string/f8ah1" />
+
+
             <!--f8a01-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -180,7 +189,7 @@
 
                     <TextView
                         style="@style/textView3Head"
-                        android:text="@string/f8a04a" />
+                        android:text="@string/f8a04h1" />
 
                     <RadioGroup
                         android:id="@+id/f8a04a"
@@ -258,7 +267,7 @@
                     <CheckBox
                         style="@style/checkbox"
                         android:tag="-1"
-                        android:text="@string/f8a04b"
+                        android:text="@string/f8a04h2"
                         android:id="@+id/f8a04b"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -266,7 +275,7 @@
                     <CheckBox
                         style="@style/checkbox"
                         android:tag="-1"
-                        android:text="@string/f8a04c"
+                        android:text="@string/f8a04h3"
                         android:id="@+id/f8a04c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
@@ -363,7 +372,7 @@
 
                     <TextView
                         style="@style/textView3Head"
-                        android:text="@string/f8a06a" />
+                        android:text="@string/f8a06h1" />
 
                     <RadioGroup
                         android:id="@+id/f8a06a"
@@ -373,57 +382,57 @@
 
                         <RadioButton
                             android:id="@+id/f8a06a01"
-                            android:text="@string/f8a06a01"
+                            android:text="@string/f8a06a"
                             style="@style/radiobutton" />
 
                         <RadioButton
                             android:id="@+id/f8a06a02"
-                            android:text="@string/f8a06a02"
+                            android:text="@string/f8a06b"
                             style="@style/radiobutton" />
 
                         <RadioButton
                             android:id="@+id/f8a06a03"
-                            android:text="@string/f8a06a03"
+                            android:text="@string/f8a06c"
                             style="@style/radiobutton" />
 
                         <RadioButton
                             android:id="@+id/f8a06a04"
-                            android:text="@string/f8a06a04"
+                            android:text="@string/f8a06d"
                             style="@style/radiobutton" />
 
                         <RadioButton
                             android:id="@+id/f8a06a05"
-                            android:text="@string/f8a06a05"
+                            android:text="@string/f8a06e"
                             style="@style/radiobutton" />
 
                         <RadioButton
                             android:id="@+id/f8a06a06"
-                            android:text="@string/f8a06a06"
+                            android:text="@string/f8a06e"
                             style="@style/radiobutton" />
 
                         <RadioButton
                             android:id="@+id/f8a06a07"
-                            android:text="@string/f8a06a07"
+                            android:text="@string/f8a06f"
                             style="@style/radiobutton" />
 
                         <RadioButton
                             android:id="@+id/f8a06a08"
-                            android:text="@string/f8a06a08"
+                            android:text="@string/f8a06g"
                             style="@style/radiobutton" />
 
                         <RadioButton
                             android:id="@+id/f8a06a09"
-                            android:text="@string/f8a06a09"
+                            android:text="@string/f8a06h"
                             style="@style/radiobutton" />
 
                         <RadioButton
                             android:id="@+id/f8a06a10"
-                            android:text="@string/f8a06a10"
+                            android:text="@string/f8a06i"
                             style="@style/radiobutton" />
 
                         <RadioButton
                             android:id="@+id/f8a06a11"
-                            android:text="@string/f8a06a11"
+                            android:text="@string/f8a06j"
                             style="@style/radiobutton" />
 
 

@@ -16,6 +16,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <TextView
+                style="@style/textView2"
+                android:text="@string/f7anh" />
+
+            <TextView
+                style="@style/textView2"
+                android:text="@string/f7ah1" />
+
+            <TextView
+                style="@style/textView2"
+                android:text="@string/f7ah2" />
+
 
             <!--f7a01-->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -91,6 +103,7 @@
             </android.support.v7.widget.CardView>
 
             <TextView
+
                 style="@style/textView3Head"
                 android:text="@string/f7a01Heading" />
 
@@ -299,10 +312,6 @@
                                 style="@style/radiobutton"
                                 android:text="@string/f7a07n" />
 
-                            <RadioButton
-                                android:id="@+id/f7a07o"
-                                style="@style/radiobutton"
-                                android:text="@string/f7a07o" />
 
                             <RadioButton
                                 android:id="@+id/f7a0796"

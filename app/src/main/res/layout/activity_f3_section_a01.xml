@@ -18,12 +18,12 @@
 
 
         <LinearLayout
-            android:layoutDirection="rtl"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
 
-            <!--f3a01-->
+            <!--f3a00-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
 
@@ -68,7 +68,7 @@
                         <RadioButton
                             android:id="@+id/f3a01c"
                             style="@style/radiobutton"
-                            android:text="@string/f3a01c" />
+                            android:text="@string/f3a01a" />
 
                         <RadioButton
                             android:id="@+id/f3a0198"
@@ -78,7 +78,7 @@
                         <RadioButton
                             android:id="@+id/f3a0199"
                             style="@style/radiobutton"
-                            android:text="@string/f3a0199" />
+                            android:text="@string/no_answer" />
 
                     </RadioGroup>
 
@@ -121,8 +121,8 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f2b0296"
-                            android:visibility='@{f3a0296.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f3a0296.checked? f3a0296x.getText.toString : ""}' />
+                            android:text='@{f3a0296.checked? f3a0296x.getText.toString : ""}'
+                            android:visibility='@{f3a0296.checked? View.VISIBLE : View.GONE}' />
 
 
                     </RadioGroup>
@@ -148,17 +148,17 @@
                         <RadioButton
                             android:id="@+id/f3a03a"
                             style="@style/radiobutton"
-                            android:text="@string/f3a03a" />
+                            android:text="@string/yes" />
 
                         <RadioButton
                             android:id="@+id/f3a03b"
                             style="@style/radiobutton"
-                            android:text="@string/f3a03b" />
+                            android:text="@string/no" />
 
                         <RadioButton
                             android:id="@+id/f3a03c"
                             style="@style/radiobutton"
-                            android:text="@string/f3a02c" />
+                            android:text="@string/no_answer" />
 
                         <RadioButton
                             android:id="@+id/f3a0396"
@@ -172,8 +172,8 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f3a0396"
-                            android:visibility='@{f3a0396.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f3a0396.checked? f3a0396x.getText.toString : ""}' />
+                            android:text='@{f3a0396.checked? f3a0396x.getText.toString : ""}'
+                            android:visibility='@{f3a0396.checked? View.VISIBLE : View.GONE}' />
 
 
                     </RadioGroup>
@@ -215,63 +215,63 @@
 
                     <LinearLayout
                         android:id="@+id/f3a05check"
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/f3a05a"
-                            android:text="@string/f3a05a"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a05a" />
 
                         <CheckBox
                             android:id="@+id/f3a05b"
-                            android:text="@string/f3a05b"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a05b" />
 
                         <CheckBox
                             android:id="@+id/f3a05c"
-                            android:text="@string/f3a05c"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a05c" />
 
                         <CheckBox
                             android:id="@+id/f3a05d"
-                            android:text="@string/f3a05d"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a05d" />
 
                         <CheckBox
                             android:id="@+id/f3a05e"
-                            android:text="@string/f3a05e"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a05e" />
 
                         <CheckBox
                             android:id="@+id/f3a05f"
-                            android:text="@string/f3a05f"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a05f" />
 
                         <CheckBox
                             android:id="@+id/f3a05g"
-                            android:text="@string/f3a05g"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a05g" />
 
                         <CheckBox
                             android:id="@+id/f3a05h"
-                            android:text="@string/f3a05h"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a05h" />
 
                         <CheckBox
                             android:id="@+id/f3a0596"
-                            android:text="@string/other"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/other" />
 
                         <EditText
                             android:id="@+id/f3a0596x"
@@ -280,25 +280,25 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f3a0396"
-                            android:visibility='@{f3a0596.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f3a0596.checked? f3a0596x.getText.toString : ""}' />
+                            android:text='@{f3a0596.checked? f3a0596x.getText.toString : ""}'
+                            android:visibility='@{f3a0596.checked? View.VISIBLE : View.GONE}' />
 
 
                     </LinearLayout>
 
                     <CheckBox
                         android:id="@+id/f3a0598"
-                        android:text="@string/dkn"
-                        android:tag="-1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/dkn" />
 
                     <CheckBox
                         android:id="@+id/f3a0599"
-                        android:text="@string/not_applicable"
-                        android:tag="-1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/not_applicable" />
 
 
                 </LinearLayout>
@@ -316,58 +316,58 @@
 
                     <LinearLayout
                         android:id="@+id/f3a06check"
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/f3a06a"
-                            android:text="@string/f3a06a"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a06a" />
 
                         <CheckBox
                             android:id="@+id/f3a06b"
-                            android:text="@string/f3a06b"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a06b" />
 
                         <CheckBox
                             android:id="@+id/f3a06c"
-                            android:text="@string/f3a06c"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a06c" />
 
                         <CheckBox
                             android:id="@+id/f3a06d"
-                            android:text="@string/f3a06d"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a06d" />
 
 
                     </LinearLayout>
 
                     <CheckBox
                         android:id="@+id/f3a0697"
-                        android:text="@string/none"
-                        android:tag="-1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/none" />
 
 
                     <CheckBox
                         android:id="@+id/f3a0699"
-                        android:text="@string/no_answer"
-                        android:tag="-1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/no_answer" />
 
                     <CheckBox
                         android:id="@+id/f3a0698"
-                        android:text="@string/dkn"
-                        android:tag="-1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/dkn" />
 
 
                 </LinearLayout>
@@ -420,40 +420,45 @@
 
                     <LinearLayout
                         android:id="@+id/f3a08check"
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/f3a08a"
-                            android:text="@string/f3a08a"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a08a" />
 
                         <CheckBox
                             android:id="@+id/f3a08b"
-                            android:text="@string/f3a08b"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a08b" />
 
                         <CheckBox
                             android:id="@+id/f3a08c"
-                            android:text="@string/f3a08c"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a08c" />
 
                         <CheckBox
                             android:id="@+id/f3a08d"
-                            android:text="@string/f3a08d"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a08d" />
 
 
                         <CheckBox
                             android:id="@+id/f3a0896"
-                            android:text="@string/other"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/other" />
 
                         <EditText
                             android:id="@+id/f3a0896x"
@@ -462,18 +467,19 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f3a0396"
-                            android:visibility='@{f3a0896.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f3a0896.checked? f3a0896x.getText.toString : ""}' />
+                            android:text='@{f3a0896.checked? f3a0896x.getText.toString : ""}'
+                            android:visibility='@{f3a0896.checked? View.VISIBLE : View.GONE}' />
 
 
                     </LinearLayout>
 
                     <CheckBox
                         android:id="@+id/f3a0898"
-                        android:text="@string/none"
-                        android:tag="-1"
+                        style="@style/checkbox"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/none" />
 
 
                 </LinearLayout>
@@ -491,70 +497,80 @@
 
                     <LinearLayout
                         android:id="@+id/f3a09check"
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/f3a09a"
-                            android:text="@string/f3a09a"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a09a" />
 
                         <CheckBox
                             android:id="@+id/f3a09b"
-                            android:text="@string/f3a09b"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a09b" />
 
                         <CheckBox
                             android:id="@+id/f3a09c"
-                            android:text="@string/f3a09c"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a09c" />
 
                         <CheckBox
                             android:id="@+id/f3a09d"
-                            android:text="@string/f3a09d"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a09d" />
 
                         <CheckBox
-                            android:id="@+id/f3a09de"
-                            android:text="@string/f3a09de"
+                            android:id="@+id/f3a09e"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a09e" />
 
                         <CheckBox
                             android:id="@+id/f3a09f"
-                            android:text="@string/f3a09f"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a09f" />
 
                         <CheckBox
                             android:id="@+id/f3a09g"
-                            android:text="@string/f3a09g"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a09g" />
 
                         <CheckBox
                             android:id="@+id/f3a09h"
-                            android:text="@string/f3a09h"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a09h" />
 
                         <CheckBox
                             android:id="@+id/f3a09i"
-                            android:text="@string/f3a09i"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a09i" />
 
 
                         <CheckBox
                             android:id="@+id/f3a0996"
-                            android:text="@string/other"
+                            style="@style/checkbox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="@string/other" />
 
                         <EditText
                             android:id="@+id/f3a0996x"
@@ -563,18 +579,19 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f3a0396"
-                            android:visibility='@{f3a0996.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f3a0996.checked? f3a0996x.getText.toString : ""}' />
+                            android:text='@{f3a0996.checked? f3a0996x.getText.toString : ""}'
+                            android:visibility='@{f3a0996.checked? View.VISIBLE : View.GONE}' />
 
 
                     </LinearLayout>
 
                     <CheckBox
                         android:id="@+id/f3a0997"
-                        android:text="@string/no_answer"
-                        android:tag="-1"
+                        style="@style/checkbox"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/no_answer" />
 
 
                 </LinearLayout>
@@ -656,8 +673,8 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f3a0396"
-                            android:visibility='@{f3a1096.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f3a1096.checked? f3a1096x.getText.toString : ""}' />
+                            android:text='@{f3a1096.checked? f3a1096x.getText.toString : ""}'
+                            android:visibility='@{f3a1096.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
                             android:id="@+id/f3a1097"
@@ -691,25 +708,25 @@
                         <RadioButton
                             android:id="@+id/f3a11a"
                             style="@style/radiobutton"
-                            android:text="@string/f3a07a" />
+                            android:text="@string/f3a11a" />
 
                         <RadioButton
                             android:id="@+id/f3a11b"
                             style="@style/radiobutton"
-                            android:text="@string/f3a07b" />
+                            android:text="@string/f3a11b" />
 
                         <RadioButton
                             android:id="@+id/f3a11c"
                             style="@style/radiobutton"
-                            android:text="@string/f3a07c" />
+                            android:text="@string/f3a11c" />
 
                         <RadioButton
                             android:id="@+id/f3a11d"
                             style="@style/radiobutton"
-                            android:text="@string/f3a07d" />
+                            android:text="@string/f3a11d" />
 
                         <RadioButton
-                            android:id="@+id/f3a1196"
+                            android:id="@+id/jmik"
                             style="@style/radiobutton"
                             android:text="@string/other" />
 
@@ -720,14 +737,255 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f3a1196"
-                            android:visibility='@{f3a1196.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f3a1196.checked? f3a1196x.getText.toString : ""}' />
+                            android:text='@{f3a1196.checked? f3a1196x.getText.toString : ""}'
+                            android:visibility='@{f3a1196.checked? View.VISIBLE : View.GONE}' />
 
                         <RadioButton
                             android:id="@+id/f3a1199"
                             style="@style/radiobutton"
                             android:text="@string/no_answer" />
 
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--f3a12-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f3a12" />
+
+                    <RadioGroup
+                        android:id="@+id/f3a12"
+                        style="@style/radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/f3a12a"
+                            style="@style/radiobutton"
+                            android:text="@string/f3a07a" />
+
+                        <RadioButton
+                            android:id="@+id/f3a12b"
+                            style="@style/radiobutton"
+                            android:text="@string/f3a07b" />
+
+                        <RadioButton
+                            android:id="@+id/f3a12c"
+                            style="@style/radiobutton"
+                            android:text="@string/f3a07c" />
+
+                        <RadioButton
+                            android:id="@+id/f3a1299"
+                            style="@style/radiobutton"
+                            android:text="@string/no_answer" />
+
+                        <RadioButton
+                            android:id="@+id/f3a1296"
+                            style="@style/radiobutton"
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/f3a1296x"
+                            style="@style/textInput"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/other"
+                            android:inputType="text"
+                            android:tag="f3a1196"
+                            android:text='@{f3a1296.checked? f3a1296x.getText.toString : ""}'
+                            android:visibility='@{f3a1296.checked? View.VISIBLE : View.GONE}' />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--f3a13-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f3a13" />
+
+                    <LinearLayout
+                        android:id="@+id/f3a13check"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/f3a13a"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a13a" />
+
+                        <CheckBox
+                            android:id="@+id/f3a13b"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a13b" />
+
+                        <CheckBox
+                            android:id="@+id/f3a13c"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a13c" />
+
+                        <CheckBox
+                            android:id="@+id/f3a13d"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a13d" />
+
+                        <CheckBox
+                            android:id="@+id/f3a13e"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a13e" />
+
+                        <CheckBox
+                            android:id="@+id/f3a13f"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a13f" />
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/f3a1399"
+                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/no_answer" />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--f3a14-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f3a14" />
+
+                    <LinearLayout
+                        android:id="@+id/f3a14check"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/f3a14a"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a14a" />
+
+                        <CheckBox
+                            android:id="@+id/f3a14b"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a14b" />
+
+                        <CheckBox
+                            android:id="@+id/f3a14c"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a14c" />
+
+
+                        <CheckBox
+                            android:id="@+id/f3a1396"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/other" />
+
+                        <EditText
+                            android:id="@+id/f3a1396x"
+                            style="@style/textInput"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/other"
+                            android:inputType="text"
+                            android:tag="f3a1396"
+                            android:text='@{f3a1396.checked? f3a1396x.getText.toString : ""}'
+                            android:visibility='@{f3a1396.checked? View.VISIBLE : View.GONE}' />
+
+
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/f3a1499"
+                        style="@style/checkbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/no_answer" />
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <!--f3a15-->
+            <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                    <TextView
+                        style="@style/i_textview"
+                        android:text="@string/f3a15" />
+
+                    <RadioGroup
+                        android:id="@+id/f3a15"
+                        style="@style/radiogroup">
+
+                        <RadioButton
+                            android:id="@+id/f3a15a"
+                            style="@style/radiobutton"
+                            android:text="@string/f3a15b" />
+
+                        <RadioButton
+                            android:id="@+id/f3a15b"
+                            style="@style/radiobutton"
+                            android:text="@string/f3a15b" />
+
+                        <RadioButton
+                            android:id="@+id/f3a15c"
+                            style="@style/radiobutton"
+                            android:text="@string/f3a15c" />
+
+                        <RadioButton
+                            android:id="@+id/f3a15d"
+                            style="@style/radiobutton"
+                            android:text="@string/f3a15d" />
+
+                        <RadioButton
+                            android:id="@+id/f3a1599"
+                            style="@style/radiobutton"
+                            android:text="@string/no_answer" />
 
                     </RadioGroup>
 

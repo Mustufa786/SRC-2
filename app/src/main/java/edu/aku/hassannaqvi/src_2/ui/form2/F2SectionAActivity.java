@@ -8,7 +8,6 @@ import android.widget.Toast;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.src_2.R;
-import edu.aku.hassannaqvi.src_2.databinding.F2ActivitySectionABinding;
 
 public class F2SectionAActivity extends AppCompatActivity {
 

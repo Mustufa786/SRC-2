@@ -17,10 +17,19 @@
 
 
         <LinearLayout
-            android:layoutDirection="rtl"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/textView2"
+                android:text="@string/f5nh" />
+
+            <TextView
+                style="@style/textView2"
+                android:text="@string/f5h2" />
 
 
             <!--f5a01-->
@@ -56,10 +65,10 @@
 
 
             <LinearLayout
-                android:visibility='@{f5a01a.checked? View.VISIBLE : View.GONE}'
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility='@{f5a01a.checked? View.VISIBLE : View.GONE}'>
 
 
                 <!--f5a02-->
@@ -77,8 +86,8 @@
                             android:id="@+id/f5a02"
                             style="@style/textInput"
                             android:hint="@string/f5a02"
-                            android:maxLength="2"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:maxLength="2" />
 
 
                     </LinearLayout>
@@ -88,7 +97,7 @@
                 <!--                Section A-->
                 <TextView
                     style="@style/textView3Head"
-                    android:text="@string/f5aHeading" />
+                    android:text="@string/f5ah" />
 
                 <!--f5a03-->
                 <android.support.v7.widget.CardView style="@style/cardView">
@@ -122,10 +131,10 @@
                 </android.support.v7.widget.CardView>
 
                 <LinearLayout
-                    android:visibility='@{f5a03a.checked? View.VISIBLE : View.GONE}'
-                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility='@{f5a03a.checked? View.VISIBLE : View.GONE}'>
 
                     <!--f5a04-->
                     <android.support.v7.widget.CardView style="@style/cardView">
@@ -142,8 +151,8 @@
                                 android:id="@+id/f5a04"
                                 style="@style/textInput"
                                 android:hint="@string/f5a04"
-                                android:maxLength="2"
-                                android:inputType="number" />
+                                android:inputType="number"
+                                android:maxLength="2" />
 
 
                         </LinearLayout>
@@ -160,175 +169,168 @@
                                 android:text="@string/f5a05" />
 
                             <TextView
-                                android:background="@color/colorPrimaryLight"
-                                style="@style/textView"
-                                android:text="@string/f5a0501" />
+                                style="@style/textView2"
+                                android:text="@string/f5a05a" />
 
                             <RadioGroup
-                                android:orientation="horizontal"
                                 android:id="@+id/f5a0501"
-                                style="@style/radiogroup">
+                                style="@style/radiogroup"
+                                android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0501a"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/yes" />
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0501b"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/no" />
 
 
                             </RadioGroup>
 
                             <TextView
-                                android:background="@color/colorPrimaryLight"
-                                style="@style/textView"
-                                android:text="@string/f5a0502" />
+                                style="@style/textView2"
+                                android:text="@string/f5a05b" />
 
                             <RadioGroup
-                                android:orientation="horizontal"
                                 android:id="@+id/f5a0502"
-                                style="@style/radiogroup">
+                                style="@style/radiogroup"
+                                android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0502a"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/yes" />
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0502b"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/no" />
 
 
                             </RadioGroup>
 
                             <TextView
-                                android:background="@color/colorPrimaryLight"
-                                style="@style/textView"
-                                android:text="@string/f5a0503" />
+                                style="@style/textView2"
+                                android:text="@string/f5a05c" />
 
                             <RadioGroup
-                                android:orientation="horizontal"
                                 android:id="@+id/f5a0503"
-                                style="@style/radiogroup">
+                                style="@style/radiogroup"
+                                android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0503a"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/yes" />
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0503b"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/no" />
 
 
                             </RadioGroup>
 
                             <TextView
-                                android:background="@color/colorPrimaryLight"
-                                style="@style/textView"
-                                android:text="@string/f5a0504" />
+                                style="@style/textView2"
+                                android:text="@string/f5a05d" />
 
                             <RadioGroup
-                                android:orientation="horizontal"
                                 android:id="@+id/f5a0504"
-                                style="@style/radiogroup">
+                                style="@style/radiogroup"
+                                android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0504a"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/yes" />
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0504b"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/no" />
 
 
                             </RadioGroup>
 
                             <TextView
-                                android:background="@color/colorPrimaryLight"
-                                style="@style/textView"
-                                android:text="@string/f5a0505" />
+                                style="@style/textView2"
+                                android:text="@string/f5a05e" />
 
                             <RadioGroup
-                                android:orientation="horizontal"
                                 android:id="@+id/f5a0505"
-                                style="@style/radiogroup">
+                                style="@style/radiogroup"
+                                android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0505a"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/yes" />
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0505b"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/no" />
 
 
                             </RadioGroup>
 
                             <TextView
-                                android:background="@color/colorPrimaryLight"
-                                style="@style/textView"
-                                android:text="@string/f5a0506" />
+                                style="@style/textView2"
+                                android:text="@string/f5a05f" />
 
                             <RadioGroup
-                                android:orientation="horizontal"
                                 android:id="@+id/f5a0506"
-                                style="@style/radiogroup">
+                                style="@style/radiogroup"
+                                android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0506a"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/yes" />
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0506b"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/no" />
 
 
                             </RadioGroup>
 
                             <TextView
-                                android:background="@color/colorPrimaryLight"
-                                style="@style/textView"
-                                android:text="@string/f5a0507" />
+                                style="@style/textView2"
+                                android:text="@string/f5a05g" />
 
                             <RadioGroup
-                                android:orientation="horizontal"
                                 android:id="@+id/f5a0507"
-                                style="@style/radiogroup">
+                                style="@style/radiogroup"
+                                android:orientation="horizontal">
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0507a"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/yes" />
 
                                 <RadioButton
-                                    android:layout_weight="1"
                                     android:id="@+id/f5a0507b"
                                     style="@style/radiobutton"
+                                    android:layout_weight="1"
                                     android:text="@string/no" />
 
 
@@ -384,116 +386,116 @@
 
 
                         <LinearLayout
-                            android:orientation="vertical"
                             android:id="@+id/f5a07check"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
 
                             <CheckBox
-                                android:text="@string/f5a07a"
                                 android:id="@+id/f5a07a"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07a" />
 
                             <CheckBox
-                                android:text="@string/f5a07b"
                                 android:id="@+id/f5a07b"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07b" />
 
                             <CheckBox
-                                android:text="@string/f5a07c"
                                 android:id="@+id/f5a07c"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07c" />
 
                             <CheckBox
-                                android:text="@string/f5a07d"
                                 android:id="@+id/f5a07d"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07d" />
 
                             <CheckBox
-                                android:text="@string/f5a07e"
                                 android:id="@+id/f5a07e"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07e" />
 
                             <CheckBox
-                                android:text="@string/f5a07f"
                                 android:id="@+id/f5a07f"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07f" />
 
                             <CheckBox
-                                android:text="@string/f5a07g"
                                 android:id="@+id/f5a07g"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07g" />
 
                             <CheckBox
-                                android:text="@string/f5a07h"
                                 android:id="@+id/f5a07h"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07h" />
 
                             <CheckBox
-                                android:text="@string/f5a07i"
                                 android:id="@+id/f5a07i"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07i" />
 
                             <CheckBox
-                                android:text="@string/f5a07j"
                                 android:id="@+id/f5a07j"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07j" />
 
                             <CheckBox
-                                android:text="@string/f5a07k"
                                 android:id="@+id/f5a07k"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07k" />
 
                             <CheckBox
-                                android:text="@string/f5a07l"
                                 android:id="@+id/f5a07l"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07l" />
 
                             <CheckBox
-                                android:text="@string/f5a07m"
                                 android:id="@+id/f5a07m"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07m" />
 
                             <CheckBox
-                                android:text="@string/f5a07n"
                                 android:id="@+id/f5a07n"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/f5a07n" />
 
                             <CheckBox
-                                android:text="@string/other"
                                 android:id="@+id/f5a0796"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content" />
+                                android:layout_height="wrap_content"
+                                android:text="@string/other" />
 
                             <EditText
                                 android:id="@+id/f5a0796x"
@@ -502,8 +504,8 @@
                                 android:hint="@string/other"
                                 android:inputType="text"
                                 android:tag="f5a0796"
-                                android:visibility='@{f5a0796.checked? View.VISIBLE : View.GONE}'
-                                android:text='@{f5a0796.checked? f5a0796x.getText.toString : ""}' />
+                                android:text='@{f5a0796.checked? f5a0796x.getText.toString : ""}'
+                                android:visibility='@{f5a0796.checked? View.VISIBLE : View.GONE}' />
 
 
                         </LinearLayout>
@@ -548,7 +550,7 @@
             <!--                Section B-->
             <TextView
                 style="@style/textView3Head"
-                android:text="@string/f5bHeading" />
+                android:text="@string/f5bh" />
 
             <!--f5b01-->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -614,8 +616,8 @@
 
             <!--f5b03-->
             <android.support.v7.widget.CardView
-                android:visibility='@{f5b02a.checked? View.VISIBLE : View.GONE}'
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{f5b02a.checked? View.VISIBLE : View.GONE}'>
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">
