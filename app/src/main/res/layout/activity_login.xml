@@ -79,6 +79,7 @@
                     android:drawableStart="@drawable/ic_password"
                     android:drawablePadding="10dp"
                     android:hint="Password"
+                    android:inputType="textPassword"
                     android:padding="15dp" />
 
             </LinearLayout>
@@ -94,10 +95,27 @@
             android:layout_marginBottom="8dp"
             android:background="@drawable/button_background"
             android:elevation="10dp"
-            android:onClick='@{() -> callback.login()}'
+            android:onClick='@{() -> callback.attemptLogin()}'
             android:text="Login"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintVertical_bias="0.086" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:indeterminate="true"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"

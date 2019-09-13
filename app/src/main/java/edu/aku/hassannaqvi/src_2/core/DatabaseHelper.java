@@ -9,6 +9,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,6 +20,8 @@ import edu.aku.hassannaqvi.src_2.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.src_2.contracts.FamilyMembersContract.familyMembers;
 import edu.aku.hassannaqvi.src_2.contracts.FormsContract;
 import edu.aku.hassannaqvi.src_2.contracts.FormsContract.FormsTable;
+import edu.aku.hassannaqvi.src_2.contracts.UsersContract;
+import edu.aku.hassannaqvi.src_2.contracts.UsersContract.UsersTable;
 
 
 /**
@@ -29,6 +34,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String PROJECT_NAME = "src_2";
     private static final int DATABASE_VERSION = 1;
     public static final String DB_NAME = DATABASE_NAME.replace(".", "_" + MainApp.versionName + "_" + DATABASE_VERSION + "_copy.");
+
+
+    public static final String SQL_CREATE_USERS = "CREATE TABLE " + UsersTable.TABLE_NAME + "("
+            + UsersTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + UsersTable.ROW_USERNAME + " TEXT,"
+            + UsersTable.ROW_PASSWORD + " TEXT"
+            + " ) ;";
 
 
     private static final String SQL_CREATE_FORMS = "CREATE TABLE "
@@ -89,6 +101,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String SQL_DELETE_FORMS = "DROP TABLE IF EXISTS " + FormsTable.TABLE_NAME;
     private static final String SQL_DELETE_FAMILYMEMBERS = "DROP TABLE IF EXISTS " + familyMembers.TABLE_NAME;
+    private static final String SQL_DELETE_USER = "DROP TABLE IF EXISTS " + UsersTable.TABLE_NAME;
 
     private final String TAG = "DatabaseHelper";
     public String spDateT = new SimpleDateFormat("dd-MM-yy").format(new Date().getTime());
@@ -101,8 +114,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(SQL_CREATE_FORMS);
-
         db.execSQL(SQL_CREATE_FAMILY_MEMEBERS);
+        db.execSQL(SQL_CREATE_USERS);
     }
 
     @Override
@@ -110,6 +123,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(SQL_DELETE_FORMS);
         db.execSQL(SQL_DELETE_FAMILYMEMBERS);
+        db.execSQL(SQL_DELETE_USER);
     }
 
     public Long addForm(FormsContract fc, int type) {
@@ -279,5 +293,69 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return alc;
         }
     }
+
+    public void syncUser(JSONArray userlist) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(UsersTable.TABLE_NAME, null, null);
+        try {
+            JSONArray jsonArray = userlist;
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject jsonObjectUser = jsonArray.getJSONObject(i);
+
+                UsersContract user = new UsersContract();
+                user.Sync(jsonObjectUser);
+                ContentValues values = new ContentValues();
+
+                values.put(UsersContract.UsersTable.ROW_USERNAME, user.getUserName());
+                values.put(UsersTable.ROW_PASSWORD, user.getPassword());
+                db.insert(UsersTable.TABLE_NAME, null, values);
+            }
+
+
+        } catch (Exception e) {
+            Log.d(TAG, "syncUser(e): " + e);
+        } finally {
+            db.close();
+        }
+    }
+
+    public boolean Login(String username, String password) throws SQLException {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        String[] columns = {
+                UsersTable._ID,
+                UsersTable.ROW_USERNAME,
+                UsersTable.ROW_PASSWORD
+        };
+
+// Which row to update, based on the ID
+        String selection = UsersContract.UsersTable.ROW_USERNAME + " = ?" + " AND " + UsersContract.UsersTable.ROW_PASSWORD + " = ?";
+        String[] selectionArgs = {username, password};
+        Cursor cursor = db.query(UsersContract.UsersTable.TABLE_NAME, //Table to query
+                columns,                    //columns to return
+                selection,                  //columns for the WHERE clause
+                selectionArgs,              //The values for the WHERE clause
+                null,                       //group the rows
+                null,                       //filter by row groups
+                null);                      //The sort order
+
+        int cursorCount = cursor.getCount();
+
+        /*cursor.close();
+        db.close();
+        return cursorCount > 0;*/
+
+        if (cursorCount > 0) {
+            cursor.moveToFirst();
+            MainApp.usersContract = new UsersContract().Hydrate(cursor);
+            return true;
+        }
+
+        return false;
+    }
+
 
 }

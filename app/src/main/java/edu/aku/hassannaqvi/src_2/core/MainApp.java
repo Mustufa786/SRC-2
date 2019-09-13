@@ -29,6 +29,7 @@ import java.util.Map;
 
 import edu.aku.hassannaqvi.src_2.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.src_2.contracts.FormsContract;
+import edu.aku.hassannaqvi.src_2.contracts.UsersContract;
 import edu.aku.hassannaqvi.src_2.ui.EndingActivity;
 
 /**
@@ -83,6 +84,7 @@ public class MainApp extends Application {
     public static String cluster_no = "";
     public static Boolean flag_head = false;
     //    Ali
+    public static UsersContract usersContract = null;
     public static FamilyMembersContract fmc;
     public static List<FamilyMembersContract> members_f_m;
     public static List<FamilyMembersContract> respList;
@@ -210,7 +212,6 @@ public class MainApp extends Application {
 
     public static HashMap<String, String> getTagValues(Context mContext) {
         SharedPreferences sharedPref = mContext.getSharedPreferences("tagName", MODE_PRIVATE);
-
         HashMap<String, String> map = new HashMap<>();
         map.put("tag", sharedPref.getString("tagName", null));
         map.put("org", sharedPref.getString("countryID", null));

@@ -9,6 +9,10 @@
     <string name="not_applicable">	غير موضوع</string>
     <string name="sometimes">	ڪڏهن ڪڏهن   </string>
 
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
 
     <string name="istatus">انٹروہو کا نتیجہ</string>
     <string name="istatusa">مکمل</string>
@@ -122,6 +126,7 @@
     <string name="end03"> انڪار ڪيو </string>
     <string name="end04"> ٻن دورن کان پوء به ڪير به موجوده نه هو </string>
     <string name="end05"> لڏي وئي </string>
+
 
     <!--    Form 2-->
     <string name="f2ah"> صاف پيئڻ جو پاڻي </string>
