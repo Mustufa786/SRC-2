@@ -49,46 +49,60 @@
     <string name="f1amtd"> پشتو </string>
     <string name="f1amte"> بلوچي </string>
     <string name="f1amtf"> سرائڪي </string>
+
+
     <string name="f1bh"> سماجي ۽ معاشي معلومات </string>
     <string name="f1bh1">   نوٽ؛ هي فارم ان جو ڀريو ويندو:  </string>
+
     <string name="f1bh2">  شادي شده عورت جو ڀريوجنهن جو گهٽ ۾ گهٽ هڪ ٻار 5 سالن گهٽ عمر جو هجي يا منتخب نوجوان ڇوڪري جي ماءُ    </string>
-    <string name="f1bnm"> گهر ڀاتي جو نالو </string>
-    <string name="f1bsex"> جنس </string>
-    <string name="f1bsexa"> مرد </string>
-    <string name="f1bsexb"> عورت </string>
-    <string name="f1bdb"> عمر يا ڄمڻ جي تاريخ </string>
-    <string name="f1bmid"> ماءَ جي آءِ ڊي </string>
-    <string name="f1brw"> جواب ڏيندڙ سان رشتو </string>
-    <string name="f1brwa"> مڙس </string>
-    <string name="f1brwb"> پٽ </string>
-    <string name="f1brwc"> ڌي </string>
-    <string name="f1brwd"> پيءُ </string>
-    <string name="f1brwf"> ماءُ </string>
-    <string name="f1brwe"> ڀيڻ </string>
-    <string name="f1be"> تعليم </string>
-    <string name="f1bea"> ڪيترا سال اسڪول ۾ پڙهيو </string>
-    <string name="f1beb"> اڻ پڙهيل </string>
-    <string name="f1bec"> مذهبي تعليم </string>
-    <string name="f1bm"> ازواد جي حيثيت </string>
-    <string name="f1bma"> غير شادي شده </string>
-    <string name="f1bmb"> شادي شده </string>
-    <string name="f1bmc"> طلاق يافته </string>
-    <string name="f1bmd"> الگ، جدا </string>
-    <string name="f1bme"> بيوهه </string>
-    <string name="f1bp"> ڪاروبار </string>
-    <string name="f1bpa"> پروفيشنل /هنر مند/انتظاميا </string>
-    <string name="f1bpb"> ڪلارڪ </string>
-    <string name="f1bpc"> خريد ۽ فروخت </string>
-    <string name="f1bpd"> تربيت يافته مزدور </string>
-    <string name="f1bpe"> غير تربيت يافته مزدور </string>
-    <string name="f1bpf"> گھريلو خدمتون </string>
-    <string name="f1bpg"> زراعت </string>
-    <string name="f1bph"> ڪاروبار </string>
-    <string name="f1bpi"> ننڍو ڪاروبار/ دوڪاندار </string>
-    <string name="f1bpj"> بيروزگار </string>
-    <string name="f1bpk"> رٽائرڊ </string>
-    <string name="f1byi"> سال جي آمدني </string>
-    <string name="f1bim"> ان آمدني جي لاء توهان ڪيترا مهينا ڪم ڪيو. </string>
+    <string name="f1bh3"> منتخب ڪيو شروعات عورت کان    </string>
+
+    <string name="f1b01"> گهر ڀاتي جو نالو </string>
+    <string name="f1b02"> جنس </string>
+    <string name="f1b02a"> مرد </string>
+    <string name="f1b02b"> عورت </string>
+    <string name="f1b03"> عمر يا ڄمڻ جي تاريخ </string>
+    <string name="f1b03a"> عمر  </string>
+    <string name="f1b03b">  ڄمڻ جي تاريخ </string>
+
+    <string name="f1b04"> جواب ڏيندڙ سان رشتو </string>
+    <string name="f1b04a"> مڙس </string>
+    <string name="f1b04b"> پٽ </string>
+    <string name="f1b04c"> ڌي </string>
+    <string name="f1b04d"> پيءُ </string>
+    <string name="f1b04e"> ماءُ </string>
+    <string name="f1b04f"> ڀيڻُ </string>
+    <string name="f1b04g"> ڀاءُ	 </string>
+    <string name="f1b05"> ڀيڻ </string>
+    <string name="f1b05a"> اڻ پڙهيل </string>
+    <string name="f1b05b"> مذهبي تعليم </string>
+
+    <string name="f1b06"> ازواد جي حيثيت </string>
+    <string name="f1b06a"> غير شادي شده </string>
+    <string name="f1b06b"> شادي شده </string>
+    <string name="f1b06c"> طلاق يافته </string>
+    <string name="f1b06d"> الگ، جدا </string>
+    <string name="f1b06e"> بيوهه </string>
+    <string name="f1b07"> ڪاروبار </string>
+    <string name="f1b07a"> پروفيشنل /هنر مند/انتظاميا </string>
+    <string name="f1b07b"> ڪلارڪ </string>
+    <string name="f1b07c"> خريد ۽ فروخت </string>
+    <string name="f1b07d"> تربيت يافته مزدور </string>
+    <string name="f1b07e"> غير تربيت يافته مزدور </string>
+    <string name="f1b07f"> گھريلو خدمتون </string>
+    <string name="f1b07g"> زراعت </string>
+    <string name="f1b07h"> ڪاروبار </string>
+    <string name="f1b07i"> ننڍو ڪاروبار/ دوڪاندار </string>
+    <string name="f1b07j"> بيروزگار </string>
+    <string name="f1b07k">رٽائرڊ		 </string>
+    <string name="f1b07l"> گھريلو عورت	 </string>
+    <string name="f1b07m"> شاگرد </string>
+    <string name="f1b07n"> ڪجھ به نه	 </string>
+    <string name="f1b07o"> ٻيو ڪجھ	 </string>
+
+    <string name="f1b08"> سال جي آمدني </string>
+    <string name="f1b08a"> لاڳو نه ٿو ٿئي</string>
+    <string name="f1b09"> ان آمدني جي لاء توهان ڪيترا مهينا ڪم ڪيو. </string>
 
 
     <!--    Form 2-->

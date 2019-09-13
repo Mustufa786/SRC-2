@@ -8,18 +8,17 @@ import android.widget.Toast;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.src_2.R;
-import edu.aku.hassannaqvi.src_2.databinding.ActivityF2SectionABinding;
 
 public class F2SectionAActivity extends AppCompatActivity {
 
-    ActivityF2SectionABinding bi;
+    //F2ActivitySectionABinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_f2_section_a);
-        bi.setCallback(this);
+        //bi = DataBindingUtil.setContentView(this, R.layout.activity_f2_section_a);
+      //  bi.setCallback(this);
     }
 
     public void BtnContinue() {
@@ -50,14 +49,10 @@ public class F2SectionAActivity extends AppCompatActivity {
         return true;
     }
 
-    public void BtnEnd() {
+
+
+    public void BtnEnd()
+    {
 
     }
-
-
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "You can't go back.", Toast.LENGTH_SHORT).show();
-    }
-
 }
