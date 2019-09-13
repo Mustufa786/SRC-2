@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.InfoActivity"></activity>
+        <activity android:name=".ui.form1.F1SectionCActivity"></activity>
+        <activity android:name=".ui.form1.F1SectionBActivity" />
+        <activity android:name=".ui.form1.F1SectionAActivity" />
+        <activity android:name=".ui.InfoActivity" />
         <activity android:name=".ui.form3.F3SectionA02Activity" />
         <activity android:name=".ui.form3.F3SectionA01Activity" />
         <activity android:name=".ui.form6.F6SectionAActivity" />
