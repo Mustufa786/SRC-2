@@ -3,6 +3,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.src_2.ui.form3.F3SectionA02Activity" />

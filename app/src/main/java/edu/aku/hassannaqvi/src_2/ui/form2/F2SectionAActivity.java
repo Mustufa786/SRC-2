@@ -8,10 +8,11 @@ import android.widget.Toast;
 import org.json.JSONException;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.databinding.ActivityF2SectionABinding;
 
 public class F2SectionAActivity extends AppCompatActivity {
 
-    F2ActivitySectionABinding bi;
+    ActivityF2SectionABinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +48,16 @@ public class F2SectionAActivity extends AppCompatActivity {
     private boolean formValidation() {
 
         return true;
+    }
+
+    public void BtnEnd() {
+
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Toast.makeText(this, "You can't go back.", Toast.LENGTH_SHORT).show();
     }
 
 }

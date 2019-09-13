@@ -5,6 +5,7 @@
 
     <data>
 
+        <import type="android.view.View" />
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.src_2.ui.form3.F3SectionA01Activity" />
@@ -726,7 +727,7 @@
                             android:text="@string/f3a11d" />
 
                         <RadioButton
-                            android:id="@+id/jmik"
+                            android:id="@+id/f3a1196"
                             style="@style/radiobutton"
                             android:text="@string/other" />
 

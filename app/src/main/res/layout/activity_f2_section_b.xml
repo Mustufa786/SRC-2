@@ -4,6 +4,7 @@
 
     <data>
 
+        <import type="android.view.View" />
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.src_2.ui.form2.F2SectionBActivity" />
@@ -50,7 +51,7 @@
             </android.support.v7.widget.CardView>
 
             <LinearLayout
-                android:visibility='@{f2b01a.checked? View.VISBLE : View.GONE}'
+                android:visibility='@{f2b01a.checked? View.VISIBLE : View.GONE}'
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">

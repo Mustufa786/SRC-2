@@ -9,7 +9,7 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 
-import edu.aku.hassannaqvi.casi_2019.R;
+import edu.aku.hassannaqvi.src_2.R;
 
 
 /**
@@ -88,7 +88,6 @@ public class SplashscreenActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_splash_screen);
 
         mVisible = true;
