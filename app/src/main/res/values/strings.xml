@@ -114,6 +114,14 @@
     <string name="f1c05m">فرج </string>
     <string name="f1c05n">بئنڪ اڪائونٽ</string>
 
+    <!--    End Activity-->
+
+    <string name="endHeading"> انٽرويو جو نتيجو </string>
+    <string name="end01"> پورو ٿيو </string>
+    <string name="end02"> اڌ ۾ ڇڏيو </string>
+    <string name="end03"> انڪار ڪيو </string>
+    <string name="end04"> ٻن دورن کان پوء به ڪير به موجوده نه هو </string>
+    <string name="end05"> لڏي وئي </string>
 
     <!--    Form 2-->
     <string name="f2ah"> صاف پيئڻ جو پاڻي </string>
