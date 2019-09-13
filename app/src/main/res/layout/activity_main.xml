@@ -3,6 +3,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.src_2.MainActivity" />
@@ -132,65 +134,22 @@
                             android:layout_margin="@dimen/cardview_compat_inset_shadow"
                             android:layout_weight="1"
                             android:clickable="true"
-                            android:foreground="?android:attr/selectableItemBackground">
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:onClick='@{()->callback.openForm()}'>
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:orientation="vertical">
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_centerVertical="true"
-                                    android:gravity="center"
-                                    android:text="Enrolment and Household SES - Population Survey"
+                                    android:layout_centerInParent="true"
+                                    android:text="Open Form"
                                     android:textColor="@color/colorPrimaryDark" />
 
-                                <ImageView
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="5dp" />
-
-                            </LinearLayout>
-
-                        </android.support.v7.widget.CardView>
-
-                        <View
-                            android:layout_width="20dp"
-                            android:layout_height="match_parent" />
-
-                        <android.support.v7.widget.CardView
-                            android:layout_width="0dp"
-                            android:layout_height="120dp"
-                            android:layout_margin="@dimen/cardview_compat_inset_shadow"
-                            android:layout_weight="1"
-                            android:clickable="true"
-                            android:foreground="?android:attr/selectableItemBackground">
-
-                            <LinearLayout
-                                android:layout_width="239dp"
-                                android:layout_height="99dp"
-                                android:layout_margin="10dp"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerVertical="true"
-                                    android:gravity="center"
-                                    android:text="Enrolment and Household SES - School Cohort"
-                                    android:textColor="@color/colorPrimaryDark" />
-
-                                <ImageView
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
-                                    android:layout_gravity="center"
-                                    android:layout_marginTop="5dp" />
-
-                            </LinearLayout>
+                            </RelativeLayout>
 
                         </android.support.v7.widget.CardView>
 

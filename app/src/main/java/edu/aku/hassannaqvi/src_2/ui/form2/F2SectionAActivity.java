@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.src_2.ui.form2;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,7 +28,7 @@ public class F2SectionAActivity extends AppCompatActivity {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
-//                    startActivity(new Intent(getApplicationContext(), Form02HHPart_1.class));
+                    startActivity(new Intent(getApplicationContext(), F2SectionBActivity.class));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }
@@ -53,7 +54,6 @@ public class F2SectionAActivity extends AppCompatActivity {
     public void BtnEnd() {
 
     }
-
 
     @Override
     public void onBackPressed() {

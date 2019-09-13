@@ -28,7 +28,6 @@
     <string name="some">ڪڏهن ڪڏهن</string>
     <string name="often">اڪثر ڪري</string>
     <string name="almostA">هميشه</string>
-
     <string name="other"> ٻيو ڪجھ </string>
     <string name="month"> مهينا </string>
     <string name="year"> سال </string>
@@ -38,17 +37,17 @@
     <!--    Form 1-->
     <string name="f1"> ڊيموگرافڪ </string>
     <string name="f1adate"> دوري جي تاريخ </string>
-    <string name="f1auni"> يونين ڪائونسل </string>
-    <string name="f1awn"> ڳوٺ / وارڊ جو نالو </string>
-    <string name="f1awc"> ڳوٺ / وارڊ جو ڪوڊ </string>
-    <string name="f1ahid"> گھر جو نمبر </string>
-    <string name="f1amt"> مادري زبان </string>
-    <string name="f1amta"> اردو </string>
-    <string name="f1amtb"> سنڌي </string>
-    <string name="f1amtc"> پنجابي </string>
-    <string name="f1amtd"> پشتو </string>
-    <string name="f1amte"> بلوچي </string>
-    <string name="f1amtf"> سرائڪي </string>
+    <string name="f1a01"> يونين ڪائونسل </string>
+    <string name="f1a02"> ڳوٺ / وارڊ جو نالو </string>
+    <string name="f1a03"> ڳوٺ / وارڊ جو ڪوڊ </string>
+    <string name="f1a04"> گھر جو نمبر </string>
+    <string name="f1a05"> مادري زبان </string>
+    <string name="f1a05a"> اردو </string>
+    <string name="f1a05b"> سنڌي </string>
+    <string name="f1a05c"> پنجابي </string>
+    <string name="f1a05d"> پشتو </string>
+    <string name="f1a05e"> بلوچي </string>
+    <string name="f1a05f"> سرائڪي </string>
     <string name="f1bh"> سماجي ۽ معاشي معلومات </string>
     <string name="f1bh1">   نوٽ؛ هي فارم ان جو ڀريو ويندو:  </string>
     <string name="f1bh2">  شادي شده عورت جو ڀريوجنهن جو گهٽ ۾ گهٽ هڪ ٻار 5 سالن گهٽ عمر جو هجي يا منتخب نوجوان ڇوڪري جي ماءُ    </string>
@@ -89,6 +88,31 @@
     <string name="f1bpk"> رٽائرڊ </string>
     <string name="f1byi"> سال جي آمدني </string>
     <string name="f1bim"> ان آمدني جي لاء توهان ڪيترا مهينا ڪم ڪيو. </string>
+
+
+    <string name="f1c01">گهر جي مالڪاڻي حيثيت ڇا آهي؟</string>
+    <string name="f1c01a">ذاتي</string>
+    <string name="f1c01b">ڪرائي تي</string>
+    <string name="f1c01c">بنا ڪرائي جي رهائش</string>
+
+    <string name="f1c02">ڇا توهان کي رڌ پچاءَ جي لاءِ ڌار بورچي خانو آهي؟</string>
+    <string name="f1c03">سمهڻ جي لاءِ هن گهر ۾ ڪيترا ڪمرا استعمال ٿينداآهن؟</string>
+    <string name="f1c04">ڪمرن ۾ ڪيترا ماڻهو سمهندا آهن </string>
+    <string name="f1c05">توهان وٽ ڪهڙو سامان موجود آهي</string>
+    <string name="f1c05a">بجلي</string>
+    <string name="f1c05b">استري   </string>
+    <string name="f1c05c">فوم وارا گدا  </string>
+    <string name="f1c05d">ڪرسي </string>
+    <string name="f1c05e">صوفا </string>
+    <string name="f1c05f">الماڙي  </string>
+    <string name="f1c05g">ٽيبل </string>
+    <string name="f1c05h">ريڊيو </string>
+    <string name="f1c05i">ڪمپيوٽر  </string>
+    <string name="f1c05j">ٽيليويزن  </string>
+    <string name="f1c05k">سلائي مشين</string>
+    <string name="f1c05l">موبائيل فون  </string>
+    <string name="f1c05m">فرج </string>
+    <string name="f1c05n">بئنڪ اڪائونٽ</string>
 
 
     <!--    Form 2-->
