@@ -104,7 +104,7 @@ public class F3SectionA01Activity extends AppCompatActivity {
                 }
             }
         });
-        bi.f3a0598.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        bi.f3a0597.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
@@ -180,6 +180,7 @@ public class F3SectionA01Activity extends AppCompatActivity {
 
         JSONObject f1 = new JSONObject();
 
+   /*
         f1.put("f3a01", bi.f3a01a.isChecked() ? "1"
                 : bi.f3a01b.isChecked() ? "2"
                 : bi.f3a01c.isChecked() ? "3"
@@ -188,15 +189,16 @@ public class F3SectionA01Activity extends AppCompatActivity {
                 : "0");
 
 
-        f1.put("f3a02", bi.f3a02a.isChecked() ? "1"
-                : bi.f3a02b.isChecked() ? "2"
-                : bi.f3a0296.isChecked() ? "96"
-                : "0");
+
+        f1.put("f3a02", bi.f3a02a.isChecked() ? "1" : bi.f3a02b.isChecked() ? "2" : bi.f3a0296.isChecked() ? "96" : "0");
+
+
+        f1.put("f3a02",bi.f3a02a.isChecked() ?"1" :bi.f3a02b.isChecked() ?'2" :bi.f3a0296.isChecked() ?'96" :'0');
 
 
 
 
-        f1.put("f3a0296x", bi.f3a0296x.getText().toString());
+                f1.put("f3a0296x", bi.f3a0296x.getText().toString());
 
         f1.put("f3a03", bi.f3a03a.isChecked() ? "1"
                 : bi.f3a03b.isChecked() ? "2"
@@ -218,7 +220,7 @@ public class F3SectionA01Activity extends AppCompatActivity {
         f1.put("f3a05g", bi.f3a05g.isChecked() ? "1" : "0");
         f1.put("f3a05h", bi.f3a05h.isChecked() ? "1" : "0");
         f1.put("f3a0596", bi.f3a0596.isChecked() ? "1" : "0");
-        f1.put("f3a0598", bi.f3a0598.isChecked() ? "1" : "0");
+        f1.put("f3a0597", bi.f3a0597.isChecked() ? "1" : "0");
         f1.put("f3a0599", bi.f3a0599.isChecked() ? "1" : "0");
         f1.put("f3a0596x", bi.f3a0596x.getText().toString());
 
@@ -248,7 +250,65 @@ public class F3SectionA01Activity extends AppCompatActivity {
 
 
 
+ */
 
+
+
+
+        f1.put("f3a01",bi.f3a01a.isChecked() ?"1" :bi.f3a01b.isChecked() ?"2" :bi.f3a01c.isChecked() ?"3" :bi.f3a0198.isChecked() ?"98" :bi.f3a0199.isChecked() ?"99" :"0");
+        f1.put("f3a0296x", bi.f3a0296x.getText().toString());
+        f1.put("f3a02",bi.f3a02a.isChecked() ?"1" :bi.f3a02b.isChecked() ?"2" :bi.f3a0296.isChecked() ?"96" :"0");
+        f1.put("f3a0396x", bi.f3a0396x.getText().toString());
+        f1.put("f3a03",bi.f3a03a.isChecked() ?"1" :bi.f3a03b.isChecked() ?"2" :bi.f3a0399.isChecked() ?"99" :bi.f3a0396.isChecked() ?"96" :"0");
+        f1.put("f3a04", bi.f3a04.getText().toString());
+        f1.put("f3a05a",bi.f3a05a.isChecked() ?"1" :"0");
+        f1.put("f3a05b",bi.f3a05b.isChecked() ?"2" :"0");
+        f1.put("f3a05c",bi.f3a05c.isChecked() ?"3" :"0");
+        f1.put("f3a05d",bi.f3a05d.isChecked() ?"4" :"0");
+        f1.put("f3a05e",bi.f3a05e.isChecked() ?"5" :"0");
+        f1.put("f3a05f",bi.f3a05f.isChecked() ?"6" :"0");
+        f1.put("f3a05g",bi.f3a05g.isChecked() ?"7" :"0");
+        f1.put("f3a05h",bi.f3a05h.isChecked() ?"8" :"0");
+        f1.put("f3a0596",bi.f3a0596.isChecked() ?"96" :"0");
+        f1.put("f3a0596x", bi.f3a0596x.getText().toString());
+        f1.put("f3a0597",bi.f3a0597.isChecked() ?"97" :"0");
+        f1.put("f3a0599",bi.f3a0599.isChecked() ?"99" :"0");
+        f1.put("f3a06",bi.f3a06a.isChecked() ?"1" :bi.f3a06b.isChecked() ?"2" :bi.f3a06c.isChecked() ?"3" :bi.f3a06d.isChecked() ?"4" :bi.f3a0697.isChecked() ?"97" :bi.f3a0699.isChecked() ?"99" :bi.f3a0698.isChecked() ?"98" :"0");
+        f1.put("f3a07",bi.f3a07a.isChecked() ?"1" :bi.f3a07b.isChecked() ?"2" :bi.f3a07c.isChecked() ?"3" :"0");
+        f1.put("f3a08a",bi.f3a08a.isChecked() ?"1" :"0");
+        f1.put("f3a08b",bi.f3a08b.isChecked() ?"2" :"0");
+        f1.put("f3a08c",bi.f3a08c.isChecked() ?"3" :"0");
+        f1.put("f3a08d",bi.f3a08d.isChecked() ?"4" :"0");
+        f1.put("f3a08e",bi.f3a08e.isChecked() ?"5" :"0");
+        f1.put("f3a0896",bi.f3a0896.isChecked() ?"96" :"0");
+        f1.put("f3a0896x", bi.f3a0896x.getText().toString());
+        f1.put("f3a0898",bi.f3a0898.isChecked() ?"98" :"0");
+        f1.put("f3a09a",bi.f3a09a.isChecked() ?"1" :"0");
+        f1.put("f3a09b",bi.f3a09b.isChecked() ?"2" :"0");
+        f1.put("f3a09c",bi.f3a09c.isChecked() ?"3" :"0");
+        f1.put("f3a09d",bi.f3a09d.isChecked() ?"4" :"0");
+        f1.put("f3a09e",bi.f3a09e.isChecked() ?"5" :"0");
+        f1.put("f3a09f",bi.f3a09f.isChecked() ?"6" :"0");
+        f1.put("f3a09g",bi.f3a09g.isChecked() ?"7" :"0");
+        f1.put("f3a09h",bi.f3a09h.isChecked() ?"8" :"0");
+        f1.put("f3a09i",bi.f3a09i.isChecked() ?"9" :"0");
+        f1.put("f3a0996",bi.f3a0996.isChecked() ?"96" :"0");
+        f1.put("f3a0996x", bi.f3a0996x.getText().toString());
+        f1.put("f3a0997",bi.f3a0997.isChecked() ?"99" :"0");
+        f1.put("f3a1096x", bi.f3a1096x.getText().toString());
+        f1.put("f3a10",bi.f3a10a.isChecked() ?"1" :bi.f3a10b.isChecked() ?"2" :bi.f3a10c.isChecked() ?"3" :bi.f3a10d.isChecked() ?"4" :bi.f3a10e.isChecked() ?"5" :bi.f3a10f.isChecked() ?"6" :bi.f3a10g.isChecked() ?"7" :bi.f3a10h.isChecked() ?"8" :bi.f3a10i.isChecked() ?"9" :bi.f3a10j.isChecked() ?"10" :bi.f3a1096.isChecked() ?"96" :bi.f3a1097.isChecked() ?"97" :bi.f3a1099.isChecked() ?"99" :"0");
+        f1.put("f3a1196x", bi.f3a1196x.getText().toString());
+        f1.put("f3a11",bi.f3a11a.isChecked() ?"1" :bi.f3a11b.isChecked() ?"2" :bi.f3a11c.isChecked() ?"3" :bi.f3a11d.isChecked() ?"4" :bi.f3a1196.isChecked() ?"96" :bi.f3a1199.isChecked() ?"99" :"0");
+        f1.put("f3a1296x", bi.f3a1296x.getText().toString());
+        f1.put("f3a12",bi.f3a12a.isChecked() ?"2" :bi.f3a12b.isChecked() ?"3" :bi.f3a12c.isChecked() ?"4" :bi.f3a1299.isChecked() ?"99" :bi.f3a1296.isChecked() ?"96" :"0");
+        f1.put("f3a13",bi.f3a13a.isChecked() ?"1" :bi.f3a13b.isChecked() ?"2" :bi.f3a13c.isChecked() ?"3" :bi.f3a13d.isChecked() ?"4" :bi.f3a13e.isChecked() ?"5" :bi.f3a13f.isChecked() ?"6" :bi.f3a1399.isChecked() ?"99" :"0");
+        f1.put("f3a14a",bi.f3a14a.isChecked() ?"1" :"0");
+        f1.put("f3a14b",bi.f3a14b.isChecked() ?"2" :"0");
+        f1.put("f3a14c",bi.f3a14c.isChecked() ?"3" :"0");
+        f1.put("f3a1496",bi.f3a1496.isChecked() ?"96" :"0");
+        f1.put("f3a1496x", bi.f3a1496x.getText().toString());
+        f1.put("f3a1499",bi.f3a1499.isChecked() ?"99" :"0");
+        f1.put("f3a15",bi.f3a15a.isChecked() ?"1" :bi.f3a15b.isChecked() ?"2" :bi.f3a15c.isChecked() ?"3" :bi.f3a15d.isChecked() ?"4" :bi.f3a1599.isChecked() ?"99" :"0");
 
 
     }

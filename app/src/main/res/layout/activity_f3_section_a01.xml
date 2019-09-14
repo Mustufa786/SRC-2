@@ -145,7 +145,7 @@
                             android:text="@string/no" />
 
                         <RadioButton
-                            android:id="@+id/f3a03c"
+                            android:id="@+id/f3a0399"
                             style="@style/radiobutton"
                             android:text="@string/no_answer" />
 
@@ -288,7 +288,7 @@
                     </LinearLayout>
 
                     <CheckBox
-                        android:id="@+id/f3a0598"
+                        android:id="@+id/f3a0597"
                         style="@style/checkbox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -462,6 +462,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/f3a08d" />
+                        <CheckBox
+                            android:id="@+id/f3a08e"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f3a08e" />
 
 
                         <CheckBox
@@ -936,21 +942,21 @@
 
 
                             <CheckBox
-                                android:id="@+id/f3a1396"
+                                android:id="@+id/f3a1496"
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/other" />
 
                             <EditText
-                                android:id="@+id/f3a1396x"
+                                android:id="@+id/f3a1496x"
                                 style="@style/textInput"
                                 android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                                 android:hint="@string/other"
                                 android:inputType="text"
                                 android:tag="f3a1396"
-                                android:text='@{f3a1396.checked? f3a1396x.getText.toString : ""}'
-                                android:visibility='@{f3a1396.checked? View.VISIBLE : View.GONE}' />
+                                android:text='@{f3a1496.checked? f3a1496x.getText.toString : ""}'
+                                android:visibility='@{f3a1496.checked? View.VISIBLE : View.GONE}' />
 
 
                         </LinearLayout>
