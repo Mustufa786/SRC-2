@@ -620,16 +620,16 @@ public class F1SectionBActivity extends AppCompatActivity {
                     if(f1b06a.isChecked())
                     {
                         respondent_type="UM";
-                        FormsContract.Respondent_is_UnMarried=true;
+                        MainApp.Respondent_is_UnMarried=true;
                     }
                     else if(f1b06b.isChecked())
                     {
-                        FormsContract.Respondent_is_UnMarried=false;
+                        MainApp.Respondent_is_UnMarried=false;
                         respondent_type="M";
                     }
                     else
                     {
-                        FormsContract.Respondent_is_UnMarried=false;
+                        MainApp.Respondent_is_UnMarried=false;
                         respondent_type="others";
                     }
 
