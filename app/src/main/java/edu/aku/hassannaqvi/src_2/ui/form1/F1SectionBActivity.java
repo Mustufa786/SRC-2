@@ -14,7 +14,6 @@ import edu.aku.hassannaqvi.src_2.databinding.ActivityF1SectionBBinding;
 public class F1SectionBActivity extends AppCompatActivity {
 
 
-
     ActivityF1SectionBBinding bi;
 
     @Override
@@ -30,20 +29,18 @@ public class F1SectionBActivity extends AppCompatActivity {
 
     public void BtnAddMembers() {
 
-         final AlertDialog b = new AlertDialog.Builder(this).create();
-
-
+        final AlertDialog b = new AlertDialog.Builder(this).create();
         LayoutInflater layoutInflater = getLayoutInflater();
         View v = layoutInflater.inflate(R.layout.dialog_f1_section_b_add_member, null);
         b.setView(v);
         b.show();
         b.setCancelable(false);
 
-        Button btn_Continue,btn_End;
+        Button btn_Continue, btn_End;
 
 
-        btn_Continue=v.findViewById(R.id.btn_Continue);
-        btn_End=v.findViewById(R.id.btn_End);
+        btn_Continue = v.findViewById(R.id.btn_Continue);
+        btn_End = v.findViewById(R.id.btn_End);
 
         btn_Continue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,16 +58,13 @@ public class F1SectionBActivity extends AppCompatActivity {
         });
 
 
+    }
 
-        }
+    public void BtnContinue() {
 
-        public void BtnContinue()
-        {
+    }
 
-        }
-
-    public void BtnEnd()
-    {
+    public void BtnEnd() {
 
     }
 

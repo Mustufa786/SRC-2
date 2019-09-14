@@ -1,15 +1,27 @@
 package edu.aku.hassannaqvi.src_2.ui.form1;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.format.DateFormat;
 import android.widget.Toast;
 
 import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.Date;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.contracts.FormsContract;
+import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
+import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF1SectionABinding;
+import edu.aku.hassannaqvi.src_2.util.Util;
+import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
+
+import static edu.aku.hassannaqvi.src_2.core.MainApp.fc;
 
 public class F1SectionAActivity extends AppCompatActivity {
 
@@ -41,25 +53,55 @@ public class F1SectionAActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        Long rowId;
+        DatabaseHelper db = new DatabaseHelper(this);
+        rowId = db.addForm(fc);
+        if (rowId > 0) {
+            fc.set_ID(String.valueOf(rowId));
+            fc.setUID((fc.getDeviceID() + fc.get_ID()));
+            db.updateFormID(fc);
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+
+        }
     }
 
     private void SaveDraft() throws JSONException {
+
+        fc = new FormsContract();
+        SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+        fc.setTagID(sharedPref.getString("tagName", null));
+        fc.setFormDate((DateFormat.format("dd-MM-yyyy HH:mm", new Date())).toString());
+        fc.setDeviceID(MainApp.deviceId);
+        fc.setUser(MainApp.userName);
+        fc.setUc(MainApp.userName);
+        fc.setVillage(MainApp.userName);
+        fc.setHhNo(bi.f1a04.getText().toString());
+        JSONObject f1 = new JSONObject();
+        f1.put("f1a05", bi.f1a05a.isChecked() ? "1"
+                : bi.f1a05b.isChecked() ? "2"
+                : bi.f1a05c.isChecked() ? "3"
+                : bi.f1a05d.isChecked() ? "4"
+                : bi.f1a05e.isChecked() ? "5"
+                : bi.f1a05f.isChecked() ? "6"
+                : bi.f1a0596.isChecked() ? "96"
+                : "0");
+        f1.put("f1a0596x", bi.f1a0596x.getText().toString());
+        Util.setGPS(this);
+
     }
 
     private boolean formValidation() {
 
-        return true;
+        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpSectionF1A);
     }
 
     public void BtnEnd() {
 
+        MainApp.endActivity(this, this);
     }
 
-
-    @Override
-    public void onBackPressed() {
-        Toast.makeText(this, "You can't go back.", Toast.LENGTH_SHORT).show();
-    }
 
 }

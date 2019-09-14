@@ -217,6 +217,24 @@
     <string name="f2b09c"> سستو آهي </string>
 
 
+    <string name="f2c01"> توهان جي گهر جا ڀاتي گهڻو ڪري ڪهڙي قسم جي ليٽرين استعمال ڪندا آهن؟ </string>
+    <string name="f2c01a">نڪاسي جو باقاعدي نظام</string>
+    <string name="f2c01b">گٽر سان جڙيلنيڪال</string>
+    <string name="f2c01c">عارضي حاجت وارو نيڪال</string>
+    <string name="f2c01d">ٻي ڪنهن جاءِ وارو نيڪال</string>
+    <string name="f2c01e">ڪا به جاءِ</string>
+    <string name="f2c01f">هوادار حاجت واري جاء</string>
+    <string name="f2c01g">سليب سان عارضي حاجت واري جاء</string>
+    <string name="f2c01h">سليب کان بغير کليل حاجت واري جاءِ</string>
+    <string name="f2c01i">بالٽي واري حاجت جي جاءِ</string>
+    <string name="f2c01j">ٽنگيل حاجت واري جاء</string>
+    <string name="f2c01k">بغير سهولت جيزمين يا ٻوڙن۾</string>
+
+    <string name="f2cHeading"> عمل يا طريقا     </string>
+    <string name="f2c02">ڇا توهان اها ليٽرين ٻين گهرن کي به استعمال ڪرڻ ڏيندا آهيو؟</string>
+    <string name="f2c03">جيڪڏهن ها ته ٻيا گهڻا گهرليٽرين جي اها سهولت استعمال ڪندا آهن؟</string>
+
+
     <!--    Form 7-->
     <string name="f7Form"> Form - 07 DIARRHEA </string>
     <string name="f7anh"> نوٽ ؛ هي فارم صرف منتخب ٿيل جواب ڏيندڙ کان پڇو </string>

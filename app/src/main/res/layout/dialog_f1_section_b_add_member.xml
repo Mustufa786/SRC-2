@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-
 <LinearLayout
 
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:layoutDirection="rtl"
     android:orientation="vertical"
@@ -17,16 +16,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layoutDirection="rtl"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:orientation="vertical">
 
 
             <!--f1b01-->
@@ -40,19 +36,16 @@
                         android:text="@string/f1b01" />
 
 
-
                     <EditText
                         android:id="@+id/f1b01"
                         style="@style/textInput"
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="f1b01"
-                        android:text="@string/f1b01"
                         android:inputType="text"
-                        />
+                        android:text="@string/f1b01" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
 
 
             <!--f1b02-->
@@ -107,7 +100,6 @@
                             android:text="@string/f1b03a" />
 
 
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f1b03a1"
                             style="@style/textInput"
@@ -116,8 +108,6 @@
                             android:maxLength="2"
                             app:maxValue="29"
                             app:minValue="1"
-
-
 
 
                             app:type="range" />
@@ -134,8 +124,6 @@
                             app:minValue="1"
 
 
-
-
                             app:type="range" />
                         <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
 
@@ -149,8 +137,6 @@
                             app:minValue="0"
 
 
-
-
                             app:type="range" />
                         <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
 
@@ -161,7 +147,6 @@
                             android:text="@string/f1b03b" />
 
 
-
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f1b03b1"
                             style="@style/textInput"
@@ -170,8 +155,6 @@
                             android:maxLength="2"
                             app:maxValue="30"
                             app:minValue="1"
-
-
 
 
                             app:type="range" />
@@ -188,8 +171,6 @@
                             app:minValue="1"
 
 
-
-
                             app:type="range" />
 
                         <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
@@ -204,11 +185,8 @@
                             app:minValue="1940"
 
 
-
-
                             app:type="range" />
                         <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
-
 
 
                     </RadioGroup>
@@ -216,7 +194,6 @@
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
 
 
             <!--f1b04-->
@@ -243,22 +220,27 @@
                             android:id="@+id/f1b04b"
                             style="@style/radiobutton"
                             android:text="@string/f1b04b" />
+
                         <RadioButton
                             android:id="@+id/f1b04c"
                             style="@style/radiobutton"
                             android:text="@string/f1b04c" />
+
                         <RadioButton
                             android:id="@+id/f1b04d"
                             style="@style/radiobutton"
                             android:text="@string/f1b04d" />
+
                         <RadioButton
                             android:id="@+id/f1b04e"
                             style="@style/radiobutton"
                             android:text="@string/f1b04e" />
+
                         <RadioButton
                             android:id="@+id/f1b04f"
                             style="@style/radiobutton"
                             android:text="@string/f1b04f" />
+
                         <RadioButton
                             android:id="@+id/f1b04g"
                             style="@style/radiobutton"
@@ -269,8 +251,6 @@
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
-
 
 
             <!--f1b05-->
@@ -287,7 +267,6 @@
                     <RadioGroup
                         android:id="@+id/f1b05"
                         style="@style/radiogroup">
-
 
 
                         <com.edittextpicker.aliazaz.EditTextPicker
@@ -310,7 +289,6 @@
                             android:text="@string/f1b05a" />
 
 
-
                         <RadioButton
                             android:id="@+id/f1b05b"
                             style="@style/radiobutton"
@@ -322,8 +300,6 @@
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
-
 
 
             <!--f1b06-->
@@ -350,14 +326,17 @@
                             android:id="@+id/f1b06b"
                             style="@style/radiobutton"
                             android:text="@string/f1b06b" />
+
                         <RadioButton
                             android:id="@+id/f1b06c"
                             style="@style/radiobutton"
                             android:text="@string/f1b06c" />
+
                         <RadioButton
                             android:id="@+id/f1b06d"
                             style="@style/radiobutton"
                             android:text="@string/f1b06d" />
+
                         <RadioButton
                             android:id="@+id/f1b06e"
                             style="@style/radiobutton"
@@ -369,7 +348,6 @@
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
 
 
             <!--f1b07-->
@@ -396,54 +374,67 @@
                             android:id="@+id/f1b07b"
                             style="@style/radiobutton"
                             android:text="@string/f1b07b" />
+
                         <RadioButton
                             android:id="@+id/f1b07c"
                             style="@style/radiobutton"
                             android:text="@string/f1b07c" />
+
                         <RadioButton
                             android:id="@+id/f1b07d"
                             style="@style/radiobutton"
                             android:text="@string/f1b07d" />
+
                         <RadioButton
                             android:id="@+id/f1b07e"
                             style="@style/radiobutton"
                             android:text="@string/f1b07e" />
+
                         <RadioButton
                             android:id="@+id/f1b07f"
                             style="@style/radiobutton"
                             android:text="@string/f1b07f" />
+
                         <RadioButton
                             android:id="@+id/f1b07g"
                             style="@style/radiobutton"
                             android:text="@string/f1b07g" />
+
                         <RadioButton
                             android:id="@+id/f1b07h"
                             style="@style/radiobutton"
                             android:text="@string/f1b07h" />
+
                         <RadioButton
                             android:id="@+id/f1b07i"
                             style="@style/radiobutton"
                             android:text="@string/f1b07i" />
+
                         <RadioButton
                             android:id="@+id/f1b07j"
                             style="@style/radiobutton"
                             android:text="@string/f1b07j" />
+
                         <RadioButton
                             android:id="@+id/f1b07k"
                             style="@style/radiobutton"
                             android:text="@string/f1b07k" />
+
                         <RadioButton
                             android:id="@+id/f1b07l"
                             style="@style/radiobutton"
                             android:text="@string/f1b07l" />
+
                         <RadioButton
                             android:id="@+id/f1b07m"
                             style="@style/radiobutton"
                             android:text="@string/f1b07m" />
+
                         <RadioButton
                             android:id="@+id/f1b07n"
                             style="@style/radiobutton"
                             android:text="@string/f1b07n" />
+
                         <RadioButton
                             android:id="@+id/f1b07o"
                             style="@style/radiobutton"
@@ -482,7 +473,6 @@
                         android:text="@string/f1b08" />
 
 
-
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/f1b08x"
                         style="@style/textInput"
@@ -501,8 +491,6 @@
                         android:id="@+id/f1b08a"
                         style="@style/checkbox"
                         android:text="@string/f1b08a" />
-
-
 
 
                 </LinearLayout>
@@ -524,7 +512,6 @@
                         android:text="@string/f1b09" />
 
 
-
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/f1b09"
                         style="@style/textInput"
@@ -537,16 +524,8 @@
                         app:type="range" />
 
 
-
-
-
-
-
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
-
-
 
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
