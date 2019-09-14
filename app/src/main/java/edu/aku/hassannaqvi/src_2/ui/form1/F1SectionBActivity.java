@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import edu.aku.hassannaqvi.src_2.R;
 import edu.aku.hassannaqvi.src_2.contracts.FormsContract;
+import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF1SectionBBinding;
 import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
@@ -886,9 +887,9 @@ public class F1SectionBActivity extends AppCompatActivity {
 
         }
 
-    public void BtnEnd()
-    {
+    public void BtnEnd() {
 
+        MainApp.endActivity(this, this);
     }
 
 

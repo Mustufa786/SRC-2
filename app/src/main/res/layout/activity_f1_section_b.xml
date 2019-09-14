@@ -43,26 +43,22 @@
                         style="@style/i_textview"
                         android:text="@string/f1bh"
                         android:textStyle="italic"
-                        android:background="#e76b4c"
                         />
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/f1bh1"
                         android:textStyle="italic"
-                        android:background="#e76b4c"
                         />
 
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/f1bh2"
                         android:textStyle="italic"
-                        android:background="#e76b4c"
                         />
                     <TextView
                         style="@style/i_textview"
                         android:text="@string/f1bh3"
                         android:textStyle="italic"
-                        android:background="#e76b4c"
                         />
 
 
@@ -105,7 +101,7 @@
                 <Button
                     android:id="@+id/btn_add_memb"
                     style="@style/button"
-                    android:background="#6e1600"
+                    android:background="@color/colorPrimary"
                     android:layout_marginRight="10dp"
                     android:onClick="@{() -> callback.BtnAddMembers()}"
                     android:text="ميمبر شامل ڪريو" />

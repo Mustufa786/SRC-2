@@ -38,9 +38,14 @@ public class MainActivity extends AppCompatActivity {
             bi.databaseBtn.setVisibility(View.GONE);
         }
 
-        Util.showTagDialog(this);
-
         sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+        if (sharedPref.getString("tagName", null).equals("")
+                && sharedPref.getString("tagName", null) == null) {
+            Util.showTagDialog(this);
+        }
+
+
+
 
 
         db = new DatabaseHelper(this);

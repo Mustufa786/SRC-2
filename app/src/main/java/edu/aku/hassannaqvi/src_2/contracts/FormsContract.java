@@ -114,7 +114,6 @@ public class FormsContract {
         this.hhNo = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HH_NO));
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
         this.istatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS88x));
-        this.istatusHH = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUSHH));
         this.gpsElev = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSELEV));
         this.f1 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_F1));
         this.f2 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_F2));

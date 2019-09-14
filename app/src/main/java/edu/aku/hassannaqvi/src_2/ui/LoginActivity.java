@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,9 +21,13 @@ import java.util.HashMap;
 
 import edu.aku.hassannaqvi.src_2.MainActivity;
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.contracts.DistrictsContract;
+import edu.aku.hassannaqvi.src_2.contracts.UsersContract;
+import edu.aku.hassannaqvi.src_2.contracts.VillagesContract;
 import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
 import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityLoginBinding;
+import edu.aku.hassannaqvi.src_2.get.GetAllData;
 import edu.aku.hassannaqvi.src_2.util.Util;
 
 import static java.lang.Thread.sleep;
@@ -84,7 +90,16 @@ public class LoginActivity extends AppCompatActivity {
 
 
     public void syncData() {
-
+        ConnectivityManager connMgr = (ConnectivityManager)
+                getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            new GetAllData(this, "users", MainApp._HOST_URL + UsersContract.UsersTable._URI).execute();
+            new GetAllData(this, "ucs", MainApp._HOST_URL + DistrictsContract.singleDistrict._URI).execute();
+            new GetAllData(this, "villages", MainApp._HOST_URL + VillagesContract.singleVillages._URI).execute();
+        } else {
+            Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void showProgress(boolean b) {

@@ -72,9 +72,7 @@ public class EndingActivity extends AppCompatActivity {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-
-//
-
+                finish();
                 Intent endSec = new Intent(this, MainActivity.class);
                 startActivity(endSec);
             } else {

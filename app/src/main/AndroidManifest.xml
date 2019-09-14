@@ -25,6 +25,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.SplashscreenActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,8 +38,12 @@
         <activity android:name=".ui.form1.F1SectionCActivity" />
         <activity android:name=".ui.form1.F1SectionBActivity" />
         <activity android:name=".ui.form1.F1SectionAActivity" />
-        <activity android:name=".ui.form3.F3SectionA02Activity" />
-        <activity android:name=".ui.form3.F3SectionA01Activity" />
+        <activity android:name=".ui.form3.F3SectionA02Activity">
+
+        </activity>
+        <activity android:name=".ui.form3.F3SectionA01Activity">
+
+        </activity>
         <activity android:name=".ui.form6.F6SectionAActivity" />
         <activity android:name=".ui.form5.F5SectionAActivity" />
         <activity android:name=".ui.form4.F4SectionBActivity" />
@@ -53,6 +58,7 @@
         <activity android:name=".MainActivity">
 
         </activity>
+        <activity android:name=".ui.EndingActivity"></activity>
     </application>
 
 </manifest>

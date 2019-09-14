@@ -16,13 +16,18 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
+import edu.aku.hassannaqvi.src_2.contracts.DistrictsContract;
+import edu.aku.hassannaqvi.src_2.contracts.DistrictsContract.singleDistrict;
 import edu.aku.hassannaqvi.src_2.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.src_2.contracts.FamilyMembersContract.familyMembers;
 import edu.aku.hassannaqvi.src_2.contracts.FormsContract;
 import edu.aku.hassannaqvi.src_2.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.src_2.contracts.UsersContract;
 import edu.aku.hassannaqvi.src_2.contracts.UsersContract.UsersTable;
+import edu.aku.hassannaqvi.src_2.contracts.VillagesContract;
+import edu.aku.hassannaqvi.src_2.contracts.VillagesContract.singleVillages;
 
 
 /**
@@ -41,6 +46,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + UsersTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + UsersTable.ROW_USERNAME + " TEXT,"
             + UsersTable.ROW_PASSWORD + " TEXT"
+            + " ) ;";
+    public static final String SQL_CREATE_UCS = "CREATE TABLE " + singleDistrict.TABLE_NAME + "("
+            + singleDistrict._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + singleDistrict.COLUMN_DISTRICT_NAME + " TEXT,"
+            + singleDistrict.COLUMN_DISTRICT_CODE + " TEXT"
+            + " ) ;";
+    public static final String SQL_CREATE_VILLAGES = "CREATE TABLE " + singleVillages.TABLE_NAME + "("
+            + singleVillages._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + singleVillages.COLUMN_VILLAGES_NAME + " TEXT,"
+            + singleVillages.COLUMN_VILLAGES_CODE + " TEXT,"
+            + singleVillages.COLUMN_DISTRICT_CODE + " TEXT"
             + " ) ;";
 
 
@@ -106,6 +122,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String SQL_DELETE_FORMS = "DROP TABLE IF EXISTS " + FormsTable.TABLE_NAME;
     private static final String SQL_DELETE_FAMILYMEMBERS = "DROP TABLE IF EXISTS " + familyMembers.TABLE_NAME;
     private static final String SQL_DELETE_USER = "DROP TABLE IF EXISTS " + UsersTable.TABLE_NAME;
+    private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + singleDistrict.TABLE_NAME;
+    private static final String SQL_DELETE_VILLAGES = "DROP TABLE IF EXISTS " + singleVillages.TABLE_NAME;
 
     private final String TAG = "DatabaseHelper";
     public String spDateT = new SimpleDateFormat("dd-MM-yy").format(new Date().getTime());
@@ -120,6 +138,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_FORMS);
         db.execSQL(SQL_CREATE_FAMILY_MEMEBERS);
         db.execSQL(SQL_CREATE_USERS);
+        db.execSQL(SQL_CREATE_UCS);
+        db.execSQL(SQL_CREATE_VILLAGES);
     }
 
     @Override
@@ -128,6 +148,66 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_FORMS);
         db.execSQL(SQL_DELETE_FAMILYMEMBERS);
         db.execSQL(SQL_DELETE_USER);
+        db.execSQL(SQL_DELETE_UCS);
+        db.execSQL(SQL_DELETE_VILLAGES);
+    }
+
+    public List<DistrictsContract> getDistrictList() {
+        List<DistrictsContract> formList = new ArrayList<>();
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + singleDistrict.TABLE_NAME;
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = db.rawQuery(selectQuery, null);
+
+        // looping through all rows and adding to list
+        if (c.moveToFirst()) {
+            do {
+                DistrictsContract fc = new DistrictsContract();
+                fc.setDistrictCode(c.getString(c.getColumnIndex(singleDistrict.COLUMN_DISTRICT_CODE)));
+                fc.setDistrictName(c.getString(c.getColumnIndex(singleDistrict.COLUMN_DISTRICT_NAME)));
+                formList.add(fc.hydrate(c));
+            } while (c.moveToNext());
+        }
+
+        // return contact list
+        return formList;
+    }
+
+    public List<VillagesContract> getVillages(String id) {
+        List<VillagesContract> formList = new ArrayList<>();
+
+        String[] columns = {
+                singleVillages.COLUMN_VILLAGES_NAME,
+                singleVillages.COLUMN_VILLAGES_CODE
+        };
+        String selection = singleVillages.COLUMN_DISTRICT_CODE + " = ?";
+        String[] selectionArgs = new String[]{String.valueOf(id)};
+
+        String orderBy =
+                singleVillages.COLUMN_VILLAGES_NAME + " COLLATE NOCASE ASC;";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor c = db.query(
+                singleVillages.TABLE_NAME,
+                columns,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                orderBy);
+
+        if (c.moveToFirst()) {
+            do {
+                VillagesContract fc = new VillagesContract();
+//                fc.setHf_name(c.getString(c.getColumnIndex(singleHF.COLUMN_HF_NAME)));
+//                fc.setHf_uen_code(c.getLong(c.getColumnIndex(singleHF.COLUMN_HF_UEN_CODE)));
+                formList.add(fc.hydrate(c));
+            } while (c.moveToNext());
+        }
+
+        // return contact list
+        return formList;
     }
 
     public Long addForm(FormsContract fc) {
@@ -157,7 +237,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_GPSTIME, fc.getGpsElev());
         values.put(FormsTable.COLUMN_ISTATUS, fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
-        values.put(FormsTable.COLUMN_ISTATUSHH, fc.getIstatusHH());
         values.put(FormsTable.COLUMN_GPSLAT, fc.getGpsLat());
         values.put(FormsTable.COLUMN_GPSLNG, fc.getGpsLng());
         values.put(FormsTable.COLUMN_GPSDATE, fc.getGpsDT());
@@ -348,6 +427,168 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allFC;
     }
 
+    public int updatesF1() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_F1, MainApp.fc.getF1());
+
+// Which row to update, based on the ID
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesF2() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_F2, MainApp.fc.getF2());
+
+// Which row to update, based on the ID
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesF3() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_F3, MainApp.fc.getF3());
+
+// Which row to update, based on the ID
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesF4() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_F4, MainApp.fc.getF4());
+
+// Which row to update, based on the ID
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesF5() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_F5, MainApp.fc.getF5());
+
+// Which row to update, based on the ID
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesF6() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_F6, MainApp.fc.getF6());
+
+// Which row to update, based on the ID
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesF7() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_F7, MainApp.fc.getF7());
+
+// Which row to update, based on the ID
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesF8() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_F8, MainApp.fc.getF8());
+
+// Which row to update, based on the ID
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
+    public int updatesF9() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_F9, MainApp.fc.getF9());
+
+// Which row to update, based on the ID
+        String selection = FormsTable._ID + " =? ";
+        String[] selectionArgs = {String.valueOf(MainApp.fc.get_ID())};
+
+        int count = db.update(FormsTable.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
     public int updateEnding() {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -448,6 +689,60 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(UsersContract.UsersTable.ROW_USERNAME, user.getUserName());
                 values.put(UsersTable.ROW_PASSWORD, user.getPassword());
                 db.insert(UsersTable.TABLE_NAME, null, values);
+            }
+
+
+        } catch (Exception e) {
+            Log.d(TAG, "syncUser(e): " + e);
+        } finally {
+            db.close();
+        }
+    }
+
+    public void syncUcs(JSONArray ucslist) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(UsersTable.TABLE_NAME, null, null);
+        try {
+            JSONArray jsonArray = ucslist;
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject jsonObjectUser = jsonArray.getJSONObject(i);
+
+                DistrictsContract user = new DistrictsContract();
+                user.sync(jsonObjectUser);
+                ContentValues values = new ContentValues();
+
+                values.put(DistrictsContract.singleDistrict.COLUMN_DISTRICT_NAME, user.getDistrictName());
+                values.put(DistrictsContract.singleDistrict.COLUMN_DISTRICT_CODE, user.getDistrictCode());
+
+                db.insert(DistrictsContract.singleDistrict.TABLE_NAME, null, values);
+            }
+
+
+        } catch (Exception e) {
+            Log.d(TAG, "syncUser(e): " + e);
+        } finally {
+            db.close();
+        }
+    }
+
+    public void syncVillages(JSONArray villages) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(UsersTable.TABLE_NAME, null, null);
+        try {
+            JSONArray jsonArray = villages;
+            for (int i = 0; i < jsonArray.length(); i++) {
+
+                JSONObject jsonObjectUser = jsonArray.getJSONObject(i);
+
+                VillagesContract user = new VillagesContract();
+                user.sync(jsonObjectUser);
+                ContentValues values = new ContentValues();
+
+                values.put(VillagesContract.singleVillages.COLUMN_VILLAGES_NAME, user.getVILLAGESName());
+                values.put(VillagesContract.singleVillages.COLUMN_VILLAGES_CODE, user.getVILLAGESCode());
+                values.put(VillagesContract.singleVillages.COLUMN_DISTRICT_CODE, user.getDistrictCode());
+                db.insert(VillagesContract.singleVillages.TABLE_NAME, null, values);
             }
 
 
