@@ -19,6 +19,7 @@
 
 
         <LinearLayout
+            android:layout_marginTop="35dp"
             android:layoutDirection="rtl"
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -71,16 +72,18 @@
 
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:orientation="horizontal">
 
 
 
                 <TextView
                     style="@style/i_textview"
+                    android:id="@+id/itextview"
                     android:text="Number of Added Members" />
 
 
@@ -94,7 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:orientation="horizontal">
 
 
@@ -116,7 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="35dp"
                 android:orientation="horizontal">
 
                 <Button
