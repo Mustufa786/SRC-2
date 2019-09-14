@@ -14,7 +14,7 @@ import org.json.JSONObject;
 
 public class FormsContract {
 
-    public  static  boolean Respondent_is_UnMarried;
+
     private final String projectName = "SRC-2";
     //private final String surveyType = "SN";
     private String _ID = "";

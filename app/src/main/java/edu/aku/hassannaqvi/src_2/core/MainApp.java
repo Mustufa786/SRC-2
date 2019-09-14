@@ -37,7 +37,7 @@ import edu.aku.hassannaqvi.src_2.ui.EndingActivity;
  */
 
 public class MainApp extends Application {
-
+    public  static  boolean Respondent_is_UnMarried;
     public static final Integer _PORT = 443; // Port - with colon (:)
     public static final Integer MONTHS_LIMIT = 11;
     public static final Integer DAYS_LIMIT = 29;

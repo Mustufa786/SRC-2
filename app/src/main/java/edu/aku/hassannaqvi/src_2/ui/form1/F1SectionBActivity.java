@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import edu.aku.hassannaqvi.src_2.R;
 import edu.aku.hassannaqvi.src_2.contracts.FormsContract;
+import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF1SectionBBinding;
 import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
@@ -619,16 +620,16 @@ public class F1SectionBActivity extends AppCompatActivity {
                     if(f1b06a.isChecked())
                     {
                         respondent_type="UM";
-                        FormsContract.Respondent_is_UnMarried=true;
+                        MainApp.Respondent_is_UnMarried=true;
                     }
                     else if(f1b06b.isChecked())
                     {
-                        FormsContract.Respondent_is_UnMarried=false;
+                        MainApp.Respondent_is_UnMarried=false;
                         respondent_type="M";
                     }
                     else
                     {
-                        FormsContract.Respondent_is_UnMarried=false;
+                        MainApp.Respondent_is_UnMarried=false;
                         respondent_type="others";
                     }
 
