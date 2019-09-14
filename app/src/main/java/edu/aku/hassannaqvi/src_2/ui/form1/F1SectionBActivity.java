@@ -16,6 +16,7 @@ import android.widget.RadioButton;
 import java.util.ArrayList;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.contracts.FormsContract;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF1SectionBBinding;
 import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
@@ -215,6 +216,7 @@ public class F1SectionBActivity extends AppCompatActivity {
                 }
               if(respondent_type=="UM")
                {
+
 
                    f1b04a.setEnabled(false);
                    f1b04b.setEnabled(false);
@@ -617,13 +619,16 @@ public class F1SectionBActivity extends AppCompatActivity {
                     if(f1b06a.isChecked())
                     {
                         respondent_type="UM";
+                        FormsContract.Respondent_is_UnMarried=true;
                     }
                     else if(f1b06b.isChecked())
                     {
+                        FormsContract.Respondent_is_UnMarried=false;
                         respondent_type="M";
                     }
                     else
                     {
+                        FormsContract.Respondent_is_UnMarried=false;
                         respondent_type="others";
                     }
 
