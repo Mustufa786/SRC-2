@@ -619,6 +619,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return count;
     }
 
+    public int updateFamilyMemID(FamilyMembersContract fmc) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(familyMembers.COLUMN_UID, fmc.get_UID());
+
+// Which row to update, based on the ID
+        String selection = familyMembers._ID + " =?";
+        String[] selectionArgs = {String.valueOf(fmc.get_ID())};
+
+        int count = db.update(familyMembers.TABLE_NAME,
+                values,
+                selection,
+                selectionArgs);
+        return count;
+    }
+
     // ANDROID DATABASE MANAGER
     public ArrayList<Cursor> getData(String Query) {
         //get writable database

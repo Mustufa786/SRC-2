@@ -11,6 +11,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.src_2.R;
 import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
+import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF2SectionABinding;
 import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
@@ -68,6 +69,7 @@ public class F2SectionAActivity extends AppCompatActivity {
         f1.put("f2a04",bi.f2a04a.isChecked() ?"1" :bi.f2a04b.isChecked() ?"2" :bi.f2a04c.isChecked() ?"3" :bi.f2a04d.isChecked() ?"4" :bi.f2a04e.isChecked() ?"5" :bi.f2a04f.isChecked() ?"6" :bi.f2a04g.isChecked() ?"7" :bi.f2a04h.isChecked() ?"8" :bi.f2a04i.isChecked() ?"9" :bi.f2a04j.isChecked() ?"10" :bi.f2a04k.isChecked() ?"11" :bi.f2a04l.isChecked() ?"12" :bi.f2a04m.isChecked() ?"13" :bi.f2a04n.isChecked() ?"14" :bi.f2a04o.isChecked() ?"15" :bi.f2a0496.isChecked() ?"96" :"0");
         f1.put("f2a05",bi.f2a05a.isChecked() ?"1" :bi.f2a05b.isChecked() ?"2" :bi.f2a0598.isChecked() ?"98" :"0");
 
+        MainApp.fc.setF2(String.valueOf(f1));
 
 
 

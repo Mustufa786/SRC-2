@@ -18,7 +18,6 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.text.format.DateFormat;
 
-import java.security.PublicKey;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -38,10 +37,10 @@ import edu.aku.hassannaqvi.src_2.ui.EndingActivity;
  */
 
 public class MainApp extends Application {
-    public  static  boolean Respondent_is_UnMarried; // true if Respondent is Unmarid
-    public  static  boolean two_year_child;  // true if We have U2 Year Child
-    public  static  List<String> lst_U2; // List Name of U2 children
-    public  static  List<String> lst_U5; // List Name of U5 children
+    public static boolean Respondent_is_UnMarried; // true if Respondent is Unmarid
+    public static boolean two_year_child;  // true if We have U2 Year Child
+    public static List<String> lst_U2; // List Name of U2 children
+    public static List<String> lst_U5; // List Name of U5 children
     public static final Integer _PORT = 443; // Port - with colon (:)
     public static final Integer MONTHS_LIMIT = 11;
     public static final Integer DAYS_LIMIT = 29;
@@ -77,6 +76,7 @@ public class MainApp extends Application {
 
     public static Boolean admin = false;
     public static FormsContract fc;
+    public static FamilyMembersContract fmc;
     public static String IMEI;
     public static String userName = "0000";
     public static int versionCode;
@@ -89,7 +89,6 @@ public class MainApp extends Application {
     public static Boolean flag_head = false;
     //    Ali
     public static UsersContract usersContract = null;
-    public static FamilyMembersContract fmc;
     public static List<FamilyMembersContract> members_f_m;
     public static List<FamilyMembersContract> respList;
     public static List<FamilyMembersContract> all_members;
@@ -113,7 +112,7 @@ public class MainApp extends Application {
     public static List<String> editmothersSerials, editfathersSerials;
     public static ArrayList<String> duplicateMembers;
 
-    public static int serial_no;
+    public static int serial_no = 1;
     public static int dwraSerial_no;
 
     // fro section A2

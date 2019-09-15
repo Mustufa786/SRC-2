@@ -1,9 +1,13 @@
 package edu.aku.hassannaqvi.src_2.ui.form1;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -12,13 +16,24 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.contracts.FamilyMembersContract;
+import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
 import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF1SectionBBinding;
 import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
+
+import static edu.aku.hassannaqvi.src_2.core.MainApp.fc;
+import static edu.aku.hassannaqvi.src_2.core.MainApp.fmc;
 
 public class F1SectionBActivity extends AppCompatActivity {
 
@@ -42,6 +57,36 @@ public class F1SectionBActivity extends AppCompatActivity {
             lstf1b08,
             lstf1b09;
 
+    ArrayList<ArrayList<String>> subList = new ArrayList<>(Arrays.asList(
+            lstf1b01,
+            lstf1b02,
+            lstf1b03,
+            lstf1b03D,
+            lstf1b03M,
+            lstf1b03Y,
+            lstf1b04,
+            lstf1b05,
+            lstf1b06,
+            lstf1b07,
+            lstf1b07x,
+            lstf1b08,
+            lstf1b09
+    ));
+    ArrayList<String> allQuestions = new ArrayList<>(Arrays.asList(
+            "lstf1b01",
+            "lstf1b02",
+            "lstf1b03",
+            "lstf1b03D",
+            "lstf1b03M",
+            "lstf1b03Y",
+            "lstf1b04",
+            "lstf1b05",
+            "lstf1b06",
+            "lstf1b07",
+            "lstf1b07x",
+            "lstf1b08",
+            "lstf1b09"
+    ));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +111,7 @@ public class F1SectionBActivity extends AppCompatActivity {
         lstf1b08 = new ArrayList<>();
         lstf1b09 = new ArrayList<>();
 
-        MainApp.two_year_child=false;
+        MainApp.two_year_child = false;
         MainApp.lst_U2.clear();
         MainApp.lst_U5.clear();
     }
@@ -532,14 +577,13 @@ public class F1SectionBActivity extends AppCompatActivity {
                     return;
                 }
 
-
                 if (iam_respondent == true) {
 
                     if (f1b03a.isChecked()) {
                         if (f1b03a3.getText().toString().length() > 0) {
                             int age = Integer.parseInt(f1b03a3.getText().toString());
                             if (age > 49 || age < 14) {
-                                f1b03a3.setError("Respondent age Muste be Between 14 to 49 Years");
+                                f1b03a3.setError("Respondent age Must be Between 14 to 49 Years");
                                 f1b03a3.requestFocus();
                                 return;
                             }
@@ -614,18 +658,14 @@ public class F1SectionBActivity extends AppCompatActivity {
                     lstf1b03M.add(f1b03a2.getText().toString());
                     lstf1b03Y.add(f1b03a3.getText().toString());
 
-                    if(f1b03a3.getText().toString().length()>0)
-                    {
-                        int age=Integer.parseInt(f1b03a3.getText().toString());
-                        if(age<2 )
-                        {
-                            MainApp.two_year_child=true;
+                    if (f1b03a3.getText().toString().length() > 0) {
+                        int age = Integer.parseInt(f1b03a3.getText().toString());
+                        if (age < 2) {
+                            MainApp.two_year_child = true;
                             MainApp.lst_U2.add(f1b01.getText().toString());
-
                         }
 
-                        if(age<5 )
-                        {
+                        if (age < 5) {
 
                             MainApp.lst_U5.add(f1b01.getText().toString());
 
@@ -640,19 +680,15 @@ public class F1SectionBActivity extends AppCompatActivity {
                     lstf1b03Y.add(f1b03b3.getText().toString());
 
 
-
-                    if(f1b03b3.getText().toString().length()>0)
-                    {
-                        int age=Integer.parseInt(f1b03b3.getText().toString());
-                        if(age>2017 )
-                        {
-                            MainApp.two_year_child=true;
+                    if (f1b03b3.getText().toString().length() > 0) {
+                        int age = Integer.parseInt(f1b03b3.getText().toString());
+                        if (age > 2017) {
+                            MainApp.two_year_child = true;
                             MainApp.lst_U2.add(f1b01.getText().toString());
 
                         }
 
-                        if(age>2015 )
-                        {
+                        if (age > 2015) {
 
                             MainApp.lst_U5.add(f1b01.getText().toString());
 
@@ -758,10 +794,15 @@ public class F1SectionBActivity extends AppCompatActivity {
 
                 }
 
-
                 bi.itextview.setText("Number of Added Members (" + lstf1b09.size() + ")");
-
                 iam_respondent = false;
+
+                try {
+                    saveDraft();
+                    UpdateDB();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 b.dismiss();
 
             }
@@ -780,7 +821,67 @@ public class F1SectionBActivity extends AppCompatActivity {
 
     }
 
+    private void saveDraft() throws JSONException {
+
+        SharedPreferences sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+        fmc = new FamilyMembersContract();
+        fmc.setDevicetagID(sharedPref.getString("tagName", null));
+        fmc.setDeviceId(MainApp.deviceId);
+        fmc.setFormDate((DateFormat.format("dd-MM-yyyy HH:mm", new Date())).toString());
+        fmc.setUser(MainApp.userName);
+        fmc.setSerialNo(String.valueOf(MainApp.serial_no));
+        fmc.set_UUID(fc.getDeviceID() + fc.get_ID());
+
+        JSONObject object = new JSONObject();
+
+        for (int i = 0; i < subList.size(); i++) {
+            object.put(allQuestions.get(i), subList.get(i).get(i));
+        }
+        fmc.setF1b(String.valueOf(object));
+
+        MainApp.serial_no++;
+    }
+
+    private boolean UpdateDB() {
+
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        // 2. UPDATE FORM ROWID
+        long rowId = db.addFamilyMembers(fmc);
+
+        if (rowId > 0) {
+            fmc.set_ID(String.valueOf(rowId));
+            fmc.set_UID((fmc.getDeviceId() + fmc.get_ID()));
+            db.updateFamilyMemID(fmc);
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+
+        }
+    }
+
     public void BtnContinue() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setMessage("Are you sure you want to move to next section?");
+        builder.setTitle("Alert!");
+        builder.setIcon(android.R.drawable.ic_dialog_alert);
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(getApplicationContext(), F1SectionCActivity.class));
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
 
     }
 

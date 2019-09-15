@@ -12,8 +12,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
 import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF3SectionA02Binding;
+import edu.aku.hassannaqvi.src_2.other.JsonUtils;
 import edu.aku.hassannaqvi.src_2.ui.form4.F4SectionAActivity;
 import edu.aku.hassannaqvi.src_2.ui.form8.F8SectionAActivity;
 import edu.aku.hassannaqvi.src_2.validation.ClearClass;
@@ -76,7 +78,18 @@ public class F3SectionA02Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        // 2. UPDATE FORM ROWID
+        int updcount = db.updatesF3();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
@@ -129,6 +142,11 @@ public class F3SectionA02Activity extends AppCompatActivity {
         f1.put("f3a3396x", bi.f3a3396x.getText().toString());
         f1.put("f3a33", bi.f3a33a.isChecked() ? "1" : bi.f3a33b.isChecked() ? "2" : bi.f3a33c.isChecked() ? "3" : bi.f3a3396.isChecked() ? "96" : "0");
         f1.put("f3a34", bi.f3a34.getText().toString());
+
+
+        JSONObject merged = JsonUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getF3()), f1);
+        MainApp.fc.setF3(String.valueOf(merged));
+
 
     }
 

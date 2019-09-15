@@ -10,7 +10,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF2SectionBBinding;
+import edu.aku.hassannaqvi.src_2.other.JsonUtils;
 import edu.aku.hassannaqvi.src_2.ui.form3.F3SectionA01Activity;
 
 public class F2SectionBActivity extends AppCompatActivity {
@@ -66,6 +68,9 @@ public class F2SectionBActivity extends AppCompatActivity {
         f1.put("f2c01",bi.f2c01a.isChecked() ?"1" :bi.f2c01b.isChecked() ?"2" :bi.f2c01c.isChecked() ?"3" :bi.f2c01d.isChecked() ?"4" :bi.f2c01e.isChecked() ?"5" :bi.f2c01f.isChecked() ?"6" :bi.f2c01g.isChecked() ?"7" :bi.f2c01h.isChecked() ?"8" :bi.f2c01i.isChecked() ?"9" :bi.f2c01j.isChecked() ?"10" :bi.f2c01k.isChecked() ?"11" :"0");
         f1.put("f2c02",bi.f2c02a.isChecked() ?"1" :bi.f2c02b.isChecked() ?"2" :"0");
         f1.put("f2c03", bi.f2c03.getText().toString());
+
+        JSONObject merged = JsonUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getF2()), f1);
+        MainApp.fc.setF2(String.valueOf(merged));
 
     }
 

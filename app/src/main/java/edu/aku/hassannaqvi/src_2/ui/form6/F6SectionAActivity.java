@@ -12,6 +12,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
+import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF6SectionABinding;
 import edu.aku.hassannaqvi.src_2.ui.form7.F7SectionAActivity;
 import edu.aku.hassannaqvi.src_2.validation.ClearClass;
@@ -111,7 +113,18 @@ public class F6SectionAActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        // 2. UPDATE FORM ROWID
+        int updcount = db.updatesF6();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
@@ -141,6 +154,7 @@ public class F6SectionAActivity extends AppCompatActivity {
         f1.put("f6b01",bi.f6b01a.isChecked() ?"1" :bi.f6b01b.isChecked() ?"2" :bi.f6b0198.isChecked() ?"98" :"0");
         f1.put("f6b02",bi.f6b02a.isChecked() ?"1" :bi.f6b02b.isChecked() ?"2" :bi.f6b0298.isChecked() ?"98" :"0");
 
+        MainApp.fc.setF6(String.valueOf(f1));
     }
 
     private boolean formValidation() {

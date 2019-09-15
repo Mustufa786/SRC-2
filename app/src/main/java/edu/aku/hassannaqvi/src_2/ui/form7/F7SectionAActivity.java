@@ -11,6 +11,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
+import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF7SectionABinding;
 import edu.aku.hassannaqvi.src_2.ui.form8.F8SectionAActivity;
 import edu.aku.hassannaqvi.src_2.validation.ClearClass;
@@ -62,13 +64,24 @@ public class F7SectionAActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        // 2. UPDATE FORM ROWID
+        int updcount = db.updatesF7();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
 
         JSONObject f1 = new JSONObject();
-        f1.put("f7a01", bi.f7a01.getText().toString());
+//        f1.put("f7a01", bi.f7a01.getText().toString());
         f1.put("f7a02a", bi.f7a02a.getText().toString());
         f1.put("f7a02b", bi.f7a02b.getText().toString());
         f1.put("f7a02c", bi.f7a02c.getText().toString());
@@ -82,6 +95,7 @@ public class F7SectionAActivity extends AppCompatActivity {
         f1.put("f7a0896x", bi.f7a0896x.getText().toString());
         f1.put("f7a08",bi.f7a08a.isChecked() ?"1" :bi.f7a08b.isChecked() ?"2" :bi.f7a0896.isChecked() ?"96" :"0");
 
+        MainApp.fc.setF7(String.valueOf(f1));
 
     }
 

@@ -20,8 +20,15 @@ public class FamilyMembersContract implements Serializable {
     private String _UUID = "";
     private String formDate = "";
     private String deviceId = "";
-
     private String f1b = "";
+    private String devicetagID = "";
+    private String user = "";
+    private String app_ver = "";
+    private String serialNo = "";
+    private String synced = "";
+    private String syncedDate = "";
+
+
 
     public String getDevicetagID() {
         return devicetagID;
@@ -43,40 +50,11 @@ public class FamilyMembersContract implements Serializable {
         return f1b;
     }
 
-    private String devicetagID = "";
-    private String user = "";
-    private String app_ver = "";
-
-    private String serialNo = "";
 
     public void setF1b(String f1b) {
         this.f1b = f1b;
     }
-//    private String name = "";
-//    private String dob = "";
-//    private String age = "";
-//    private String ageInYear = "";
-//    private String na204 = "";
-//    private String motherId = "";
-//    private String sA2 = "";
-//    private String av = "";
-//    private String delflag = "";
-//
-//    private String enmNo = "";
-//    private String hhNo = "";
 
-    private String synced = "";
-    private String syncedDate = "";
-
-//    private String motherName = "";
-//    private String fatherName = "";
-//    private String maritialStatus = "";
-//    private String realtionHH = "";
-//    private String resp = "";
-//    private String type = "";
-//    private String kishSelected = "";
-//    private String kishMWRASelected = "";
-//    private String kishAdolsSelected = "";
 
     public FamilyMembersContract() {
     }

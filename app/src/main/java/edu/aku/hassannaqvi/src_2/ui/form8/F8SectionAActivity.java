@@ -11,6 +11,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
+import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF8SectionABinding;
 import edu.aku.hassannaqvi.src_2.ui.form9.F9SectionAActivity;
 import edu.aku.hassannaqvi.src_2.validation.ClearClass;
@@ -72,7 +74,18 @@ public class F8SectionAActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        // 2. UPDATE FORM ROWID
+        int updcount = db.updatesF8();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
@@ -92,22 +105,16 @@ public class F8SectionAActivity extends AppCompatActivity {
         f1.put("f8a0296",bi.f8a0296.isChecked() ?"96" :"0");
         f1.put("f8a0296x", bi.f8a0296x.getText().toString());
         f1.put("f8a03",bi.f8a03a.isChecked() ?"1" :bi.f8a03b.isChecked() ?"2" :bi.f8a03c.isChecked() ?"3" :"0");
-
         f1.put("f8a04",bi.f8a0401.isChecked() ?"1" :bi.f8a0402.isChecked() ?"2" :bi.f8a0403.isChecked() ?"3" :bi.f8a0404.isChecked() ?"4" :bi.f8a0405.isChecked() ?"5" :bi.f8a0406.isChecked() ?"6" :bi.f8a0407.isChecked() ?"7" :bi.f8a0408.isChecked() ?"8" :bi.f8a0409.isChecked() ?"9" :bi.f8a0410.isChecked() ?"10" :bi.f8a0496.isChecked() ?"96" :bi.f8a0411.isChecked() ?"11" :"0");
         f1.put("f8a0496x", bi.f8a0496x.getText().toString());
         f1.put("f8a04a",bi.f8a04a01.isChecked() ?"1" :bi.f8a04a02.isChecked() ?"2" :"0");
-
-
-
         f1.put("f8a05",bi.f8a05a.isChecked() ?"1" :bi.f8a05b.isChecked() ?"2" :bi.f8a05c.isChecked() ?"3" :bi.f8a05d.isChecked() ?"4" :bi.f8a05e.isChecked() ?"5" :bi.f8a05f.isChecked() ?"6" :bi.f8a05g.isChecked() ?"7" :bi.f8a0596.isChecked() ?"96" :"0");
         f1.put("f8a0596x", bi.f8a0596x.getText().toString());
-
-
-
         f1.put("f8a06",bi.f8a06a.isChecked() ?"1" :bi.f8a06b.isChecked() ?"2" :bi.f8a06c.isChecked() ?"3" :bi.f8a06d.isChecked() ?"4" :bi.f8a06e.isChecked() ?"5" :bi.f8a06f.isChecked() ?"6" :bi.f8a06g.isChecked() ?"7" :bi.f8a06h.isChecked() ?"8" :bi.f8a06i.isChecked() ?"9" :bi.f8a06j.isChecked() ?"10"  :bi.f8a06k.isChecked() ?"11" :bi.f8a0696.isChecked() ?"96" :"0");
         f1.put("f8a0696x", bi.f8a0696x.getText().toString());
         f1.put("f8a07",bi.f8a07a.isChecked() ?"1" :bi.f8a07b.isChecked() ?"2" :bi.f8a07c.isChecked() ?"3" :bi.f8a07d.isChecked() ?"4" :bi.f8a07e.isChecked() ?"5" :bi.f8a07f.isChecked() ?"6" :"0");
 
+        MainApp.fc.setF8(String.valueOf(f1));
     }
 
     private boolean formValidation() {

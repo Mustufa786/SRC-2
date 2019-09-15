@@ -11,6 +11,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
+import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF4SectionABinding;
 import edu.aku.hassannaqvi.src_2.validation.ClearClass;
 import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
@@ -70,7 +72,18 @@ public class F4SectionAActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        // 2. UPDATE FORM ROWID
+        int updcount = db.updatesF4();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
@@ -118,6 +131,7 @@ public class F4SectionAActivity extends AppCompatActivity {
         f1.put("f4a16", bi.f4a16.getText().toString());
         f1.put("f4a1698",bi.f4a1698.isChecked() ?"" :"0");
 
+        MainApp.fc.setF4(String.valueOf(f1));
     }
 
     private boolean formValidation() {

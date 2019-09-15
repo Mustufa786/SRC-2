@@ -11,8 +11,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
+import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF5SectionABinding;
 import edu.aku.hassannaqvi.src_2.ui.form6.F6SectionAActivity;
+import edu.aku.hassannaqvi.src_2.ui.form7.F7SectionAActivity;
 import edu.aku.hassannaqvi.src_2.validation.ClearClass;
 import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
@@ -49,7 +52,8 @@ public class F5SectionAActivity extends AppCompatActivity {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
-                    startActivity(new Intent(getApplicationContext(), F6SectionAActivity.class));
+                    startActivity(new Intent(getApplicationContext(), (!MainApp.Respondent_is_UnMarried && MainApp.two_year_child) ?
+                            F6SectionAActivity.class : F7SectionAActivity.class));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }
@@ -61,7 +65,18 @@ public class F5SectionAActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        // 2. UPDATE FORM ROWID
+        int updcount = db.updatesF5();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
@@ -102,6 +117,7 @@ public class F5SectionAActivity extends AppCompatActivity {
         f1.put("f5b03", bi.f5b03a.isChecked() ? "1" : bi.f5b03b.isChecked() ? "2" : bi.f5b03c.isChecked() ? "3" : bi.f5b03d.isChecked() ? "4" : "0");
         f1.put("f5b04", bi.f5b04a.isChecked() ? "1" : bi.f5b04b.isChecked() ? "2" : "0");
 
+        MainApp.fc.setF5(String.valueOf(f1));
     }
 
     private boolean formValidation() {
