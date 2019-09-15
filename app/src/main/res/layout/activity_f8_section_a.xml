@@ -262,6 +262,7 @@
                             style="@style/radiobutton" />
 
 
+
                         <EditText
                             android:id="@+id/f8a04a96x"
                             style="@style/textInput"
@@ -271,23 +272,13 @@
                             android:tag="f8a04a96"
                             android:visibility='@{f8a04a96.checked? View.VISIBLE : View.GONE}'
                             android:text='@{f8a04a96.checked? f8a04a96x.getText.toString : ""}' />
+
+
+
+
                     </RadioGroup>
 
-                    <CheckBox
-                        style="@style/checkbox"
-                        android:tag="-1"
-                        android:text="@string/f8a04h2"
-                        android:id="@+id/f8a04b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
 
-                    <CheckBox
-                        style="@style/checkbox"
-                        android:tag="-1"
-                        android:text="@string/f8a04h3"
-                        android:id="@+id/f8a04c"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
 
 
                 </LinearLayout>

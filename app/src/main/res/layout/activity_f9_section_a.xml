@@ -184,6 +184,10 @@
                                 android:id="@+id/f9a04f"
                                 style="@style/radiobutton"
                                 android:text="@string/f9a04f" />
+                            <RadioButton
+                                android:id="@+id/f9a04g"
+                                style="@style/radiobutton"
+                                android:text="@string/f9a04g" />
 
                             <RadioButton
                                 android:id="@+id/f9a0496"

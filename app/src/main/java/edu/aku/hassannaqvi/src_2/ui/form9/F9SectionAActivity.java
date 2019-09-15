@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.src_2.R;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF9SectionABinding;
@@ -44,6 +45,22 @@ public class F9SectionAActivity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
+
+
+        JSONObject f1 = new JSONObject();
+        f1.put("f9a01",bi.f9a01a.isChecked() ?"1" :bi.f9a01b.isChecked() ?"2" :"0");
+        f1.put("f9a02", bi.f9a02.getText().toString());
+
+        f1.put("f9a03",bi.f9a03a.isChecked() ?"1" :bi.f9a03b.isChecked() ?"2" :bi.f9a03c.isChecked() ?"3" :bi.f9a03d.isChecked() ?"4" :bi.f9a03e.isChecked() ?"96" :"0");
+        f1.put("f9a0496", bi.f9a0496.getText().toString());
+        f1.put("f9a04",bi.f9a04a.isChecked() ?"1" :bi.f9a04b.isChecked() ?"2" :bi.f9a04c.isChecked() ?"3" :bi.f9a04d.isChecked() ?"4" :bi.f9a04e.isChecked() ?"5" :bi.f9a04f.isChecked() ?"6" :bi.f9a04g.isChecked() ?"7" :"0");
+        f1.put("f9a0496x", bi.f9a0496x.getText().toString());
+        f1.put("f9a05a",bi.f9a05a.isChecked() ?"1" :"0");
+        f1.put("f9a05b",bi.f9a05b.isChecked() ?"2" :"0");
+        f1.put("f9a05c",bi.f9a05c.isChecked() ?"3" :"0");
+        f1.put("f9a0596",bi.f9a0596.isChecked() ?"96" :"0");
+        f1.put("f9a0596x", bi.f9a0596x.getText().toString());
+
     }
 
     private boolean formValidation() {
