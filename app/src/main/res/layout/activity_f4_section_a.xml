@@ -578,7 +578,7 @@
                                 android:text="@string/f4a10" />
 
                             <EditText
-                                android:id="@+id/f4a10day"
+                                android:id="@+id/f4a10dd"
                                 style="@style/textInput"
                                 android:hint="@string/day"
                                 android:inputType="number"
@@ -586,7 +586,7 @@
                                 android:text='@{!f4a1098.checked? f4a10day.getText.toString : ""}' />
 
                             <EditText
-                                android:id="@+id/f4a10mon"
+                                android:id="@+id/f4a10mm"
                                 style="@style/textInput"
                                 android:hint="@string/month"
                                 android:inputType="number"
@@ -781,7 +781,7 @@
                                 android:text="@string/no" />
 
                             <RadioButton
-                                android:id="@+id/f4a15c"
+                                android:id="@+id/f4a1598"
                                 style="@style/radiobutton"
                                 android:text="@string/dkn" />
 
@@ -803,7 +803,7 @@
 
 
                         <EditText
-                            android:id="@+id/f4a16x"
+                            android:id="@+id/f4a16"
                             style="@style/textInput"
                             android:hint="@string/f4a16"
                             android:inputType="number"
