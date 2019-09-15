@@ -124,24 +124,32 @@
             app:layout_constraintTop_toBottomOf="@+id/cardView"
             app:layout_constraintVertical_bias="0.086" />
 
+        <TextView
+            android:id="@+id/txtinstalldate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:gravity="center"
+            android:text="install Date"
+            android:textColor="#565656"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="552dp"
             android:layout_height="120dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
             android:gravity="center"
             android:text="This application has been developed by the Software Development Team of the Data Management Unit, Department of Paediatrics and Child Health, Aga Khan University. All rights reserved. Copyright Aga Khan University 2018. For questions/comments, please email us at dmu@aku.edu "
             android:textColor="@color/black"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.484"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginBtn"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@+id/txtinstalldate" />
 
 
     </android.support.constraint.ConstraintLayout>

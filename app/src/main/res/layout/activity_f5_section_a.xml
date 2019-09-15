@@ -5,6 +5,7 @@
     <data>
 
         <import type="android.view.View" />
+
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.src_2.ui.form5.F5SectionAActivity" />
@@ -94,11 +95,9 @@
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
-
-                <!--                Section A-->
-                <TextView
-                    style="@style/textView3Head"
-                    android:text="@string/f5ah" />
+                <!--                <TextView-->
+                <!--                    style="@style/textView3Head"-->
+                <!--                    android:text="@string/f5ah" />-->
 
                 <!--f5a03-->
                 <android.support.v7.widget.CardView style="@style/cardView">
@@ -131,249 +130,244 @@
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                <!--f5a04-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fldGrpf5a04"
+                    style="@style/cardView"
                     android:visibility='@{f5a03a.checked? View.VISIBLE : View.GONE}'>
 
-                    <!--f5a04-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
 
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
 
-                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f5a04" />
 
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/f5a04" />
 
+                        <EditText
+                            android:id="@+id/f5a04"
+                            style="@style/textInput"
+                            android:hint="@string/f5a04"
+                            android:inputType="number"
+                            android:maxLength="2" />
 
-                            <EditText
-                                android:id="@+id/f5a04"
-                                style="@style/textInput"
-                                android:hint="@string/f5a04"
-                                android:inputType="number"
-                                android:maxLength="2" />
 
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
 
-                    <!--f5a05-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                <!--f5a05-->
+                <android.support.v7.widget.CardView style="@style/cardView">
 
 
-                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
 
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/f5a05" />
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f5a05" />
 
-                            <TextView
-                                style="@style/textView2"
-                                android:text="@string/f5a05a" />
+                        <TextView
+                            style="@style/textView2"
+                            android:text="@string/f5a05a" />
 
-                            <RadioGroup
-                                android:id="@+id/f5a0501"
-                                style="@style/radiogroup"
-                                android:orientation="horizontal">
+                        <RadioGroup
+                            android:id="@+id/f5a0501"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
-                                <RadioButton
-                                    android:id="@+id/f5a0501a"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/yes" />
+                            <RadioButton
+                                android:id="@+id/f5a0501a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
 
-                                <RadioButton
-                                    android:id="@+id/f5a0501b"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/no" />
+                            <RadioButton
+                                android:id="@+id/f5a0501b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
 
 
-                            </RadioGroup>
+                        </RadioGroup>
 
-                            <TextView
-                                style="@style/textView2"
-                                android:text="@string/f5a05b" />
+                        <TextView
+                            style="@style/textView2"
+                            android:text="@string/f5a05b" />
 
-                            <RadioGroup
-                                android:id="@+id/f5a0502"
-                                style="@style/radiogroup"
-                                android:orientation="horizontal">
+                        <RadioGroup
+                            android:id="@+id/f5a0502"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
-                                <RadioButton
-                                    android:id="@+id/f5a0502a"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/yes" />
+                            <RadioButton
+                                android:id="@+id/f5a0502a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
 
-                                <RadioButton
-                                    android:id="@+id/f5a0502b"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/no" />
+                            <RadioButton
+                                android:id="@+id/f5a0502b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
 
 
-                            </RadioGroup>
+                        </RadioGroup>
 
-                            <TextView
-                                style="@style/textView2"
-                                android:text="@string/f5a05c" />
+                        <TextView
+                            style="@style/textView2"
+                            android:text="@string/f5a05c" />
 
-                            <RadioGroup
-                                android:id="@+id/f5a0503"
-                                style="@style/radiogroup"
-                                android:orientation="horizontal">
+                        <RadioGroup
+                            android:id="@+id/f5a0503"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
-                                <RadioButton
-                                    android:id="@+id/f5a0503a"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/yes" />
+                            <RadioButton
+                                android:id="@+id/f5a0503a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
 
-                                <RadioButton
-                                    android:id="@+id/f5a0503b"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/no" />
+                            <RadioButton
+                                android:id="@+id/f5a0503b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
 
 
-                            </RadioGroup>
+                        </RadioGroup>
 
-                            <TextView
-                                style="@style/textView2"
-                                android:text="@string/f5a05d" />
+                        <TextView
+                            style="@style/textView2"
+                            android:text="@string/f5a05d" />
 
-                            <RadioGroup
-                                android:id="@+id/f5a0504"
-                                style="@style/radiogroup"
-                                android:orientation="horizontal">
+                        <RadioGroup
+                            android:id="@+id/f5a0504"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
-                                <RadioButton
-                                    android:id="@+id/f5a0504a"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/yes" />
+                            <RadioButton
+                                android:id="@+id/f5a0504a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
 
-                                <RadioButton
-                                    android:id="@+id/f5a0504b"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/no" />
+                            <RadioButton
+                                android:id="@+id/f5a0504b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
 
 
-                            </RadioGroup>
+                        </RadioGroup>
 
-                            <TextView
-                                style="@style/textView2"
-                                android:text="@string/f5a05e" />
+                        <TextView
+                            style="@style/textView2"
+                            android:text="@string/f5a05e" />
 
-                            <RadioGroup
-                                android:id="@+id/f5a0505"
-                                style="@style/radiogroup"
-                                android:orientation="horizontal">
+                        <RadioGroup
+                            android:id="@+id/f5a0505"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
-                                <RadioButton
-                                    android:id="@+id/f5a0505a"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/yes" />
+                            <RadioButton
+                                android:id="@+id/f5a0505a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
 
-                                <RadioButton
-                                    android:id="@+id/f5a0505b"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/no" />
+                            <RadioButton
+                                android:id="@+id/f5a0505b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
 
 
-                            </RadioGroup>
+                        </RadioGroup>
 
-                            <TextView
-                                style="@style/textView2"
-                                android:text="@string/f5a05f" />
+                        <TextView
+                            style="@style/textView2"
+                            android:text="@string/f5a05f" />
 
-                            <RadioGroup
-                                android:id="@+id/f5a0506"
-                                style="@style/radiogroup"
-                                android:orientation="horizontal">
+                        <RadioGroup
+                            android:id="@+id/f5a0506"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
-                                <RadioButton
-                                    android:id="@+id/f5a0506a"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/yes" />
+                            <RadioButton
+                                android:id="@+id/f5a0506a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
 
-                                <RadioButton
-                                    android:id="@+id/f5a0506b"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/no" />
+                            <RadioButton
+                                android:id="@+id/f5a0506b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
 
 
-                            </RadioGroup>
+                        </RadioGroup>
 
-                            <TextView
-                                style="@style/textView2"
-                                android:text="@string/f5a05g" />
+                        <TextView
+                            style="@style/textView2"
+                            android:text="@string/f5a05g" />
 
-                            <RadioGroup
-                                android:id="@+id/f5a0507"
-                                style="@style/radiogroup"
-                                android:orientation="horizontal">
+                        <RadioGroup
+                            android:id="@+id/f5a0507"
+                            style="@style/radiogroup"
+                            android:orientation="horizontal">
 
-                                <RadioButton
-                                    android:id="@+id/f5a0507a"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/yes" />
+                            <RadioButton
+                                android:id="@+id/f5a0507a"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
 
-                                <RadioButton
-                                    android:id="@+id/f5a0507b"
-                                    style="@style/radiobutton"
-                                    android:layout_weight="1"
-                                    android:text="@string/no" />
+                            <RadioButton
+                                android:id="@+id/f5a0507b"
+                                style="@style/radiobutton"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
 
 
-                            </RadioGroup>
+                        </RadioGroup>
 
 
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
-                    <!--f5a06-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                <!--f5a06-->
+                <android.support.v7.widget.CardView style="@style/cardView">
 
 
-                        <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
 
-                            <TextView
-                                style="@style/i_textview"
-                                android:text="@string/f5a06" />
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f5a06" />
 
-                            <RadioGroup
-                                android:id="@+id/f5a06"
-                                style="@style/radiogroup">
+                        <RadioGroup
+                            android:id="@+id/f5a06"
+                            style="@style/radiogroup">
 
-                                <RadioButton
-                                    android:id="@+id/f5a06a"
-                                    style="@style/radiobutton"
-                                    android:text="@string/yes" />
+                            <RadioButton
+                                android:id="@+id/f5a06a"
+                                style="@style/radiobutton"
+                                android:text="@string/yes" />
 
-                                <RadioButton
-                                    android:id="@+id/f5a06b"
-                                    style="@style/radiobutton"
-                                    android:text="@string/no" />
+                            <RadioButton
+                                android:id="@+id/f5a06b"
+                                style="@style/radiobutton"
+                                android:text="@string/no" />
 
 
-                            </RadioGroup>
+                        </RadioGroup>
 
 
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-
-                </LinearLayout>
-
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
 
                 <!--f5a07-->
                 <android.support.v7.widget.CardView style="@style/cardView">

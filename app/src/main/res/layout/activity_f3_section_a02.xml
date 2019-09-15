@@ -23,7 +23,6 @@
             android:orientation="vertical">
 
 
-
             <!--f3a18-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -253,6 +252,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/f3a23c" />
+
                         <CheckBox
                             android:id="@+id/f3a23d"
                             style="@style/checkbox"
@@ -514,6 +514,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/f3a28d" />
+
                         <CheckBox
                             android:id="@+id/f3a28e"
                             style="@style/checkbox"
@@ -807,7 +808,10 @@
             </android.support.v7.widget.CardView>
 
             <!--f3a33-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpf3a33"
+                style="@style/cardView"
+                android:visibility='@{f3a32a.checked? View.VISIBLE : View.GONE}'>
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">
@@ -868,8 +872,6 @@
             </android.support.v7.widget.CardView>
 
 
-
-
             <!--f3a34-->
             <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -881,17 +883,15 @@
                         android:text="@string/f3a31" />
 
 
-
-                        <EditText
-                            android:id="@+id/f3a34"
-                            style="@style/textInput"
-                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                            android:hint="@string/other"
-                            android:inputType="text"
-                            android:tag="f3a3196"
-                            android:text='@{f3a3196.checked? f3a3196x.getText.toString : ""}'
-                            android:visibility='@{f3a3196.checked? View.VISIBLE : View.GONE}' />
-
+                    <EditText
+                        android:id="@+id/f3a34"
+                        style="@style/textInput"
+                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:hint="@string/other"
+                        android:inputType="text"
+                        android:tag="f3a3196"
+                        android:text='@{f3a3196.checked? f3a3196x.getText.toString : ""}'
+                        android:visibility='@{f3a3196.checked? View.VISIBLE : View.GONE}' />
 
 
                 </LinearLayout>

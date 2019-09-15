@@ -103,19 +103,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             familyMembers.COLUMN_UUID + " TEXT," +
             familyMembers.COLUMN_FORMDATE + " TEXT," +
             familyMembers.COLUMN_USER + " TEXT," +
-            familyMembers.COLUMN_SA2 + " TEXT," +
-            familyMembers.COLUMN_ENM_NO + " TEXT," +
-            familyMembers.COLUMN_HH_NO + " TEXT," +
-            familyMembers.COLUMN_AV + " TEXT," +
-            familyMembers.COLUMN_KISH_SELECTED + " TEXT," +
-            familyMembers.COLUMN_KISH_SELECTED_MWRA_D + " TEXT," +
-            familyMembers.COLUMN_KISH_SELECTED_ADOLESCENT + " TEXT," +
+            familyMembers.COLUMN_F1B + " TEXT," +
             familyMembers.COLUMN_DEVICEID + " TEXT," +
             familyMembers.COLUMN_DEVICETAGID + " TEXT," +
             familyMembers.COLUMN_APP_VERSION + " TEXT," +
             familyMembers.COLUMN_SYNCED + " TEXT," +
-            familyMembers.COLUMN_SYNCED_DATE + " TEXT," +
-            familyMembers.COLUMN_FLAG + " TEXT"
+            familyMembers.COLUMN_SYNCED_DATE + " TEXT"
             + " );";
 
 
@@ -268,9 +261,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(familyMembers.COLUMN_UUID, fmc.get_UUID());
         values.put(familyMembers.COLUMN_FORMDATE, fmc.getFormDate());
         values.put(familyMembers.COLUMN_USER, fmc.getUser());
-        values.put(familyMembers.COLUMN_ENM_NO, fmc.getEnmNo());
-        values.put(familyMembers.COLUMN_HH_NO, fmc.getHhNo());
         values.put(familyMembers.COLUMN_DEVICETAGID, fmc.getDevicetagID());
+        values.put(familyMembers.COLUMN_F1B, fmc.getF1b());
         values.put(familyMembers.COLUMN_DEVICEID, fmc.getDeviceId());
         values.put(familyMembers.COLUMN_SYNCED, fmc.getSynced());
         values.put(familyMembers.COLUMN_SYNCED_DATE, fmc.getSyncedDate());

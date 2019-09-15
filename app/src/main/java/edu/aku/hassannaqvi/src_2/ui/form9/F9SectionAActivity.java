@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.src_2.ui.form9;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,7 +28,7 @@ public class F9SectionAActivity extends AppCompatActivity {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
-//                    startActivity(new Intent(getApplicationContext(), Form02HHPart_1.class));
+                    startActivity(new Intent(getApplicationContext(), F9SectionBActivity.class));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }

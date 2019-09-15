@@ -5,6 +5,7 @@
     <data>
 
         <import type="android.view.View" />
+
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.src_2.ui.form6.F6SectionAActivity" />
@@ -31,24 +32,24 @@
                 style="@style/textView2"
                 android:text="@string/f6h3" />
 
-            <!--f6a00-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <!--            &lt;!&ndash;f6a00&ndash;&gt;-->
+            <!--            <android.support.v7.widget.CardView style="@style/cardView">-->
 
 
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
+            <!--                <LinearLayout style="@style/linearlayout_view_wt_bound">-->
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/f6ah1" />
+            <!--                    <TextView-->
+            <!--                        style="@style/i_textview"-->
+            <!--                        android:text="@string/f6ah1" />-->
 
 
-                    <Spinner
-                        android:id="@+id/f6a00"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+            <!--                    <Spinner-->
+            <!--                        android:id="@+id/f6a00"-->
+            <!--                        android:layout_width="match_parent"-->
+            <!--                        android:layout_height="wrap_content" />-->
 
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+            <!--                </LinearLayout>-->
+            <!--            </android.support.v7.widget.CardView>-->
 
             <!--f6a01-->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -84,82 +85,79 @@
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 
-            <!--f6a02-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <LinearLayout
+                android:id="@+id/fldGrp0203"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility='@{f6a01a.checked? View.VISIBLE : View.GONE}'>
+
+                <!--f6a02-->
+                <android.support.v7.widget.CardView style="@style/cardView">
 
 
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/f6a02" />
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f6a02" />
 
-                    <TextView
-                        style="@style/textView2"
-                        android:text="DISCHARGE CARD AVAILABLE" />
+                        <TextView
+                            style="@style/textView2"
+                            android:text="DISCHARGE CARD AVAILABLE" />
 
-                    <RadioGroup
-                        android:id="@+id/f6a02"
-                        style="@style/radiogroup">
+                        <RadioGroup
+                            android:id="@+id/f6a02"
+                            style="@style/radiogroup">
 
-                        <RadioButton
-                            android:id="@+id/f6a02a"
-                            style="@style/radiobutton"
-                            android:text="@string/yes" />
+                            <RadioButton
+                                android:id="@+id/f6a02a"
+                                style="@style/radiobutton"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/f6a02b"
+                                style="@style/radiobutton"
+                                android:text="@string/no" />
+
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!--f6a03-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fldGrpf6a03"
+                    style="@style/cardView"
+                    android:visibility='@{f6a02b.checked? View.VISIBLE : View.GONE}'>
+
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f6a03" />
+
+                        <TextView
+                            style="@style/textView2"
+                            android:text="FROM RECALL" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/f6a02ax"
+                            android:id="@+id/f6a03"
                             style="@style/textInput"
                             android:hint="#.### kg"
                             android:inputType="number"
                             android:maxLength="5"
-                            android:text='@{f6a02a.checked? f6a02ax.getText.toString : ""}'
-                            android:visibility='@{f6a02a.checked? View.VISIBLE : View.GONE}'
+                            android:text='@{f6a02b.checked? f6a03.getText.toString : ""}'
                             app:mask="^(\\d{1,1}\\.\\d{3,3})$"
                             app:pattern="^(\\d{1,1}\\.\\d{3,3})$"
                             app:type="range" />
 
-                        <RadioButton
-                            android:id="@+id/f6a02b"
-                            style="@style/radiobutton"
-                            android:text="@string/no" />
 
-
-                    </RadioGroup>
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <!--f6a03-->
-            <android.support.v7.widget.CardView
-                style="@style/cardView"
-                android:visibility='@{f6a02b.checked? View.VISIBLE : View.GONE}'>
-
-
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/f6a03" />
-
-                    <TextView
-                        style="@style/textView2"
-                        android:text="FROM RECALL" />
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/f6a03"
-                        style="@style/textInput"
-                        android:hint="#.### kg"
-                        android:inputType="number"
-                        android:maxLength="5"
-                        android:text='@{f6a02b.checked? f6a03.getText.toString : ""}'
-                        app:mask="^(\\d{1,1}\\.\\d{3,3})$"
-                        app:pattern="^(\\d{1,1}\\.\\d{3,3})$"
-                        app:type="range" />
-
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
 
 
             <!--f6a04-->
@@ -247,7 +245,10 @@
             </android.support.v7.widget.CardView>
 
             <!--f6a06-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpf6a06"
+                style="@style/cardView"
+                android:visibility='@{f6a05a.checked? View.VISIBLE : View.GONE}'>
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">
@@ -500,6 +501,7 @@
 
             <!--f6a11-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpf6a11"
                 style="@style/cardView"
                 android:visibility='@{f6a10b.checked? View.VISIBLE : View.GONE}'>
 
@@ -699,6 +701,7 @@
 
             <!--f6b02-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpf6b02"
                 style="@style/cardView"
                 android:visibility='@{f6b01a.checked? View.VISIBLE : View.GONE}'>
 

@@ -31,6 +31,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".ui.LoginActivity"
@@ -47,7 +48,9 @@
         <activity android:name=".ui.form6.F6SectionAActivity" />
         <activity android:name=".ui.form5.F5SectionAActivity" />
         <activity android:name=".ui.form4.F4SectionBActivity" />
-        <activity android:name=".ui.form4.F4SectionAActivity" />
+        <activity android:name=".ui.form4.F4SectionAActivity">
+
+        </activity>
         <activity android:name=".ui.form9.F9SectionBActivity" />
         <activity android:name=".ui.form9.F9SectionAActivity" />
         <activity android:name=".ui.form7.F7SectionAActivity" />

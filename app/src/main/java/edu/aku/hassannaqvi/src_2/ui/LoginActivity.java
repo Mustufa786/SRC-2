@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.databinding.DataBindingUtil;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
@@ -17,6 +18,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 import edu.aku.hassannaqvi.src_2.MainActivity;
@@ -53,6 +56,30 @@ public class LoginActivity extends AppCompatActivity {
         bi.setCallback(this);
 
         db = new DatabaseHelper(this);
+
+        String packageName = getPackageName();
+        try {
+            long installedOn = this
+                    .getPackageManager()
+                    .getPackageInfo(packageName, 0)
+                    .lastUpdateTime;
+            Integer versionCode = this
+                    .getPackageManager()
+                    .getPackageInfo(packageName, 0)
+                    .versionCode;
+            String versionName = this
+                    .getPackageManager()
+                    .getPackageInfo(packageName, 0)
+                    .versionName;
+            bi.txtinstalldate.setText("Ver. " + versionName + "." + versionCode + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(installedOn)) + " )");
+
+            MainApp.versionCode = versionCode;
+            MainApp.versionName = versionName;
+
+
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
 
 
     }
