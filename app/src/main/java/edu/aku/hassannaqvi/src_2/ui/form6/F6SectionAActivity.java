@@ -9,6 +9,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.src_2.R;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF6SectionABinding;
@@ -113,6 +114,30 @@ public class F6SectionAActivity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
+
+        JSONObject f1 = new JSONObject();
+        f1.put("f6a01",bi.f6a01a.isChecked() ?"1" :bi.f6a01b.isChecked() ?"2" :bi.f6a0198.isChecked() ?"98" :"0");
+        f1.put("f6a02c", bi.f6a02c.getText().toString());
+        f1.put("f6a02",bi.f6a02a.isChecked() ?"1" :bi.f6a02b.isChecked() ?"2" :"0");
+        f1.put("f6a03", bi.f6a03.getText().toString());
+        f1.put("f6a04",bi.f6a04a.isChecked() ?"1" :bi.f6a04b.isChecked() ?"2" :bi.f6a04c.isChecked() ?"3" :bi.f6a04d.isChecked() ?"4" :bi.f6a04e.isChecked() ?"5" :bi.f6a0498.isChecked() ?"98" :"0");
+        f1.put("f6a05",bi.f6a05a.isChecked() ?"1" :bi.f6a05b.isChecked() ?"2" :bi.f6a05c.isChecked() ?"98" :"0");
+        f1.put("f6a06",bi.f6a06a.isChecked() ?"1" :bi.f6a06b.isChecked() ?"2" :bi.f6a06c.isChecked() ?"3" :bi.f6a06d.isChecked() ?"4" :"0");
+        f1.put("f6a0796x", bi.f6a0796x.getText().toString());
+        f1.put("f6a07",bi.f6a07a.isChecked() ?"1" :bi.f6a07b.isChecked() ?"2" :bi.f6a07c.isChecked() ?"3" :bi.f6a07d.isChecked() ?"4" :bi.f6a0796.isChecked() ?"96" :"0");
+        f1.put("f6a08",bi.f6a08a.isChecked() ?"1" :bi.f6a08b.isChecked() ?"2" :bi.f6a08c.isChecked() ?"98" :"0");
+        f1.put("f6a0996x", bi.f6a0996x.getText().toString());
+        f1.put("f6a09",bi.f6a09a.isChecked() ?"1" :bi.f6a09b.isChecked() ?"2" :bi.f6a09c.isChecked() ?"3" :bi.f6a09d.isChecked() ?"4" :bi.f6a09e.isChecked() ?"5" :bi.f6a09f.isChecked() ?"6" :bi.f6a0996.isChecked() ?"96" :bi.f6a0998.isChecked() ?"98" :"0");
+        f1.put("f6a10",bi.f6a10a.isChecked() ?"1" :bi.f6a10b.isChecked() ?"2" :bi.f6a1098.isChecked() ?"98" :"0");
+        f1.put("f6a1196x", bi.f6a1196x.getText().toString());
+        f1.put("f6a11",bi.f6a11a.isChecked() ?"1" :bi.f6a11b.isChecked() ?"2" :bi.f6a11c.isChecked() ?"3" :bi.f6a1198.isChecked() ?"98" :bi.f6a1196.isChecked() ?"96" :"0");
+        f1.put("f6a12",bi.f6a12a.isChecked() ?"1" :bi.f6a12b.isChecked() ?"2" :bi.f6a1298.isChecked() ?"98" :"0");
+        f1.put("f6a13bx", bi.f6a13bx.getText().toString());
+        f1.put("f6a13cx", bi.f6a13cx.getText().toString());
+        f1.put("f6a13",bi.f6a13a.isChecked() ?"1" :bi.f6a13b.isChecked() ?"2" :bi.f6a13c.isChecked() ?"3" :bi.f6a13d.isChecked() ?"4" :bi.f6a1398.isChecked() ?"98" :"0");
+        f1.put("f6b01",bi.f6b01a.isChecked() ?"1" :bi.f6b01b.isChecked() ?"2" :bi.f6b0198.isChecked() ?"98" :"0");
+        f1.put("f6b02",bi.f6b02a.isChecked() ?"1" :bi.f6b02b.isChecked() ?"2" :bi.f6b0298.isChecked() ?"98" :"0");
+
     }
 
     private boolean formValidation() {

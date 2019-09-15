@@ -120,6 +120,19 @@
                                 style="@style/radiobutton"
                                 android:text="@string/no" />
 
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/f6a02c"
+                                style="@style/textInput"
+                                android:hint="#.### kg"
+                                android:inputType="number"
+                                android:maxLength="5"
+                                android:text='@{f6a02b.checked? f6a02c.getText.toString : ""}'
+                                android:visibility='@{f6a02a.checked? View.VISIBLE : View.GONE}'
+
+                                app:mask="^(\\d{1,1}\\.\\d{3,3})$"
+                                app:pattern="^(\\d{1,1}\\.\\d{3,3})$"
+                                app:type="range" />
+
 
                         </RadioGroup>
 
@@ -150,6 +163,7 @@
                             android:inputType="number"
                             android:maxLength="5"
                             android:text='@{f6a02b.checked? f6a03.getText.toString : ""}'
+
                             app:mask="^(\\d{1,1}\\.\\d{3,3})$"
                             app:pattern="^(\\d{1,1}\\.\\d{3,3})$"
                             app:type="range" />
