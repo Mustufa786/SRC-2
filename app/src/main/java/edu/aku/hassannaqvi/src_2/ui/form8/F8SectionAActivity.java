@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -11,6 +12,8 @@ import org.json.JSONException;
 import edu.aku.hassannaqvi.src_2.R;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF8SectionABinding;
 import edu.aku.hassannaqvi.src_2.ui.form9.F9SectionAActivity;
+import edu.aku.hassannaqvi.src_2.validation.ClearClass;
+import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
 public class F8SectionAActivity extends AppCompatActivity {
 
@@ -24,6 +27,31 @@ public class F8SectionAActivity extends AppCompatActivity {
         bi.setCallback(this);
 
         setTitle(R.string.form8Heading);
+
+        setupViews();
+    }
+
+    private void setupViews() {
+
+        bi.f8a04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.f8a0411.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrpf8a04a, null);
+                }
+            }
+        });
+
+        bi.f8a04a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.f8a04a02.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrpf8a05, null);
+                }
+            }
+        });
     }
 
     public void BtnContinue() {
@@ -51,7 +79,7 @@ public class F8SectionAActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return true;
+        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpF8);
     }
 
     public void BtnEnd() {

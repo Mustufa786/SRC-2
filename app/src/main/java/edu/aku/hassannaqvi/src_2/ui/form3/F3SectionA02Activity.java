@@ -17,6 +17,7 @@ import edu.aku.hassannaqvi.src_2.databinding.ActivityF3SectionA02Binding;
 import edu.aku.hassannaqvi.src_2.ui.form4.F4SectionAActivity;
 import edu.aku.hassannaqvi.src_2.ui.form8.F8SectionAActivity;
 import edu.aku.hassannaqvi.src_2.validation.ClearClass;
+import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
 public class F3SectionA02Activity extends AppCompatActivity {
 
@@ -133,7 +134,7 @@ public class F3SectionA02Activity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return true;
+        return ValidatorClass.EmptyCheckingContainer(this, bi.fdlGrpSectionF3);
     }
 
     public void BtnEnd() {

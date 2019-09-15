@@ -19,6 +19,7 @@
 
 
         <LinearLayout
+            android:id="@+id/fldGrpF4B"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layoutDirection="rtl"
@@ -352,41 +353,39 @@
                             android:layout_height="wrap_content"
                             android:text="@string/f4c03c" />
 
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/f4c03h" />
-                    <CheckBox
-                        android:id="@+id/f4c03d"
-                        style="@style/checkbox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/f4c03d" />
-                    <CheckBox
-                        android:id="@+id/f4c03e"
-                        style="@style/checkbox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/f4c03e" />
-                    <CheckBox
-                        android:id="@+id/f4c03f"
-                        style="@style/checkbox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/f4c03f" />
-                    <CheckBox
-                        android:id="@+id/f4c03g"
-                        style="@style/checkbox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/f4c03g" />
-                    <CheckBox
-                        android:id="@+id/f4c03h"
-                        style="@style/checkbox"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/f4c03h" />
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f4c03h" />
 
+                        <CheckBox
+                            android:id="@+id/f4c03d"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f4c03d" />
 
+                        <CheckBox
+                            android:id="@+id/f4c03e"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f4c03e" />
+
+                        <CheckBox
+                            android:id="@+id/f4c03f"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f4c03f" />
+
+                        <CheckBox
+                            android:id="@+id/f4c03g"
+                            style="@style/checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/f4c03g" />
+
+                        <!--                       -->
 
 
                     </LinearLayout>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -12,6 +13,8 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.src_2.R;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF7SectionABinding;
 import edu.aku.hassannaqvi.src_2.ui.form8.F8SectionAActivity;
+import edu.aku.hassannaqvi.src_2.validation.ClearClass;
+import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
 public class F7SectionAActivity extends AppCompatActivity {
 
@@ -25,6 +28,21 @@ public class F7SectionAActivity extends AppCompatActivity {
         bi.setCallback(this);
 
         setTitle(R.string.f7Form);
+
+        setupViews();
+    }
+
+    private void setupViews() {
+
+        bi.f7a04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.f7a04a.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrp5678, null);
+                }
+            }
+        });
     }
 
     public void BtnContinue() {
@@ -69,7 +87,7 @@ public class F7SectionAActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return true;
+        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpF7);
     }
 
     public void BtnEnd() {

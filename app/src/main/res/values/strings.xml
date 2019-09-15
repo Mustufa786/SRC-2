@@ -306,7 +306,8 @@
     <string name="f8a04h"> بغل ۾ رکڻ وارو امپلائٽ </string>
     <string name="f8a04i"> عورت جو آپريشنل بندي </string>
     <string name="f8a04j"> مرد جو آپريشن / نس بندي </string>
-    <string name="f8a04k"> ڪجھ ٻيو </string>
+    <string name="f8a04k"> Not Current Use </string>
+    <string name="f8a04a01"> Have you ever used a family planing method?</string>
     <string name="f8a04h2"> ماضي ۾ وقفو ڪيو هو هاڻي نه </string>
     <string name="f8a04h3"> ڪڏهن به وقفي جو طريقو استعمال نه ڪيو </string>
     <string name="f8a05"> اگر وقفو پوئين ٽن مهينن جي اندر ڇڏيو آهي ته وجه؟ </string>
@@ -330,7 +331,7 @@
     <string name="f8a06h"> بغل ۾ رکڻ وارو امپلائٽ </string>
     <string name="f8a06i"> عورت جو آپريشنل بندي </string>
     <string name="f8a06j"> مرد جو آپريشن / نس بندي </string>
-    <string name="f8a06k"> ڪجھ ٻيو </string>
+    <string name="f8a06k">Do not want to use/switch </string>
     <string name="f8a06h2"> نه </string>
     <string name="f8a07"> ڇا توهان کي ٻئي ٻار جي خواهش آهي؟ </string>
     <string name="f8a07a"> ٻيو ٻار ٻن سالن جي اندر چاهيان ٿي. </string>

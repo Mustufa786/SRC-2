@@ -13,6 +13,7 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.src_2.R;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF4SectionABinding;
 import edu.aku.hassannaqvi.src_2.validation.ClearClass;
+import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
 public class F4SectionAActivity extends AppCompatActivity {
 
@@ -121,7 +122,7 @@ public class F4SectionAActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return true;
+        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpF4A);
     }
 
     public void BtnEnd() {

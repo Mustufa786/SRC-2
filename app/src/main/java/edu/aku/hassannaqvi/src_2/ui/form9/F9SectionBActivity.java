@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -12,6 +13,8 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.src_2.R;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF9SectionBBinding;
 import edu.aku.hassannaqvi.src_2.ui.EndingActivity;
+import edu.aku.hassannaqvi.src_2.validation.ClearClass;
+import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
 public class F9SectionBActivity extends AppCompatActivity {
 
@@ -23,6 +26,50 @@ public class F9SectionBActivity extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f9_section_b);
         bi.setCallback(this);
+
+        setupViews();
+    }
+
+    private void setupViews() {
+
+        bi.f9b01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.f9b01a.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrpMain, null);
+                }
+            }
+        });
+
+        bi.f9b03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.f9b03a.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrp45678, null);
+                }
+            }
+        });
+        bi.f9b05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.f9b05a.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrpf9b06, null);
+                }
+            }
+        });
+
+        bi.f9b07.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.f9b07a.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrpf9b08, null);
+                }
+            }
+        });
     }
 
     public void BtnContinue() {
@@ -67,7 +114,7 @@ public class F9SectionBActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return true;
+        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpF9B);
     }
 
     public void BtnEnd() {
