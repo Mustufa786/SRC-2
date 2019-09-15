@@ -308,7 +308,7 @@
                             android:visibility='@{f4c02.checked? View.GONE : View.VISIBLE}' />
 
                         <CheckBox
-                            android:id="@+id/f4c02"
+                            android:id="@+id/f4c0298"
                             style="@style/checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
