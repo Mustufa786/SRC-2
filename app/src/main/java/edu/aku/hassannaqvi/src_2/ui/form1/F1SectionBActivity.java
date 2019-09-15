@@ -68,6 +68,9 @@ public class F1SectionBActivity extends AppCompatActivity {
                 lstf1b08=new ArrayList<>();
                 lstf1b09=new ArrayList<>();
 
+        MainApp.two_year_child=false;
+        MainApp.lst_U2.clear();
+        MainApp.lst_U5.clear();
     }
 
 
@@ -661,6 +664,24 @@ public class F1SectionBActivity extends AppCompatActivity {
                     lstf1b03D.add(f1b03a1.getText().toString());
                     lstf1b03M.add(f1b03a2.getText().toString());
                     lstf1b03Y.add(f1b03a3.getText().toString());
+
+                    if(f1b03a3.getText().toString().length()>0)
+                    {
+                        int age=Integer.parseInt(f1b03a3.getText().toString());
+                        if(age<2 )
+                        {
+                            MainApp.two_year_child=true;
+                            MainApp.lst_U2.add(f1b01.getText().toString());
+
+                        }
+
+                        if(age<5 )
+                        {
+
+                            MainApp.lst_U5.add(f1b01.getText().toString());
+
+                        }
+                    }
                 }
                 if(f1b03b.isChecked())
                 {
@@ -669,6 +690,26 @@ public class F1SectionBActivity extends AppCompatActivity {
                     lstf1b03D.add(f1b03b1.getText().toString());
                     lstf1b03M.add(f1b03b2.getText().toString());
                     lstf1b03Y.add(f1b03b3.getText().toString());
+
+
+
+                    if(f1b03b3.getText().toString().length()>0)
+                    {
+                        int age=Integer.parseInt(f1b03b3.getText().toString());
+                        if(age>2017 )
+                        {
+                            MainApp.two_year_child=true;
+                            MainApp.lst_U2.add(f1b01.getText().toString());
+
+                        }
+
+                        if(age>2015 )
+                        {
+
+                            MainApp.lst_U5.add(f1b01.getText().toString());
+
+                        }
+                    }
                 }
                 if(iam_respondent==true)
                 {
