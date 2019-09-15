@@ -71,13 +71,51 @@
                         android:text="@string/f7a02" />
 
 
-                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
-                        android:hint="@string/f7a02"
-                        app:dateFormat="dd-MM-yyyy"
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/f7a02a"
                         style="@style/textInput"
-                        android:id="@+id/f7a02"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:hint="Days"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        app:maxValue="29"
+                        app:minValue="1"
+
+
+
+
+
+                        app:type="range" />
+
+                    <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/f7a02b"
+                        style="@style/textInput"
+                        android:hint="Month"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        app:maxValue="12"
+                        app:minValue="1"
+
+
+
+
+                        app:type="range" />
+                    <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
+
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/f7a02c"
+                        style="@style/textInput"
+                        android:hint="Year"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        app:maxValue="80"
+                        app:minValue="0"
+
+
+
+
+                        app:type="range" />
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>

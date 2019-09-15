@@ -116,6 +116,8 @@ public class F6SectionAActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject f1 = new JSONObject();
+
+
         f1.put("f6a01",bi.f6a01a.isChecked() ?"1" :bi.f6a01b.isChecked() ?"2" :bi.f6a0198.isChecked() ?"98" :"0");
         f1.put("f6a02c", bi.f6a02c.getText().toString());
         f1.put("f6a02",bi.f6a02a.isChecked() ?"1" :bi.f6a02b.isChecked() ?"2" :"0");
