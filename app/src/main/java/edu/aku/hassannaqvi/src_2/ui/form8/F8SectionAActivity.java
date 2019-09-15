@@ -39,7 +39,7 @@ public class F8SectionAActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 if (checkedId != bi.f8a0411.getId()) {
-                    ClearClass.ClearAllFields(bi.fldGrpf8a04, null);
+                    ClearClass.ClearAllFields(bi.fldGrpf8a04a, null);
                 }
             }
         });
