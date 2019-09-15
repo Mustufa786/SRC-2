@@ -32,17 +32,16 @@ public class MainActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bi.setCallback(this);
 
+        sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
+
         if (MainApp.admin) {
             bi.databaseBtn.setVisibility(View.VISIBLE);
         } else {
             bi.databaseBtn.setVisibility(View.GONE);
         }
 
-        sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
-        if (sharedPref.getString("tagName", null).equals("")
-                && sharedPref.getString("tagName", null) == null) {
-            Util.showTagDialog(this);
-        }
+        Util.showTagDialog(this);
+
 
 
 

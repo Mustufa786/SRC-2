@@ -108,6 +108,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/f1c03"
                         style="@style/textInput"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/number"
@@ -132,6 +133,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/f1c04"
                         style="@style/textInput"
+                        android:inputType="number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/number"

@@ -57,21 +57,7 @@ public class F1SectionBActivity extends AppCompatActivity {
             lstf1b08,
             lstf1b09;
 
-    ArrayList<ArrayList<String>> subList = new ArrayList<>(Arrays.asList(
-            lstf1b01,
-            lstf1b02,
-            lstf1b03,
-            lstf1b03D,
-            lstf1b03M,
-            lstf1b03Y,
-            lstf1b04,
-            lstf1b05,
-            lstf1b06,
-            lstf1b07,
-            lstf1b07x,
-            lstf1b08,
-            lstf1b09
-    ));
+    ArrayList<ArrayList<String>> subList = new ArrayList<>();
     ArrayList<String> allQuestions = new ArrayList<>(Arrays.asList(
             "lstf1b01",
             "lstf1b02",
@@ -111,9 +97,12 @@ public class F1SectionBActivity extends AppCompatActivity {
         lstf1b08 = new ArrayList<>();
         lstf1b09 = new ArrayList<>();
 
-        MainApp.two_year_child = false;
-        MainApp.lst_U2.clear();
-        MainApp.lst_U5.clear();
+//        MainApp.two_year_child = false;
+//        if(MainApp.lst_U2.size() > 0 || MainApp.lst_U5.size() > 0){
+//            MainApp.lst_U2.clear();
+//            MainApp.lst_U5.clear();
+//        }
+
     }
 
 
@@ -795,25 +784,27 @@ public class F1SectionBActivity extends AppCompatActivity {
                 }
 
 
-
-
                 bi.itextview.setText("Number of Added Members (" + lstf1b09.size() + ")");
                 iam_respondent = false;
 
 
-                if(lstf1b01.size()<3)
-                {
-                    Toast.makeText(F1SectionBActivity.this,"Please Enter at least  Two Member",Toast.LENGTH_LONG).show();
-                return;
-                }
-                if(respondent_type!="UM")
-                {
-                    if(MainApp.lst_U5.size()==0)
-                    {
-                        Toast.makeText(F1SectionBActivity.this,"Please Add U5 Child ",Toast.LENGTH_LONG).show();
-                        return;
-                    }
-                }
+                subList.addAll(Arrays.asList(
+                        lstf1b01,
+                        lstf1b02,
+                        lstf1b03,
+                        lstf1b03D,
+                        lstf1b03M,
+                        lstf1b03Y,
+                        lstf1b04,
+                        lstf1b05,
+                        lstf1b06,
+                        lstf1b07,
+                        lstf1b07x,
+                        lstf1b08,
+                        lstf1b09
+                ));
+//
+//
 
                 try {
                     saveDraft();
@@ -852,12 +843,22 @@ public class F1SectionBActivity extends AppCompatActivity {
 
         JSONObject object = new JSONObject();
 
-        for (int i = 0; i < subList.size(); i++) {
-            object.put(allQuestions.get(i), subList.get(i).get(i));
+        for (int i = 0; i < allQuestions.size(); i++) {
+            object.put(allQuestions.get(i), subList.get(i).get(lstf1b07.size() - 1));
+
         }
         fmc.setF1b(String.valueOf(object));
 
         MainApp.serial_no++;
+
+//        clearArray();
+        subList.clear();
+    }
+
+    private void clearArray() {
+        for (int i = 0; i < subList.size(); i++) {
+            subList.get(i).clear();
+        }
     }
 
     private boolean UpdateDB() {
@@ -880,6 +881,16 @@ public class F1SectionBActivity extends AppCompatActivity {
     }
 
     public void BtnContinue() {
+        if (lstf1b01.size() == 0) {
+            Toast.makeText(F1SectionBActivity.this, "Please Enter at least  Two Member", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if (respondent_type != "UM") {
+            if (MainApp.lst_U5.size() == 0) {
+                Toast.makeText(F1SectionBActivity.this, "Please Add U5 Child ", Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
         builder.setMessage("Are you sure you want to move to next section?");
