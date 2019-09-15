@@ -18,6 +18,7 @@ import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.text.format.DateFormat;
 
+import java.security.PublicKey;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -37,7 +38,10 @@ import edu.aku.hassannaqvi.src_2.ui.EndingActivity;
  */
 
 public class MainApp extends Application {
-    public  static  boolean Respondent_is_UnMarried;
+    public  static  boolean Respondent_is_UnMarried; // true if Respondent is Unmarid
+    public  static  boolean two_year_child;  // true if We have U2 Year Child
+    public  static  List<String> lst_U2; // List Name of U2 children
+    public  static  List<String> lst_U5; // List Name of U5 children
     public static final Integer _PORT = 443; // Port - with colon (:)
     public static final Integer MONTHS_LIMIT = 11;
     public static final Integer DAYS_LIMIT = 29;
