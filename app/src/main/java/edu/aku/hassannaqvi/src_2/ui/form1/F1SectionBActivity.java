@@ -794,8 +794,26 @@ public class F1SectionBActivity extends AppCompatActivity {
 
                 }
 
+
+
+
                 bi.itextview.setText("Number of Added Members (" + lstf1b09.size() + ")");
                 iam_respondent = false;
+
+
+                if(lstf1b01.size()<3)
+                {
+                    Toast.makeText(F1SectionBActivity.this,"Please Enter at least  Two Member",Toast.LENGTH_LONG).show();
+                return;
+                }
+                if(respondent_type!="UM")
+                {
+                    if(MainApp.lst_U5.size()==0)
+                    {
+                        Toast.makeText(F1SectionBActivity.this,"Please Add U5 Child ",Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                }
 
                 try {
                     saveDraft();
