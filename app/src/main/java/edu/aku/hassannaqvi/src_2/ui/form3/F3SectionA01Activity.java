@@ -147,6 +147,16 @@ public class F3SectionA01Activity extends AppCompatActivity {
             }
         });
 
+        bi.f3a15.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.f3a15d.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrpf3a16, null);
+                }
+            }
+        });
+
         bi.f3a1799.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

@@ -1030,7 +1030,10 @@
                 </android.support.v7.widget.CardView>
 
                 <!--f3a16-->
-                <android.support.v7.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fldGrpf3a16"
+                    style="@style/cardView"
+                    android:visibility='@{f3a15d.checked? View.GONE : View.VISIBLE}'>
 
 
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
