@@ -141,6 +141,8 @@ public class F4SectionAActivity extends AppCompatActivity {
 
     public void BtnEnd() {
 
+        MainApp.endActivity(this, this);
+
     }
 
 

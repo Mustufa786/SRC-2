@@ -87,6 +87,8 @@ public class F1SectionCActivity extends AppCompatActivity {
 
     public void BtnEnd() {
 
+        MainApp.endActivity(this, this);
+
     }
 
 

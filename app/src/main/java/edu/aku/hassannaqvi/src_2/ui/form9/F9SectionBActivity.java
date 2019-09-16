@@ -138,6 +138,7 @@ public class F9SectionBActivity extends AppCompatActivity {
 
     public void BtnEnd() {
 
+        MainApp.endActivity(this, this);
     }
 
 

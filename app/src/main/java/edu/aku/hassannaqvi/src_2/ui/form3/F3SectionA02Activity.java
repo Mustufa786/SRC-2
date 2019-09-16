@@ -159,6 +159,7 @@ public class F3SectionA02Activity extends AppCompatActivity {
 
     public void BtnEnd() {
 
+        MainApp.endActivity(this, this);
     }
 
 

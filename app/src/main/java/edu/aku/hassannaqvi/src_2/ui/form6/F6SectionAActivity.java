@@ -164,6 +164,8 @@ public class F6SectionAActivity extends AppCompatActivity {
 
     public void BtnEnd() {
 
+        MainApp.endActivity(this, this);
+
     }
 
     @Override

@@ -127,6 +127,7 @@ public class F5SectionAActivity extends AppCompatActivity {
 
     public void BtnEnd() {
 
+        MainApp.endActivity(this, this);
     }
 
     @Override

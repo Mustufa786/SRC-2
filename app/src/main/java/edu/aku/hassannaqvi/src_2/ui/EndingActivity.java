@@ -64,10 +64,18 @@ public class EndingActivity extends AppCompatActivity {
             }
         });
 
+        if (MainApp.lst_U5.size() > 0) {
+            MainApp.lst_U5.clear();
+        }
+        if (MainApp.lst_U2.size() > 0) {
+            MainApp.lst_U2.clear();
+        }
+        MainApp.serial_no = 1;
+        MainApp.Respondent_is_UnMarried = false;
+
     }
 
     public void BtnEnd() {
-
 
         if (formValidation()) {
             SaveDraft();

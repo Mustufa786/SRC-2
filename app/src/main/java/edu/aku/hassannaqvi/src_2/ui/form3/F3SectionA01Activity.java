@@ -273,6 +273,8 @@ public class F3SectionA01Activity extends AppCompatActivity {
 
     public void BtnEnd() {
 
+        MainApp.endActivity(this, this);
+
     }
 
     @Override

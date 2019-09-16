@@ -18,6 +18,7 @@
         tools:context=".ui.form2.F2SectionBActivity">
 
         <LinearLayout
+            android:id="@+id/fldGrpf2b"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layoutDirection="rtl"

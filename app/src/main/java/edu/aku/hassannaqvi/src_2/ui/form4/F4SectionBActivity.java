@@ -112,7 +112,9 @@ public class F4SectionBActivity extends AppCompatActivity {
         return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpF4B);
     }
 
+
     public void BtnEnd() {
+        MainApp.endActivity(this, this);
 
     }
 
