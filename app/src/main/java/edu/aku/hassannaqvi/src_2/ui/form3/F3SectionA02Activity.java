@@ -53,8 +53,10 @@ public class F3SectionA02Activity extends AppCompatActivity {
         bi.f3a32.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if (checkedId != bi.f3a32a.getId()) {
+                if (checkedId == bi.f3a32b.getId() || checkedId == bi.f3a3298.getId()) {
                     ClearClass.ClearAllFields(bi.fldGrpf3a33, null);
+                } else if (checkedId == bi.f3a32a.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrpf3a34, null);
                 }
             }
         });

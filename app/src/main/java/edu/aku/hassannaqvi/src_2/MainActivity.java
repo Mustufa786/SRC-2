@@ -40,11 +40,8 @@ public class MainActivity extends AppCompatActivity {
             bi.databaseBtn.setVisibility(View.GONE);
         }
 
-        Util.showTagDialog(this);
-
-
-
-
+        if (sharedPref.getString("tagName", null) == "" && sharedPref.getString("tagName", null) == null)
+            Util.showTagDialog(this);
 
 
         db = new DatabaseHelper(this);
@@ -102,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
             rSumText += "Last Data Upload: \t" + syncPref.getString("LastUpSyncServer", "Never Synced");
             rSumText += "\r\n";
             rSumText += "\r\n";
-            rSumText += "Unsynced Forms8: \t" + unsyncedForms6.size();
             rSumText += "\r\n";
 
         }

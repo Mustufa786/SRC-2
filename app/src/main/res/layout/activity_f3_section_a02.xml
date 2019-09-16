@@ -874,14 +874,17 @@
 
 
             <!--f3a34-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpf3a34"
+                style="@style/cardView"
+                android:visibility='@{f3a32b.checked &amp; f3a3298.checked ? View.VISIBLE : View.GONE}'>
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">
 
                     <TextView
                         style="@style/i_textview"
-                        android:text="@string/f3a31" />
+                        android:text="@string/f3a34" />
 
 
                     <EditText
@@ -890,9 +893,7 @@
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/other"
                         android:inputType="text"
-                        android:tag="f3a3196"
-                        android:text='@{f3a3196.checked? f3a3196x.getText.toString : ""}'
-                        android:visibility='@{f3a3196.checked? View.VISIBLE : View.GONE}' />
+                        android:tag="f3a3196" />
 
 
                 </LinearLayout>

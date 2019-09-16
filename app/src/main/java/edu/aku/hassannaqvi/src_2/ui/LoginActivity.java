@@ -18,6 +18,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.github.amlcurran.showcaseview.ShowcaseView;
+import com.github.amlcurran.showcaseview.targets.Target;
+import com.github.amlcurran.showcaseview.targets.ViewTarget;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -81,6 +85,15 @@ public class LoginActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+
+        Target viewTarget = new ViewTarget(bi.syncBtn.getId(), this);
+
+        new ShowcaseView.Builder(this)
+                .setTarget(viewTarget)
+                .setStyle(R.style.CustomShowcaseTheme)
+                .setContentText("\n\nPlease Sync Data before login...")
+                .singleShot(42)
+                .build();
 
     }
 
