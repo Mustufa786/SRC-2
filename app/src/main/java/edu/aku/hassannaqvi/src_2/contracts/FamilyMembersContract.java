@@ -29,7 +29,6 @@ public class FamilyMembersContract implements Serializable {
     private String syncedDate = "";
 
 
-
     public String getDevicetagID() {
         return devicetagID;
     }
@@ -166,6 +165,9 @@ public class FamilyMembersContract implements Serializable {
         this.user = cursor.getString(cursor.getColumnIndex(familyMembers.COLUMN_USER));
         this.app_ver = cursor.getString(cursor.getColumnIndex(familyMembers.COLUMN_APP_VERSION));
         this.devicetagID = cursor.getString(cursor.getColumnIndex(familyMembers.COLUMN_DEVICETAGID));
+        this.f1b = cursor.getString(cursor.getColumnIndex(familyMembers.COLUMN_F1B));
+        this.synced = cursor.getString(cursor.getColumnIndex(familyMembers.COLUMN_SYNCED));
+        this.syncedDate = cursor.getString(cursor.getColumnIndex(familyMembers.COLUMN_SYNCED_DATE));
 
         return this;
 

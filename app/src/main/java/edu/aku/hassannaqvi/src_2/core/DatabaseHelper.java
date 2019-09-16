@@ -351,6 +351,176 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return formList;
     }
 
+    public Collection<FormsContract> getUnsyncedForms() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                FormsTable._ID,
+                FormsTable.COLUMN_UID,
+                FormsTable.COLUMN_FORMDATE,
+                FormsTable.COLUMN_USER,
+                FormsTable.COLUMN_UC_ID,
+                FormsTable.COLUMN_village_ID,
+                FormsTable.COLUMN_ISTATUS,
+                FormsTable.COLUMN_ISTATUS88x,
+                FormsTable.COLUMN_END_TIME,
+                FormsTable.COLUMN_F1,
+                FormsTable.COLUMN_F2,
+                FormsTable.COLUMN_F3,
+                FormsTable.COLUMN_F4,
+                FormsTable.COLUMN_F5,
+                FormsTable.COLUMN_F6,
+                FormsTable.COLUMN_F7,
+                FormsTable.COLUMN_F8,
+                FormsTable.COLUMN_F9,
+                FormsTable.COLUMN_HH_NO,
+                FormsTable.COLUMN_GPSLAT,
+                FormsTable.COLUMN_GPSLNG,
+                FormsTable.COLUMN_GPSDATE,
+                FormsTable.COLUMN_GPSACC,
+                FormsTable.COLUMN_GPSELEV,
+                FormsTable.COLUMN_GPSTIME,
+                FormsTable.COLUMN_DEVICEID,
+                FormsTable.COLUMN_DEVICETAGID,
+                FormsTable.COLUMN_SYNCED,
+                FormsTable.COLUMN_SYNCED_DATE,
+                FormsTable.COLUMN_APP_VERSION,
+
+        };
+        String whereClause = FormsTable.COLUMN_SYNCED + " is null OR " + FormsTable.COLUMN_SYNCED + " = '' ";
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                FormsTable._ID + " ASC";
+
+        Collection<FormsContract> allFC = new ArrayList<FormsContract>();
+        try {
+            c = db.query(
+                    FormsTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+
+            if (c.moveToFirst())
+                do {
+                    FormsContract fc = new FormsContract();
+                    allFC.add(fc.Hydrate(c));
+                } while (c.moveToNext());
+
+
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allFC;
+    }
+
+    public Collection<FamilyMembersContract> getUnsyncedFamilyMember() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                familyMembers._ID,
+                familyMembers.COLUMN_UID,
+                familyMembers.COLUMN_UUID,
+                familyMembers.COLUMN_FORMDATE,
+                familyMembers.COLUMN_USER,
+                familyMembers.COLUMN_DEVICEID,
+                familyMembers.COLUMN_DEVICETAGID,
+                familyMembers.COLUMN_APP_VERSION,
+                familyMembers.COLUMN_F1B,
+                familyMembers.COLUMN_SYNCED,
+                familyMembers.COLUMN_SYNCED_DATE,
+
+
+        };
+        String whereClause = familyMembers.COLUMN_SYNCED + " is null OR " + familyMembers.COLUMN_SYNCED + " = '' ";
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+
+        String orderBy =
+                FormsTable._ID + " ASC";
+
+        Collection<FamilyMembersContract> allFC = new ArrayList<FamilyMembersContract>();
+        try {
+            c = db.query(
+                    familyMembers.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+
+            if (c.moveToFirst())
+                do {
+                    FamilyMembersContract fc = new FamilyMembersContract();
+                    allFC.add(fc.Hydrate(c));
+                } while (c.moveToNext());
+
+
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allFC;
+    }
+
+    public void updateSyncedForms(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(FormsTable.COLUMN_SYNCED, true);
+        values.put(FormsTable.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = FormsContract.FormsTable._ID + " LIKE ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                FormsTable.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+        db.close();
+    }
+
+    public void updateSyncedFamilyMembers(String id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+// New value for one column
+        ContentValues values = new ContentValues();
+        values.put(familyMembers.COLUMN_SYNCED, true);
+        values.put(familyMembers.COLUMN_SYNCED_DATE, new Date().toString());
+
+// Which row to update, based on the title
+        String where = familyMembers._ID + " LIKE ?";
+        String[] whereArgs = {id};
+
+        int count = db.update(
+                familyMembers.TABLE_NAME,
+                values,
+                where,
+                whereArgs);
+        db.close();
+    }
+
     public Collection<FormsContract> getAllForms() {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
