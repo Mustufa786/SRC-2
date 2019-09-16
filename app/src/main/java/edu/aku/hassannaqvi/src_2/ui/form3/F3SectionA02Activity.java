@@ -97,6 +97,26 @@ public class F3SectionA02Activity extends AppCompatActivity {
                 }
             }
         });
+
+        bi.f3a27.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.f3a27b.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrpf3a28, null);
+                }
+            }
+        });
+
+        bi.f3a30e.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.fldGrpf3a31, null);
+                }
+            }
+        });
     }
 
     public void BtnContinue() {
