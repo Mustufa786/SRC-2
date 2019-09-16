@@ -30,7 +30,7 @@ public class F6SectionAActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f6_section_a);
         bi.setCallback(this);
 
-        setTitle(R.string.f6h1);
+        setTitle(R.string.f6Heading);
 
         setupViews();
     }

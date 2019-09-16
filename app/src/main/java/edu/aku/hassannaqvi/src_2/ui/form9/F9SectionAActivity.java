@@ -28,6 +28,8 @@ public class F9SectionAActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f9_section_a);
         bi.setCallback(this);
 
+        setTitle(R.string.f9aHeading);
+
         setupViews();
     }
 

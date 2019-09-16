@@ -33,7 +33,7 @@ public class F7SectionAActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f7_section_a);
         bi.setCallback(this);
 
-        setTitle(R.string.f7Form);
+        setTitle(R.string.f7Heading);
 
         setupViews();
     }

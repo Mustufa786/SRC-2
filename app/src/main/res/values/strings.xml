@@ -39,7 +39,24 @@
     <string name="day"> دن </string>
 
 
+    <!--    Headings-->
+    <string name="f1aHeading">سماجي ڊيموگرافڪ معلومات </string>
+    <string name="f1bHeading">سماجي ۽ معاشي معلومات</string>
+    <string name="f1cHeading">Housing Characteristics</string>
+    <string name="f2aHeading">بنيادي معلومات</string>
+    <string name="f2bHeading">عمل يا طريقا    </string>
+    <string name="f3Heading">ماهواري جي دوران صفائي سٿرائي   </string>
+    <string name="f4aHeading">گذريل حمل جي معلومات   </string>
+    <string name="f4bHeading">ويم   </string>
+    <string name="f5Heading">موجوده حمل   </string>
+    <string name="f6Heading">نئين ڄاول ٻار جي سار سنڀال  </string>
+    <string name="f7Heading">05 سالن کان گهٽ ٻار جي معلومات  </string>
+    <string name="f8Heading">خانداني منصوبابندي  </string>
+    <string name="f9aHeading">مائرن نون ڄاول ۽ ٻارن جي اموات جي گذريل معلومات  </string>
+    <string name="f9bHeading">سيڪشن بي؛ پنجن سالن کان گهٽ عمر وارن ٻارن جي وفات جي معلومات  </string>
+
     <!--    Form 1-->
+
     <string name="f1"> ڊيموگرافڪ </string>
     <string name="f1adate"> دوري جي تاريخ </string>
     <string name="f1a01"> يونين ڪائونسل </string>

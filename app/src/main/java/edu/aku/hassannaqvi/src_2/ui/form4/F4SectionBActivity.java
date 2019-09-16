@@ -31,6 +31,7 @@ public class F4SectionBActivity extends AppCompatActivity {
         bi.setCallback(this);
 
 
+        setTitle(R.string.f4bHeading);
         setupViews();
     }
 

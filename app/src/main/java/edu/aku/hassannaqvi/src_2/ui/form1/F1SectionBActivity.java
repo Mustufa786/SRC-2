@@ -83,6 +83,8 @@ public class F1SectionBActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f1_section_b);
         bi.setCallback(this);
 
+        setTitle(R.string.f1bHeading);
+
         lstf1b01 = new ArrayList<>();
         lstf1b02 = new ArrayList<>();
         lstf1b03 = new ArrayList<>();

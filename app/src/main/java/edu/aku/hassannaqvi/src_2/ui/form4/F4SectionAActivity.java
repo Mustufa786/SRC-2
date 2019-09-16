@@ -28,6 +28,8 @@ public class F4SectionAActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f4_section_a);
         bi.setCallback(this);
 
+        setTitle(R.string.f4aHeading);
+
         setupViews();
     }
 

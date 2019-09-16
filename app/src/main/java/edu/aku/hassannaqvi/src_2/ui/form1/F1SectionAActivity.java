@@ -53,6 +53,8 @@ public class F1SectionAActivity extends AppCompatActivity {
         bi.setCallback(this);
 
 
+        setTitle(R.string.f1aHeading);
+
         setupViews();
     }
 

@@ -33,6 +33,8 @@ public class F3SectionA02Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f3_section_a02);
         bi.setCallback(this);
 
+        setTitle(R.string.f3Heading);
+
         setupViews();
     }
 

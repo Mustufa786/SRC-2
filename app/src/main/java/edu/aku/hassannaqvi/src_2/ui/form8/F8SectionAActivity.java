@@ -29,7 +29,7 @@ public class F8SectionAActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f8_section_a);
         bi.setCallback(this);
 
-        setTitle(R.string.form8Heading);
+        setTitle(R.string.f8Heading);
 
         setupViews();
     }
