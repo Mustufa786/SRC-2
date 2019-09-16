@@ -5,6 +5,9 @@ import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.InputType;
+import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.AdapterView;
@@ -43,6 +46,7 @@ public class F1SectionAActivity extends AppCompatActivity {
     ArrayList<String> villagesNames;
     HashMap<String, String> villagesMap;
 
+    int length = 0;
     DatabaseHelper db;
 
     @Override
@@ -102,6 +106,37 @@ public class F1SectionAActivity extends AppCompatActivity {
 
             }
         });
+
+        bi.f1a04.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+//                bi.f1a04.setInputType(InputType.TYPE_CLASS_NUMBER);
+                length = s.toString().length();
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                if (!bi.f1a04.getText().toString().isEmpty() && bi.f1a04.getText().toString().length() == 3) {
+                    if (bi.f1a04.getText().toString().substring(0, 3).matches("[0-9]+")) {
+                        if (length < 5) {
+                            bi.f1a04.setText(bi.f1a04.getText().toString() + "-");
+                            bi.f1a04.setSelection(bi.f1a04.getText().length());
+                            bi.f1a04.setInputType(InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS);
+
+                        }
+
+                    }
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
     }
 
     public void BtnContinue() {
@@ -146,6 +181,7 @@ public class F1SectionAActivity extends AppCompatActivity {
         fc.setUser(MainApp.userName);
         fc.setUc(ucsMap.get(bi.f1a01.getSelectedItem().toString()));
         fc.setVillage(villagesMap.get(bi.f1a02.getSelectedItem().toString()));
+        fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         fc.setHhNo(bi.f1a04.getText().toString());
         JSONObject f1 = new JSONObject();
         f1.put("f1a05", bi.f1a05a.isChecked() ? "1"

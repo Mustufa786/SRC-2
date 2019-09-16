@@ -77,17 +77,6 @@ public class F3SectionA01Activity extends AppCompatActivity {
             }
         });
 
-        bi.f3a0697.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                if (isChecked) {
-                    ClearClass.ClearAllFields(bi.f3a06check, false);
-                } else {
-                    ClearClass.ClearAllFields(bi.f3a06check, true);
-                }
-            }
-        });
 
         bi.f3a0699.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -214,7 +203,8 @@ public class F3SectionA01Activity extends AppCompatActivity {
         f1.put("f3a0596x", bi.f3a0596x.getText().toString());
         f1.put("f3a0597", bi.f3a0597.isChecked() ? "97" : "0");
         f1.put("f3a0599", bi.f3a0599.isChecked() ? "99" : "0");
-        f1.put("f3a06", bi.f3a06a.isChecked() ? "1" : bi.f3a06b.isChecked() ? "2" : bi.f3a06c.isChecked() ? "3" : bi.f3a06d.isChecked() ? "4" : bi.f3a0697.isChecked() ? "97" : bi.f3a0699.isChecked() ? "99" : bi.f3a0698.isChecked() ? "98" : "0");
+        f1.put("f3a06", bi.f3a06a.isChecked() ? "1" : bi.f3a06b.isChecked() ? "2" : bi.f3a06c.isChecked() ? "3" : bi.f3a06d.isChecked() ? "4" : bi.f3a0696.isChecked() ? "96" : bi.f3a0699.isChecked() ? "99" : bi.f3a0698.isChecked() ? "98" : "0");
+        f1.put("f3a0696x", bi.f3a0696x.getText().toString());
         f1.put("f3a07", bi.f3a07a.isChecked() ? "1" : bi.f3a07b.isChecked() ? "2" : bi.f3a07c.isChecked() ? "3" : "0");
         f1.put("f3a08a", bi.f3a08a.isChecked() ? "1" : "0");
         f1.put("f3a08b", bi.f3a08b.isChecked() ? "2" : "0");

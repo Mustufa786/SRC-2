@@ -105,6 +105,7 @@ public class F1SectionBActivity extends AppCompatActivity {
 //            MainApp.lst_U5.clear();
 //        }
 
+
     }
 
 
@@ -156,6 +157,7 @@ public class F1SectionBActivity extends AppCompatActivity {
                 f1b07m,
                 f1b07n,
                 f1b07o;
+
 
 
         f1b02a = v.findViewById(R.id.f1b02a);
@@ -614,12 +616,9 @@ public class F1SectionBActivity extends AppCompatActivity {
                             f1b03b1.setError("Please Enter");
                             f1b03b1.requestFocus();
                             return;
-                        }
-                        else
-                        {
+                        } else {
                             int agee = Integer.parseInt(f1b03b1.getText().toString());
-                            if(agee!=98 & agee>30)
-                            {
+                            if (agee != 98 & agee > 30) {
                                 f1b03b1.setError("Please enter 1 30 in range ");
                                 f1b03b1.requestFocus();
                                 return;
@@ -857,6 +856,7 @@ public class F1SectionBActivity extends AppCompatActivity {
         fmc.setDeviceId(MainApp.deviceId);
         fmc.setFormDate((DateFormat.format("dd-MM-yyyy HH:mm", new Date())).toString());
         fmc.setUser(MainApp.userName);
+        fmc.setApp_ver(MainApp.versionName + "." + MainApp.versionCode);
         fmc.setSerialNo(String.valueOf(MainApp.serial_no));
         fmc.set_UUID(fc.getDeviceID() + fc.get_ID());
 
