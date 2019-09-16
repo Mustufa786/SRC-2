@@ -6,83 +6,75 @@ import android.provider.BaseColumns;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * Created by isd on 30/12/2016.
- */
-
-/**
- * Created by hassan.naqvi on 10/31/2016.
- */
-
 public class VillagesContract {
 
-    private String villagesCode;
-    private String villagesName;
+    private String villageCode;
+    private String villageName;
     private String districtCode;
+    private String talukaCode;
+    private String ucCode;
+
+    public String getTalukaCode() {
+        return talukaCode;
+    }
+
+    public void setTalukaCode(String talukaCode) {
+        this.talukaCode = talukaCode;
+    }
 
 
     public VillagesContract() {
     }
 
     public VillagesContract sync(JSONObject jsonObject) throws JSONException {
-        this.villagesCode = jsonObject.getString(singleVillages.COLUMN_VILLAGES_CODE);
-        this.villagesName = jsonObject.getString(singleVillages.COLUMN_VILLAGES_NAME);
-        this.districtCode = jsonObject.getString(singleVillages.COLUMN_DISTRICT_CODE);
+        this.villageCode = jsonObject.getString(singleVillage.COLUMN_VILLAGE_CODE);
+        this.villageName = jsonObject.getString(singleVillage.COLUMN_VILLAGE_NAME);
+        this.districtCode = jsonObject.getString(singleVillage.COLUMN_DISTRICT_CODE);
+        this.talukaCode = jsonObject.getString(singleVillage.COLUMN_TALUKA_CODE);
+        this.ucCode = jsonObject.getString(singleVillage.COLUMN_UC_CODE);
 
 
         return this;
     }
 
     public VillagesContract hydrate(Cursor cursor) {
-        this.villagesCode = cursor.getString(cursor.getColumnIndex(singleVillages.COLUMN_VILLAGES_CODE));
-        this.villagesName = cursor.getString(cursor.getColumnIndex(singleVillages.COLUMN_VILLAGES_NAME));
-//        this.districtCode = cursor.getString(cursor.getColumnIndex(singleVillages.COLUMN_DISTRICT_CODE));
+        this.villageCode = cursor.getString(cursor.getColumnIndex(singleVillage.COLUMN_VILLAGE_CODE));
+        this.villageName = cursor.getString(cursor.getColumnIndex(singleVillage.COLUMN_VILLAGE_NAME));
+//        this.districtCode = cursor.getString(cursor.getColumnIndex(singleVillage.COLUMN_DISTRICT_CODE));
+//        this.ucCode = cursor.getString(cursor.getColumnIndex(singleVillage.COLUMN_UC_CODE));
 
         return this;
     }
 
-    public String getVILLAGESCode() {
-        return villagesCode;
+
+    public String getUcCode() {
+        return ucCode;
     }
 
-    public void setVILLAGESCode(String villagesCode) {
-        this.villagesCode = villagesCode;
+    public String getVillageCode() {
+        return villageCode;
     }
 
-    public String getVILLAGESName() {
-        return villagesName;
-    }
-
-    public void setVILLAGESName(String villagesName) {
-        this.villagesName = villagesName;
+    public String getVillageName() {
+        return villageName;
     }
 
     public String getDistrictCode() {
         return districtCode;
     }
 
-    public void setDistrictCode(String districtCode) {
-        this.districtCode = districtCode;
-    }
+    public static abstract class singleVillage implements BaseColumns {
 
-    public VillagesContract setDefaultVal(String code, String name) {
-        this.villagesCode = code;
-        this.villagesName = name;
-
-        return this;
-    }
-
-    public static abstract class singleVillages implements BaseColumns {
-
-        public static final String TABLE_NAME = "Villages";
+        public static final String TABLE_NAME = "villages";
         public static final String COLUMN_NAME_NULLABLE = "nullColumnHack";
         public static final String _ID = "_ID";
-        public static final String COLUMN_VILLAGES_CODE = "village_code";
-        public static final String COLUMN_VILLAGES_NAME = "village_name";
-        public static final String COLUMN_DISTRICT_CODE = "district_code";
+        public static final String COLUMN_VILLAGE_CODE = "village_code";
+        public static final String COLUMN_TALUKA_CODE = "taluka_code";
+        public static final String COLUMN_VILLAGE_NAME = "village_name";
+        public static final String COLUMN_DISTRICT_CODE = "taluka_code";
+        public static final String COLUMN_UC_CODE = "uc_code";
 
         public static final String _URI = "villages.php";
 
     }
-
 }

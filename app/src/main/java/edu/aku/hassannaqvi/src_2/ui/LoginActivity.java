@@ -28,7 +28,7 @@ import java.util.HashMap;
 
 import edu.aku.hassannaqvi.src_2.MainActivity;
 import edu.aku.hassannaqvi.src_2.R;
-import edu.aku.hassannaqvi.src_2.contracts.DistrictsContract;
+import edu.aku.hassannaqvi.src_2.contracts.UCsContract;
 import edu.aku.hassannaqvi.src_2.contracts.UsersContract;
 import edu.aku.hassannaqvi.src_2.contracts.VillagesContract;
 import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
@@ -135,8 +135,8 @@ public class LoginActivity extends AppCompatActivity {
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
             new GetAllData(this, "users", MainApp._HOST_URL + UsersContract.UsersTable._URI).execute();
-            new GetAllData(this, "ucs", MainApp._HOST_URL + DistrictsContract.singleDistrict._URI).execute();
-            new GetAllData(this, "villages", MainApp._HOST_URL + VillagesContract.singleVillages._URI).execute();
+            new GetAllData(this, "ucs", MainApp._HOST_URL + UCsContract.UCsTable._URI).execute();
+            new GetAllData(this, "villages", MainApp._HOST_URL + VillagesContract.singleVillage._URI).execute();
         } else {
             Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
         }

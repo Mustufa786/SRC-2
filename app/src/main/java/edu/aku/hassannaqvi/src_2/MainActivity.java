@@ -40,9 +40,6 @@ public class MainActivity extends AppCompatActivity {
             bi.databaseBtn.setVisibility(View.GONE);
         }
 
-        if (sharedPref.getString("tagName", null) == "" && sharedPref.getString("tagName", null) == null)
-            Util.showTagDialog(this);
-
 
         db = new DatabaseHelper(this);
         Collection<FormsContract> todaysForms = db.getTodayForms();

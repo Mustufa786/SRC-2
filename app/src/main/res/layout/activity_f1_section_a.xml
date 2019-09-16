@@ -77,7 +77,6 @@
                         android:text="@string/f1a04" />
 
                     <EditText
-
                         android:id="@+id/f1a04"
                         style="@style/textInput"
                         android:layout_width="match_parent"

@@ -20,8 +20,8 @@ import java.util.Date;
 import java.util.HashMap;
 
 import edu.aku.hassannaqvi.src_2.R;
-import edu.aku.hassannaqvi.src_2.contracts.DistrictsContract;
 import edu.aku.hassannaqvi.src_2.contracts.FormsContract;
+import edu.aku.hassannaqvi.src_2.contracts.UCsContract;
 import edu.aku.hassannaqvi.src_2.contracts.VillagesContract;
 import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
 import edu.aku.hassannaqvi.src_2.core.MainApp;
@@ -35,9 +35,9 @@ public class F1SectionAActivity extends AppCompatActivity {
 
 
     ActivityF1SectionABinding bi;
-    Collection<DistrictsContract> distrcitList;
-    ArrayList<String> districtNames;
-    HashMap<String, String> districtMap;
+    Collection<UCsContract> ucsList;
+    ArrayList<String> ucsName;
+    HashMap<String, String> ucsMap;
 
     Collection<VillagesContract> villagesList;
     ArrayList<String> villagesNames;
@@ -60,17 +60,17 @@ public class F1SectionAActivity extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
 
-        distrcitList = db.getDistrictList();
-        districtNames = new ArrayList<>();
-        districtMap = new HashMap<>();
-        districtNames.add("-Select District-");
+        ucsList = db.getUCsList();
+        ucsName = new ArrayList<>();
+        ucsMap = new HashMap<>();
+        ucsName.add("-Select District-");
 
-        for (DistrictsContract dc : distrcitList) {
-            districtNames.add(dc.getDistrictName());
-            districtMap.put(dc.getDistrictName(), dc.getDistrictCode());
+        for (UCsContract dc : ucsList) {
+            ucsName.add(dc.getUcsName());
+            ucsMap.put(dc.getUcsName(), dc.getUccode());
         }
 
-        bi.f1a01.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, districtNames));
+        bi.f1a01.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, ucsName));
 
         bi.f1a01.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -78,15 +78,15 @@ public class F1SectionAActivity extends AppCompatActivity {
 
                 if (bi.f1a01.getSelectedItemPosition() != 0) {
 
-//                    districtCode = districtMap.get(bi.districtSpinner.getSelectedItem().toString());
-                    villagesList = db.getVillages(districtMap.get(bi.f1a01.getSelectedItem().toString()));
+//                    districtCode = ucsMap.get(bi.districtSpinner.getSelectedItem().toString());
+                    villagesList = db.getVillages(ucsMap.get(bi.f1a01.getSelectedItem().toString()));
                     villagesMap = new HashMap<>();
                     villagesNames = new ArrayList<>();
                     villagesNames.add("Select Village Name-");
 
                     for (VillagesContract hf : villagesList) {
-                        villagesNames.add(hf.getVILLAGESName());
-                        villagesMap.put(hf.getVILLAGESName(), hf.getVILLAGESCode());
+                        villagesNames.add(hf.getVillageName());
+                        villagesMap.put(hf.getVillageName(), hf.getVillageCode());
                     }
 
                     bi.f1a02.setAdapter(new ArrayAdapter<>(F1SectionAActivity.this, android.R.layout.simple_spinner_dropdown_item, villagesNames));
@@ -142,8 +142,8 @@ public class F1SectionAActivity extends AppCompatActivity {
         fc.setFormDate((DateFormat.format("dd-MM-yyyy HH:mm", new Date())).toString());
         fc.setDeviceID(MainApp.deviceId);
         fc.setUser(MainApp.userName);
-        fc.setUc(MainApp.userName);
-        fc.setVillage(MainApp.userName);
+        fc.setUc(ucsMap.get(bi.f1a01.getSelectedItem().toString()));
+        fc.setVillage(villagesMap.get(bi.f1a02.getSelectedItem().toString()));
         fc.setHhNo(bi.f1a04.getText().toString());
         JSONObject f1 = new JSONObject();
         f1.put("f1a05", bi.f1a05a.isChecked() ? "1"
