@@ -639,7 +639,9 @@
 
     <string name="f4ch1"> ويم کان پوءِ </string>
     <string name="f4c01"> ويم کان پوءِ ڇا توهان پنهنجو طبي معائنو ڪرايو هو؟ </string>
-    <string name="f4c02"> ويم کان پوءِ توهان ڪيترا ڀيرا معائني لاءِ ويا هئا؟ </string>
+    <string name="f4c02">
+جيڪڏهن ها  ته ِ توهان ويم جي 40 ڏينهن کان پوءِ ڪيترا ڀيرا معائني لاءِ ويا هئا؟
+ </string>
     <string name="f4c02a"> ڪيترا ڀيرا </string>
     <string name="f4c02b"> ياد ناهي </string>
     <string name="f4c03"> اگر ها ، موصول ڪيل خدمتون </string>

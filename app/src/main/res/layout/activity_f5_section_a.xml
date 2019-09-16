@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -85,12 +85,15 @@
                             android:text="@string/f5a02" />
 
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f5a02"
                             style="@style/textInput"
                             android:hint="@string/f5a02"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            android:maxLength="1"
+                            app:maxValue="9"
+                            app:minValue="1"
+                            app:type="range" />
 
 
                     </LinearLayout>

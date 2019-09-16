@@ -146,6 +146,29 @@ public class F3SectionA01Activity extends AppCompatActivity {
                 }
             }
         });
+
+        bi.f3a1799.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.f3a17check, false);
+                } else {
+                    ClearClass.ClearAllFields(bi.f3a17check, true);
+                }
+            }
+        });
+        bi.f3a1797.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.f3a17check, false);
+                } else {
+                    ClearClass.ClearAllFields(bi.f3a17check, true);
+                }
+            }
+        });
     }
 
     public void BtnContinue() {

@@ -172,7 +172,7 @@
                             style="@style/checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/f4a03" />
+                            android:text="@string/dkn" />
 
 
                     </LinearLayout>
@@ -602,6 +602,7 @@
                                 style="@style/checkbox"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:tag="-1"
                                 android:text="@string/dkn" />
 
 

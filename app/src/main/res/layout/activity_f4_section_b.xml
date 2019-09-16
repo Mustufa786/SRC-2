@@ -302,18 +302,19 @@
                         <EditText
                             android:id="@+id/f4c02x"
                             style="@style/textInput"
-                            android:hint="@string/f4c02"
+                            android:hint="@string/f4c02a"
                             android:inputType="number"
                             android:tag="f4a03"
                             android:text='@{!f4c0298.checked? f4c02x.getText.toString : ""}'
                             android:visibility='@{f4c0298.checked? View.GONE : View.VISIBLE}' />
 
                         <CheckBox
+                            android:tag="-1"
                             android:id="@+id/f4c0298"
                             style="@style/checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/dkn" />
+                            android:text="@string/f4c02b" />
 
 
                     </LinearLayout>
