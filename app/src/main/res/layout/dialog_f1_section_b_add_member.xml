@@ -103,6 +103,63 @@
                             android:id="@+id/f1b03"
                             style="@style/radiogroup">
 
+
+
+
+
+
+                            <RadioButton
+                                android:id="@+id/f1b03b"
+                                style="@style/radiobutton"
+                                android:text="@string/f1b03b" />
+
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/f1b03b1"
+                                style="@style/textInput"
+                                android:hint="Day"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="f1b03b"
+                                app:maxValue="99"
+                                app:minValue="1"
+
+
+                                app:type="range" />
+
+                            <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/f1b03b2"
+                                style="@style/textInput"
+                                android:hint="Month"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:tag="f1b03b"
+                                app:maxValue="12"
+
+                                app:minValue="1"
+
+
+                                app:type="range" />
+
+                            <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/f1b03b3"
+                                style="@style/textInput"
+                                android:hint="Year"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:tag="f1b03b"
+                                app:maxValue="2019"
+
+
+                                app:minValue="1940"
+
+                                app:type="range" />
+                            <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
+
                             <RadioButton
                                 android:id="@+id/f1b03a"
                                 style="@style/radiobutton"
@@ -155,57 +212,6 @@
                             <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
 
 
-                            <RadioButton
-                                android:id="@+id/f1b03b"
-                                style="@style/radiobutton"
-                                android:text="@string/f1b03b" />
-
-
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/f1b03b1"
-                                style="@style/textInput"
-                                android:hint="Date"
-                                android:inputType="number"
-                                android:maxLength="2"
-                                android:tag="f1b03b"
-                                app:maxValue="30"
-                                app:minValue="1"
-
-
-                                app:type="range" />
-
-                            <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
-
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/f1b03b2"
-                                style="@style/textInput"
-                                android:hint="Month"
-                                android:inputType="number"
-                                android:maxLength="2"
-                                android:tag="f1b03b"
-                                app:maxValue="12"
-
-                                app:minValue="1"
-
-
-                                app:type="range" />
-
-                            <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
-
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/f1b03b3"
-                                style="@style/textInput"
-                                android:hint="Year"
-                                android:inputType="number"
-                                android:maxLength="4"
-                                android:tag="f1b03b"
-                                app:maxValue="2019"
-
-
-                                app:minValue="1940"
-
-                                app:type="range" />
-                            <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
 
 
                         </RadioGroup>
