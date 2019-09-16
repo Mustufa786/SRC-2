@@ -73,114 +73,6 @@
             </android.support.v7.widget.CardView>
 
 
-            <!--f7a01-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/f7a01" />
-
-
-                    <Spinner
-                        android:id="@+id/f7a01"
-                        style="@style/spinnerStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/f7a02" />
-
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/f7a02a"
-                        style="@style/textInput"
-                        android:hint="Days"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="29"
-                        app:minValue="1"
-
-
-                        app:type="range" />
-
-                    <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/f7a02b"
-                        style="@style/textInput"
-                        android:hint="Month"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="12"
-                        app:minValue="1"
-
-
-                        app:type="range" />
-                    <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
-
-                    <com.edittextpicker.aliazaz.EditTextPicker
-                        android:id="@+id/f7a02c"
-                        style="@style/textInput"
-                        android:hint="Year"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        app:maxValue="80"
-                        app:minValue="0"
-
-
-                        app:type="range" />
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <!--f7a03-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-
-                <LinearLayout style="@style/linearlayout_view_wt_bound">
-
-                    <TextView
-                        style="@style/i_textview"
-                        android:text="@string/f7a03" />
-
-                    <RadioGroup
-                        android:id="@+id/f7a03"
-                        style="@style/radiogroup">
-
-                        <RadioButton
-                            android:id="@+id/f7a03a"
-                            style="@style/radiobutton"
-                            android:text="@string/f7a03a" />
-
-                        <RadioButton
-                            android:id="@+id/f7a03b"
-                            style="@style/radiobutton"
-                            android:text="@string/f7a03b" />
-
-                    </RadioGroup>
-
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <TextView
-
-                style="@style/textView3Head"
-                android:text="@string/f7a01Heading" />
-
-
             <LinearLayout
                 android:id="@+id/fldGrp5678"
                 android:layout_width="match_parent"
@@ -188,6 +80,113 @@
                 android:orientation="vertical"
                 android:visibility='@{f7a04a.checked? View.VISIBLE : View.GONE}'>
 
+
+                <!--f7a01-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f7a01" />
+
+
+                        <Spinner
+                            android:id="@+id/f7a01"
+                            style="@style/spinnerStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f7a02" />
+
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/f7a02a"
+                            style="@style/textInput"
+                            android:hint="Days"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:maxValue="29"
+                            app:minValue="1"
+
+
+                            app:type="range" />
+
+                        <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/f7a02b"
+                            style="@style/textInput"
+                            android:hint="Month"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:maxValue="12"
+                            app:minValue="1"
+
+
+                            app:type="range" />
+                        <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/f7a02c"
+                            style="@style/textInput"
+                            android:hint="Year"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:maxValue="80"
+                            app:minValue="0"
+
+
+                            app:type="range" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!--f7a03-->
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+
+                    <LinearLayout style="@style/linearlayout_view_wt_bound">
+
+                        <TextView
+                            style="@style/i_textview"
+                            android:text="@string/f7a03" />
+
+                        <RadioGroup
+                            android:id="@+id/f7a03"
+                            style="@style/radiogroup">
+
+                            <RadioButton
+                                android:id="@+id/f7a03a"
+                                style="@style/radiobutton"
+                                android:text="@string/f7a03a" />
+
+                            <RadioButton
+                                android:id="@+id/f7a03b"
+                                style="@style/radiobutton"
+                                android:text="@string/f7a03b" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <TextView
+
+                    style="@style/textView3Head"
+                    android:text="@string/f7a01Heading" />
 
                 <!--f7a05-->
                 <android.support.v7.widget.CardView style="@style/cardView">
