@@ -389,10 +389,9 @@
     <string name="f9a04g"> آنول جا مسئلا </string>
     <string name="f9a04h"> ٻئي ڪا وجه </string>
     <string name="f9a04i"> ٻي ڪا وجهه </string>
-    <string name="f9a05"> هيپاٽائيٽس </string>
-    <string name="f9a05a"> ڪينسر </string>
-    <string name="f9a05b"> معدي/پيٽ جي خرابي جي بيماري </string>
-    <string name="f9a05c"> ٻئي ڪا وجه وضاحت </string>
+   <string name="f9a05a"> هيپاٽائيٽس </string>
+   <string name="f9a05b"> ڪينسر </string>
+   <string name="f9a05c"> معدي/پيٽ جي خرابي جي بيماري </string>
 
 
     <string name="f9bh1"> سيڪشن بي؛ پنجن سالن کان گهٽ عمر وارن ٻارن جي وفات جي معلومات </string>

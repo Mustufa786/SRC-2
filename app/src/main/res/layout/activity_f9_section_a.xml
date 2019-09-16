@@ -225,7 +225,7 @@
 
                         <TextView
                             style="@style/i_textview"
-                            android:text="@string/f9a05" />
+                            android:text="@string/other" />
 
                         <LinearLayout
                             android:id="@+id/f9a05check"
