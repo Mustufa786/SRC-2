@@ -130,9 +130,10 @@ public class F4SectionAActivity extends AppCompatActivity {
         f1.put("f4a12",bi.f4a12a.isChecked() ?"1" :bi.f4a12b.isChecked() ?"2" :bi.f4a12c.isChecked() ?"3" :bi.f4a12d.isChecked() ?"4" :bi.f4a12e.isChecked() ?"5" :"0");
         f1.put("f4a13",bi.f4a13a.isChecked() ?"1" :bi.f4a13b.isChecked() ?"2" :"0");
         f1.put("f4a14",bi.f4a14a.isChecked() ?"1" :bi.f4a14b.isChecked() ?"2" :bi.f4a14c.isChecked() ?"3" :bi.f4a14d.isChecked() ?"4" :"0");
+
         f1.put("f4a15",bi.f4a15a.isChecked() ?"1" :bi.f4a15b.isChecked() ?"2" :bi.f4a1598.isChecked() ?"98" :"0");
         f1.put("f4a16", bi.f4a16.getText().toString());
-        f1.put("f4a1698",bi.f4a1698.isChecked() ?"" :"0");
+        f1.put("f4a1698",bi.f4a1698.isChecked() ?"98" :"0");
 
         MainApp.fc.setF4(String.valueOf(f1));
     }

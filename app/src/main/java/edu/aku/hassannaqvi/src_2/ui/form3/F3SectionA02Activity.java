@@ -182,8 +182,28 @@ public class F3SectionA02Activity extends AppCompatActivity {
         f1.put("f3a25", bi.f3a25a.isChecked() ? "1" : bi.f3a25b.isChecked() ? "2" : bi.f3a2598.isChecked() ? "98" : "0");
         f1.put("f3a26", bi.f3a26.getText().toString());
         f1.put("f3a27", bi.f3a27a.isChecked() ? "1" : bi.f3a27b.isChecked() ? "2" : bi.f3a2798.isChecked() ? "98" : "0");
+
         f1.put("f3a2896x", bi.f3a2896x.getText().toString());
-        f1.put("f3a28", bi.f3a28a.isChecked() ? "1" : bi.f3a28b.isChecked() ? "2" : bi.f3a28c.isChecked() ? "3" : bi.f3a28d.isChecked() ? "4" : bi.f3a28e.isChecked() ? "5" : bi.f3a28f.isChecked() ? "6" : bi.f3a28g.isChecked() ? "7" : bi.f3a28h.isChecked() ? "8" : bi.f3a28i.isChecked() ? "9" : bi.f3a28j.isChecked() ? "10" : bi.f3a2896.isChecked() ? "96" : bi.f3a2899.isChecked() ? "99" : "0");
+
+        f1.put("f3a28a", bi.f3a28a.isChecked() ? "1" : "0");
+        f1.put("f3a28b", bi.f3a28b.isChecked() ? "2" : "0");
+        f1.put("f3a28c", bi.f3a28c.isChecked() ? "3" : "0");
+        f1.put("f3a28d", bi.f3a28d.isChecked() ? "4" : "0");
+        f1.put("f3a28e", bi.f3a28e.isChecked() ? "5" : "0");
+        f1.put("f3a28f", bi.f3a28f.isChecked() ? "6" : "0");
+        f1.put("f3a28g", bi.f3a28g.isChecked() ? "7" : "0");
+        f1.put("f3a28h", bi.f3a28h.isChecked() ? "8" : "0");
+        f1.put("f3a28i", bi.f3a28i.isChecked() ? "9" : "0");
+        f1.put("f3a28j", bi.f3a28j.isChecked() ? "10" : "0");
+
+        f1.put("f3a2896", bi.f3a2896.isChecked() ? "10" : "0");
+
+        f1.put("f3a2899", bi.f3a2899.isChecked() ? "10" : "0");
+
+
+        f1.put("f3a2896", bi.f3a2896.isChecked() ? "96" : "0");
+
+
         f1.put("f3a29", bi.f3a29a.isChecked() ? "1" : bi.f3a29b.isChecked() ? "2" : bi.f3a2999.isChecked() ? "99" : "0");
         f1.put("f3a30a", bi.f3a30a.isChecked() ? "1" : "0");
         f1.put("f3a30b", bi.f3a30b.isChecked() ? "2" : "0");

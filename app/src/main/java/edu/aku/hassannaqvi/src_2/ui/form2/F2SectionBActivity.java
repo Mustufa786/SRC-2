@@ -82,8 +82,12 @@ public class F2SectionBActivity extends AppCompatActivity {
         f1.put("f2b08", bi.f2b08a.isChecked() ? "1" : bi.f2b08b.isChecked() ? "2" : bi.f2b08c.isChecked() ? "3" : bi.f2b08d.isChecked() ? "4" : bi.f2b08e.isChecked() ? "5" : bi.f2b08f.isChecked() ? "6" : bi.f2b08g.isChecked() ? "7" : bi.f2b08h.isChecked() ? "8" : bi.f2b0896.isChecked() ? "96" : "0");
         f1.put("f2b0996x", bi.f2b0996x.getText().toString());
         f1.put("f2b09", bi.f2b09a.isChecked() ? "1" : bi.f2b09b.isChecked() ? "2" : bi.f2b09c.isChecked() ? "3" : bi.f2b0996.isChecked() ? "96" : "0");
-        f1.put("f2c01", bi.f2c01a.isChecked() ? "1" : bi.f2c01b.isChecked() ? "2" : bi.f2c01c.isChecked() ? "3" : bi.f2c01d.isChecked() ? "4" : bi.f2c01e.isChecked() ? "5" : bi.f2c01f.isChecked() ? "6" : bi.f2c01g.isChecked() ? "7" : bi.f2c01h.isChecked() ? "8" : bi.f2c01i.isChecked() ? "9" : bi.f2c01j.isChecked() ? "10" : bi.f2c01k.isChecked() ? "11" : "0");
+        f1.put("f2c01", bi.f2c01a.isChecked() ? "1" : bi.f2c01b.isChecked() ? "2" : bi.f2c01c.isChecked() ? "3" : bi.f2c01d.isChecked() ? "4" : bi.f2c01e.isChecked() ? "5" : bi.f2c01f.isChecked() ? "6" : bi.f2c01g.isChecked() ? "7" : bi.f2c01h.isChecked() ? "8" : bi.f2c01i.isChecked() ? "9" : bi.f2c01j.isChecked() ? "10" : bi.f2c01k.isChecked() ? "11" : bi.f2c0196.isChecked() ? "96" : "0");
+
+        f1.put("f2c0196x", bi.f2c0196x.getText().toString());
+
         f1.put("f2c02", bi.f2c02a.isChecked() ? "1" : bi.f2c02b.isChecked() ? "2" : "0");
+
         f1.put("f2c03", bi.f2c03.getText().toString());
 
         JSONObject merged = JsonUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getF2()), f1);
