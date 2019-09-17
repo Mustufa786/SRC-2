@@ -137,7 +137,6 @@
                                 android:maxLength="2"
                                 android:tag="f1b03b"
                                 app:maxValue="12"
-
                                 app:minValue="1"
 
 
@@ -153,10 +152,7 @@
                                 android:maxLength="4"
                                 android:tag="f1b03b"
                                 app:maxValue="2019"
-
-
                                 app:minValue="1940"
-
                                 app:type="range" />
                             <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
 
@@ -204,10 +200,7 @@
                                 android:maxLength="2"
                                 android:tag="f1b03a"
                                 app:maxValue="80"
-
                                 app:minValue="0"
-
-
                                 app:type="range" />
                             <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
 
@@ -226,7 +219,6 @@
 
 
                     <LinearLayout
-
                         android:id="@+id/lvf1b04"
                         style="@style/linearlayout_view_wt_bound">
 

@@ -68,6 +68,7 @@
                         android:text="@string/f4a02" />
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f4a02check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -391,6 +392,7 @@
                             android:text="@string/f4a07" />
 
                         <LinearLayout
+                            android:tag="0"
                             android:id="@+id/f4a07check"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

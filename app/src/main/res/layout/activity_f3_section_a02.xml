@@ -228,6 +228,7 @@
                         android:text="@string/f3a23" />
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f3a23check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -485,6 +486,7 @@
                         android:text="@string/f3a28" />
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f3a28check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -641,6 +643,7 @@
                         android:text="@string/f3a30" />
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f3a30check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -721,6 +724,7 @@
                         android:text="@string/f3a31" />
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f3a31check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -826,6 +830,7 @@
                         android:text="@string/f3a33" />
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f3a33check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

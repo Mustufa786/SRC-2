@@ -71,7 +71,7 @@ public class MainApp extends Application {
     //public static String _IP = "vcoe1.aku.edu"; // Live PHP server
 
     public static boolean isAttitudeCheck = false;
-    public static String _HOST_URL = "http://" + MainApp._IP + ":" + 8080 + "/src2019/api/";
+    public static String _HOST_URL = "http://" + MainApp._IP + "/src2019/api/";
     public static String _UPDATE_URL = "http://" + MainApp._IP + "/casi/app/";
     public static String deviceId;
 

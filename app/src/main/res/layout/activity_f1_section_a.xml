@@ -36,11 +36,13 @@
                         style="@style/i_textview"
                         android:text="@string/f1a01" />
 
-                    <Spinner
+                    <EditText
+                        style="@style/textInput"
                         android:id="@+id/f1a01"
+                        android:hint="@string/f1a01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:spinnerMode="dialog" />
+                        android:maxLength="2" />
 
 
                 </LinearLayout>
@@ -77,12 +79,12 @@
                         android:text="@string/f1a04" />
 
                     <EditText
-                        android:inputType="number"
                         android:id="@+id/f1a04"
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="xxx-x"
+                        android:inputType="number"
                         android:maxLength="5" />
 
 

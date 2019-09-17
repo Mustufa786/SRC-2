@@ -333,60 +333,66 @@
                             android:text="@string/f4c03" />
 
 
-                        <CheckBox
-                            android:id="@+id/f4c03a"
-                            style="@style/checkbox"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/f4c03a" />
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
 
-                        <CheckBox
-                            android:id="@+id/f4c03b"
-                            style="@style/checkbox"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/f4c03b" />
+                            <CheckBox
+                                android:id="@+id/f4c03a"
+                                style="@style/checkbox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/f4c03a" />
 
-                        <CheckBox
-                            android:id="@+id/f4c03c"
-                            style="@style/checkbox"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/f4c03c" />
+                            <CheckBox
+                                android:id="@+id/f4c03b"
+                                style="@style/checkbox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/f4c03b" />
 
-                        <TextView
-                            style="@style/i_textview"
-                            android:text="@string/f4c03h" />
+                            <CheckBox
+                                android:id="@+id/f4c03c"
+                                style="@style/checkbox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/f4c03c" />
 
-                        <CheckBox
-                            android:id="@+id/f4c03d"
-                            style="@style/checkbox"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/f4c03d" />
+                            <TextView
+                                style="@style/i_textview"
+                                android:text="@string/f4c03h" />
 
-                        <CheckBox
-                            android:id="@+id/f4c03e"
-                            style="@style/checkbox"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/f4c03e" />
+                            <CheckBox
+                                android:id="@+id/f4c03d"
+                                style="@style/checkbox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/f4c03d" />
 
-                        <CheckBox
-                            android:id="@+id/f4c03f"
-                            style="@style/checkbox"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/f4c03f" />
+                            <CheckBox
+                                android:id="@+id/f4c03e"
+                                style="@style/checkbox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/f4c03e" />
 
-                        <CheckBox
-                            android:id="@+id/f4c03g"
-                            style="@style/checkbox"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/f4c03g" />
+                            <CheckBox
+                                android:id="@+id/f4c03f"
+                                style="@style/checkbox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/f4c03f" />
 
-                        <!--                       -->
+                            <CheckBox
+                                android:id="@+id/f4c03g"
+                                style="@style/checkbox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/f4c03g" />
+
+                            <!--                       -->
+                        </LinearLayout>
 
 
                     </LinearLayout>

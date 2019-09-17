@@ -56,7 +56,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + singleVillage._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + singleVillage.COLUMN_VILLAGE_NAME + " TEXT,"
             + singleVillage.COLUMN_VILLAGE_CODE + " TEXT,"
-            + singleVillage.COLUMN_TALUKA_CODE + " TEXT,"
             + singleVillage.COLUMN_UC_CODE + " TEXT"
             + " ) ;";
 
@@ -922,9 +921,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
                 values.put(singleVillage.COLUMN_VILLAGE_NAME, user.getVillageName());
                 values.put(singleVillage.COLUMN_VILLAGE_CODE, user.getVillageCode());
-                values.put(singleVillage.COLUMN_DISTRICT_CODE, user.getDistrictCode());
                 values.put(singleVillage.COLUMN_UC_CODE, user.getUcCode());
-                values.put(singleVillage.COLUMN_TALUKA_CODE, user.getTalukaCode());
                 db.insert(singleVillage.TABLE_NAME, null, values);
             }
 

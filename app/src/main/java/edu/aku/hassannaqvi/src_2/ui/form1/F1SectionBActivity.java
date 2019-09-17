@@ -159,7 +159,6 @@ public class F1SectionBActivity extends AppCompatActivity {
                 f1b07o;
 
 
-
         f1b02a = v.findViewById(R.id.f1b02a);
         f1b02b = v.findViewById(R.id.f1b02b);
         f1b03a = v.findViewById(R.id.f1b03a);
@@ -599,8 +598,8 @@ public class F1SectionBActivity extends AppCompatActivity {
                     }
 
                     if (f1b03b.isChecked()) {
-                        if (f1b03b3.getText().toString().length() > 0) {
-                            int age = Integer.parseInt(f1b03a3.getText().toString());
+                        if (!f1b03b3.getText().toString().equals("") && f1b03b3.getText().toString().length() > 0) {
+                            int age = Integer.parseInt(f1b03b3.getText().toString());
                             if (age > 2005 || age < 1970) {
                                 f1b03b3.setError("Respondent age Muste be Between 14 to 49 Years");
                                 f1b03b3.requestFocus();

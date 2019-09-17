@@ -407,6 +407,7 @@
                         android:text="@string/f6a09" />
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f6a09check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

@@ -29,8 +29,6 @@ public class VillagesContract {
     public VillagesContract sync(JSONObject jsonObject) throws JSONException {
         this.villageCode = jsonObject.getString(singleVillage.COLUMN_VILLAGE_CODE);
         this.villageName = jsonObject.getString(singleVillage.COLUMN_VILLAGE_NAME);
-        this.districtCode = jsonObject.getString(singleVillage.COLUMN_DISTRICT_CODE);
-        this.talukaCode = jsonObject.getString(singleVillage.COLUMN_TALUKA_CODE);
         this.ucCode = jsonObject.getString(singleVillage.COLUMN_UC_CODE);
 
 
@@ -69,9 +67,7 @@ public class VillagesContract {
         public static final String COLUMN_NAME_NULLABLE = "nullColumnHack";
         public static final String _ID = "_ID";
         public static final String COLUMN_VILLAGE_CODE = "village_code";
-        public static final String COLUMN_TALUKA_CODE = "taluka_code";
         public static final String COLUMN_VILLAGE_NAME = "village_name";
-        public static final String COLUMN_DISTRICT_CODE = "taluka_code";
         public static final String COLUMN_UC_CODE = "uc_code";
 
         public static final String _URI = "villages.php";

@@ -206,6 +206,7 @@
                         android:text="@string/f3a05" />
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f3a05check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -441,6 +442,7 @@
                         android:text="@string/f3a08" />
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f3a08check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -525,6 +527,7 @@
                         android:text="@string/f3a09" />
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f3a09check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -854,6 +857,7 @@
                             android:text="@string/f3a13" />
 
                         <LinearLayout
+                            android:tag="0"
                             android:id="@+id/f3a13check"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -926,6 +930,7 @@
                             android:text="@string/f3a14" />
 
                         <LinearLayout
+                            android:tag="0"
                             android:id="@+id/f3a14check"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1043,6 +1048,7 @@
                             android:text="@string/f3a16" />
 
                         <LinearLayout
+                            android:tag="0"
                             android:id="@+id/f3a16check"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1116,6 +1122,7 @@
                         android:text="@string/f3a17" />
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f3a17check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

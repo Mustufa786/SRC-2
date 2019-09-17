@@ -156,6 +156,7 @@
 
 
                     <LinearLayout
+                        android:tag="0"
                         android:id="@+id/f1c05check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

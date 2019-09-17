@@ -228,6 +228,7 @@
                             android:text="@string/other" />
 
                         <LinearLayout
+                            android:tag="0"
                             android:id="@+id/f9a05check"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
