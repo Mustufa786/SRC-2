@@ -331,7 +331,19 @@ public abstract class ValidatorClass {
                 }
             } else if (view instanceof RadioGroup) {
 
-                View v = ((RadioGroup) view).getChildAt(0);
+
+                boolean radioFlag = false;
+                View v = null;
+                for (byte j = 0; j < ((RadioGroup) view).getChildCount(); j++) {
+                    if (((RadioGroup) view).getChildAt(j) instanceof RadioButton) {
+                        v = ((RadioGroup) view).getChildAt(j);
+                        radioFlag = true;
+                        break;
+                    }
+                }
+
+                if (!radioFlag) continue;
+
                 if (v != null) {
 
                     String asNamed = getString(context, getIDComponent(view));

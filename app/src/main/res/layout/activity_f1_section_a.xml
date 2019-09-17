@@ -37,6 +37,7 @@
                         android:text="@string/f1a01" />
 
                     <EditText
+                        android:inputType="number"
                         style="@style/textInput"
                         android:id="@+id/f1a01"
                         android:hint="@string/f1a01"
