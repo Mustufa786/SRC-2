@@ -41,6 +41,12 @@ public class MainActivity extends AppCompatActivity {
             bi.databaseBtn.setVisibility(View.GONE);
         }
 
+        if (Integer.valueOf(MainApp.versionName.split("\\.")[0]) > 0) {
+            bi.testing.setVisibility(View.GONE);
+        } else {
+            bi.testing.setVisibility(View.VISIBLE);
+        }
+
 
         db = new DatabaseHelper(this);
         Collection<FormsContract> todaysForms = db.getTodayForms();
