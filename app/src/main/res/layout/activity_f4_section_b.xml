@@ -305,7 +305,7 @@
                             android:hint="@string/f4c02a"
                             android:inputType="number"
                             android:tag="f4a03"
-                            android:text='@{!f4c0298.checked? f4c02x.getText.toString : ""}'
+                            android:text='@{!f4c0298.checked? f4c02.getText.toString : ""}'
                             android:visibility='@{f4c0298.checked? View.GONE : View.VISIBLE}' />
 
                         <CheckBox
