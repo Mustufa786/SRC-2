@@ -62,6 +62,7 @@ public class F8SectionAActivity extends AppCompatActivity {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
+                    finish();
                     startActivity(new Intent(getApplicationContext(), F9SectionAActivity.class));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();

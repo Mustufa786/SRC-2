@@ -53,6 +53,7 @@ public class F5SectionAActivity extends AppCompatActivity {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
+                    finish();
                     startActivity(new Intent(getApplicationContext(), (!MainApp.Respondent_is_UnMarried && MainApp.two_year_child) ?
                             F6SectionAActivity.class : F7SectionAActivity.class));
                 } else {

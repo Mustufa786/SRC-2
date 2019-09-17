@@ -124,6 +124,7 @@ public class F3SectionA02Activity extends AppCompatActivity {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
+                    finish();
                     startActivity(new Intent(getApplicationContext(),
                             MainApp.Respondent_is_UnMarried ? F8SectionAActivity.class : F4SectionAActivity.class));
                 } else {

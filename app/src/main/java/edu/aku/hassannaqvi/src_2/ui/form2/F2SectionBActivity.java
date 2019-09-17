@@ -38,6 +38,7 @@ public class F2SectionBActivity extends AppCompatActivity {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
+                    finish();
                     startActivity(new Intent(getApplicationContext(), F3SectionA01Activity.class));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();

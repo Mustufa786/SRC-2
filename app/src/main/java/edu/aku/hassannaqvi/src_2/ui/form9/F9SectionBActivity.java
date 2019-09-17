@@ -80,6 +80,7 @@ public class F9SectionBActivity extends AppCompatActivity {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
+                    finish();
                     startActivity(new Intent(getApplicationContext(),
                             EndingActivity.class).putExtra("complete", true));
                 } else {
