@@ -37,6 +37,7 @@
             android:name=".ui.LoginActivity"
             android:theme="@style/AppTheme1"></activity>
         <activity android:name=".ui.form1.F1SectionCActivity" />
+        <activity android:name=".ui.SyncActivity" />
         <activity android:name=".ui.form1.F1SectionBActivity" />
         <activity android:name=".ui.form1.F1SectionAActivity" />
         <activity android:name=".ui.form3.F3SectionA02Activity">

@@ -4,22 +4,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 import java.util.Collection;
 
-import edu.aku.hassannaqvi.src_2.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.src_2.contracts.FormsContract;
 import edu.aku.hassannaqvi.src_2.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
 import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityMainBinding;
-import edu.aku.hassannaqvi.src_2.sync.SyncAllData;
+import edu.aku.hassannaqvi.src_2.ui.SyncActivity;
 import edu.aku.hassannaqvi.src_2.ui.form1.F1SectionAActivity;
 import edu.aku.hassannaqvi.src_2.util.Util;
 
@@ -111,32 +107,33 @@ public class MainActivity extends AppCompatActivity {
 
     public void onSyncServer() {
 
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) {
-
-            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
-            new SyncAllData(
-                    this,
-                    "Forms",
-                    "updateSyncedForms",
-                    FormsContract.class,
-                    MainApp._HOST_URL + FormsContract.FormsTable._URL,
-                    db.getUnsyncedForms()
-            ).execute();
-            Toast.makeText(getApplicationContext(), "Syncing Family Members", Toast.LENGTH_SHORT).show();
-            new SyncAllData(
-                    this,
-                    "Family Members",
-                    "updateSyncedFamilyMembers",
-                    FormsContract.class,
-                    MainApp._HOST_URL + FamilyMembersContract.familyMembers._URL,
-                    db.getUnsyncedFamilyMember()
-            ).execute();
-        } else {
-            Toast.makeText(this, "Internet is not available", Toast.LENGTH_SHORT).show();
-        }
+        startActivity(new Intent(this, SyncActivity.class));
+//        ConnectivityManager connMgr = (ConnectivityManager)
+//                getSystemService(Context.CONNECTIVITY_SERVICE);
+//        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+//        if (networkInfo != null && networkInfo.isConnected()) {
+//
+//            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+//            new SyncAllData(
+//                    this,
+//                    "Forms",
+//                    "updateSyncedForms",
+//                    FormsContract.class,
+//                    MainApp._HOST_URL + FormsContract.FormsTable._URL,
+//                    db.getUnsyncedForms()
+//            ).execute();
+//            Toast.makeText(getApplicationContext(), "Syncing Family Members", Toast.LENGTH_SHORT).show();
+//            new SyncAllData(
+//                    this,
+//                    "Family Members",
+//                    "updateSyncedFamilyMembers",
+//                    FormsContract.class,
+//                    MainApp._HOST_URL + FamilyMembersContract.familyMembers._URL,
+//                    db.getUnsyncedFamilyMember()
+//            ).execute();
+//        } else {
+//            Toast.makeText(this, "Internet is not available", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     public void openForm() {

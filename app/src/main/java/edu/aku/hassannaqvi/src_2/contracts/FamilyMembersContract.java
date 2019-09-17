@@ -14,7 +14,7 @@ import java.io.Serializable;
 
 public class FamilyMembersContract implements Serializable {
 
-    private final String projectName = "Central Asia Stunting Initiative 2019";
+    private final String projectName = "SRC-2";
     private String _ID = "";
     private String _UID = "";
     private String _UUID = "";

@@ -59,19 +59,19 @@ public class F1SectionBActivity extends AppCompatActivity {
 
     ArrayList<ArrayList<String>> subList = new ArrayList<>();
     ArrayList<String> allQuestions = new ArrayList<>(Arrays.asList(
-            "lstf1b01",
-            "lstf1b02",
-            "lstf1b03",
-            "lstf1b03D",
-            "lstf1b03M",
-            "lstf1b03Y",
-            "lstf1b04",
-            "lstf1b05",
-            "lstf1b06",
-            "lstf1b07",
-            "lstf1b07x",
-            "lstf1b08",
-            "lstf1b09"
+            "f1b01",
+            "f1b02",
+            "f1b03",
+            "f1b03D",
+            "f1b03M",
+            "f1b03Y",
+            "f1b04",
+            "f1b05",
+            "f1b06",
+            "f1b07",
+            "f1b07x",
+            "f1b08",
+            "f1b09"
     ));
 
     @Override

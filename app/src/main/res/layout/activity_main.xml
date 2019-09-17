@@ -56,6 +56,7 @@
                 <!--                    android:textColor="@color/colorPrimary"-->
                 <!--                    android:textStyle="bold" />-->
 
+
                 <TextView
                     android:id="@+id/lblMainMenu"
                     android:layout_width="match_parent"
