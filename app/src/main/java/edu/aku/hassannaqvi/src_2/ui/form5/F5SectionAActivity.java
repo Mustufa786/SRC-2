@@ -116,7 +116,8 @@ public class F5SectionAActivity extends AppCompatActivity {
         f1.put("f5a08", bi.f5a08a.isChecked() ? "1" : bi.f5a08b.isChecked() ? "2" : "0");
         f1.put("f5b01", bi.f5b01a.isChecked() ? "1" : bi.f5b01b.isChecked() ? "2" : "0");
         f1.put("f5b02", bi.f5b02a.isChecked() ? "1" : bi.f5b02b.isChecked() ? "2" : "0");
-        f1.put("f5b03", bi.f5b03a.isChecked() ? "1" : bi.f5b03b.isChecked() ? "2" : bi.f5b03c.isChecked() ? "3" : bi.f5b03d.isChecked() ? "4" : "0");
+        f1.put("f5b03", bi.f5b03a.isChecked() ? "1" : bi.f5b03b.isChecked() ? "2" : bi.f5b03c.isChecked() ? "3"
+                : bi.f5b03d.isChecked() ? "4" : "0");
         f1.put("f5b04", bi.f5b04a.isChecked() ? "1" : bi.f5b04b.isChecked() ? "2" : "0");
 
         MainApp.fc.setF5(String.valueOf(f1));

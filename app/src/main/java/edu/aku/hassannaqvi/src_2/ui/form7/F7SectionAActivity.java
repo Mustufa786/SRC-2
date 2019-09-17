@@ -104,7 +104,23 @@ public class F7SectionAActivity extends AppCompatActivity {
         f1.put("f7a05", bi.f7a05a.isChecked() ? "1" : bi.f7a05b.isChecked() ? "2" : bi.f7a0598.isChecked() ? "98" : "0");
         f1.put("f7a06", bi.f7a06a.isChecked() ? "1" : bi.f7a06b.isChecked() ? "2" : bi.f7a0698.isChecked() ? "98" : "0");
         f1.put("f7a0796x", bi.f7a0796x.getText().toString());
-        f1.put("f7a07", bi.f7a07a.isChecked() ? "1" : bi.f7a07b.isChecked() ? "2" : bi.f7a07c.isChecked() ? "3" : bi.f7a07d.isChecked() ? "4" : bi.f7a07e.isChecked() ? "5" : bi.f7a07f.isChecked() ? "6" : bi.f7a07g.isChecked() ? "7" : bi.f7a07h.isChecked() ? "8" : bi.f7a07i.isChecked() ? "9" : bi.f7a07j.isChecked() ? "10" : bi.f7a07k.isChecked() ? "11" : bi.f7a07l.isChecked() ? "12" : bi.f7a07m.isChecked() ? "13" : bi.f7a07n.isChecked() ? "14" : bi.f7a0796.isChecked() ? "96" : bi.f7a0798.isChecked() ? "98" : "0");
+        f1.put("f7a07", bi.f7a07a.isChecked() ? "1"
+                : bi.f7a07b.isChecked() ? "2"
+                : bi.f7a07c.isChecked() ? "3"
+                : bi.f7a07d.isChecked() ? "4"
+                : bi.f7a07e.isChecked() ? "5"
+                : bi.f7a07f.isChecked() ? "6"
+                : bi.f7a07g.isChecked() ? "7"
+                : bi.f7a07h.isChecked() ? "8"
+                : bi.f7a07i.isChecked() ? "9"
+                : bi.f7a07j.isChecked() ? "10"
+                : bi.f7a07k.isChecked() ? "11"
+                : bi.f7a07l.isChecked() ? "12"
+                : bi.f7a07m.isChecked() ? "13"
+                : bi.f7a07n.isChecked() ? "14"
+                : bi.f7a0796.isChecked() ? "96"
+                : bi.f7a0798.isChecked() ? "98"
+                : "0");
 
         f1.put("f7a0896x", bi.f7a0896x.getText().toString());
         f1.put("f7a08", bi.f7a08a.isChecked() ? "1" : bi.f7a08b.isChecked() ? "2" : bi.f7a0896.isChecked() ? "96" : "0");

@@ -300,7 +300,7 @@
 
 
                         <EditText
-                            android:id="@+id/f4c02x"
+                            android:id="@+id/f4c02"
                             style="@style/textInput"
                             android:hint="@string/f4c02a"
                             android:inputType="number"

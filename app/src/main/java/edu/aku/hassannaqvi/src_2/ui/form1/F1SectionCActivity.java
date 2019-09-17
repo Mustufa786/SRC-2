@@ -76,6 +76,21 @@ public class F1SectionCActivity extends AppCompatActivity {
                 : "0");
 
         f1c.put("f1c03", bi.f1c03.getText().toString());
+        f1c.put("f1c04", bi.f1c04.getText().toString());
+        f1c.put("f1c05a", bi.f1c05a.isChecked() ? "1" : "0");
+        f1c.put("f1c05b", bi.f1c05b.isChecked() ? "2" : "0");
+        f1c.put("f1c05c", bi.f1c05c.isChecked() ? "3" : "0");
+        f1c.put("f1c05d", bi.f1c05d.isChecked() ? "4" : "0");
+        f1c.put("f1c05e", bi.f1c05e.isChecked() ? "5" : "0");
+        f1c.put("f1c05f", bi.f1c05f.isChecked() ? "6" : "0");
+        f1c.put("f1c05g", bi.f1c05g.isChecked() ? "7" : "0");
+        f1c.put("f1c05h", bi.f1c05h.isChecked() ? "8" : "0");
+        f1c.put("f1c05i", bi.f1c05i.isChecked() ? "9" : "0");
+        f1c.put("f1c05j", bi.f1c05j.isChecked() ? "10" : "0");
+        f1c.put("f1c05k", bi.f1c05k.isChecked() ? "11" : "0");
+        f1c.put("f1c05l", bi.f1c05l.isChecked() ? "12" : "0");
+        f1c.put("f1c05m", bi.f1c05m.isChecked() ? "13" : "0");
+        f1c.put("f1c05n", bi.f1c05n.isChecked() ? "14" : "0");
 
         JSONObject merged = JsonUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getF1()), f1c);
         MainApp.fc.setF1(String.valueOf(merged));
