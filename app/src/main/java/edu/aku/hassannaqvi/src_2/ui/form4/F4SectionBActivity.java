@@ -104,7 +104,7 @@ public class F4SectionBActivity extends AppCompatActivity {
 
 
         JSONObject merged = JsonUtils.mergeJSONObjects(new JSONObject(MainApp.fc.getF4()), f1);
-        MainApp.fc.setF3(String.valueOf(merged));
+        MainApp.fc.setF4(String.valueOf(merged));
 
     }
 

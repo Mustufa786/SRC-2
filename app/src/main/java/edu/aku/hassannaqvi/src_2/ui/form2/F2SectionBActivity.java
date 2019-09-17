@@ -10,6 +10,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.src_2.R;
+import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
 import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF2SectionBBinding;
 import edu.aku.hassannaqvi.src_2.other.JsonUtils;
@@ -49,7 +50,19 @@ public class F2SectionBActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return true;
+
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        // 2. UPDATE FORM ROWID
+        int updcount = db.updatesF2();
+
+        if (updcount == 1) {
+            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
     }
 
     private void SaveDraft() throws JSONException {
