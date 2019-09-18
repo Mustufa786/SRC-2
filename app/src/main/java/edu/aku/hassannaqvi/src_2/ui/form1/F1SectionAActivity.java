@@ -9,6 +9,8 @@ import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -63,38 +65,68 @@ public class F1SectionAActivity extends AppCompatActivity {
     private void setupViews() {
 
         db = new DatabaseHelper(this);
-        villagesMap = new HashMap<>();
-        villagesNames = new ArrayList<>();
-        villagesNames.add("Select Village Name-");
-        bi.f1a01.addTextChangedListener(new TextWatcher() {
+
+        ucsList = db.getUCsList();
+        ucsName = new ArrayList<>();
+        ucsMap = new HashMap<>();
+        ucsName.add("-Select UCs -");
+
+        for (UCsContract dc : ucsList) {
+            ucsName.add(dc.getUcsName());
+            ucsMap.put(dc.getUcsName(), dc.getUccode());
+        }
+
+        bi.f1a01.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, ucsName));
+
+        bi.f1a01.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (bi.f1a01.getSelectedItemPosition() != 0) {
+
+//                    districtCode = ucsMap.get(bi.districtSpinner.getSelectedItem().toString());
+                    villagesList = db.getVillages(ucsMap.get(bi.f1a01.getSelectedItem().toString()));
+                    villagesMap = new HashMap<>();
+                    villagesNames = new ArrayList<>();
+                    villagesNames.add("Select Village Name-");
+
+                    for (VillagesContract hf : villagesList) {
+                        villagesNames.add(hf.getVillageName());
+                        villagesMap.put(hf.getVillageName(), hf.getVillageCode());
+                    }
+
+                    bi.f1a02.setAdapter(new ArrayAdapter<>(F1SectionAActivity.this, android.R.layout.simple_spinner_dropdown_item, villagesNames));
+
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        bi.f1a04.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-
+                length = s.toString().length();
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
-                if (!s.toString().equals("")) {
-                    if (s.toString().length() == 2) {
-                        villagesList = db.getVillages(bi.f1a01.getText().toString());
-                        for (VillagesContract hf : villagesList) {
-                            villagesNames.add(hf.getVillageName());
-                            villagesMap.put(hf.getVillageName(), hf.getVillageCode());
+                if (!bi.f1a04.getText().toString().isEmpty() && bi.f1a04.getText().toString().length() == 3) {
+                    if (bi.f1a04.getText().toString().substring(0, 3).matches("[0-9]+")) {
+                        if (length < 5) {
+                            bi.f1a04.setText(bi.f1a04.getText().toString() + "-");
+                            bi.f1a04.setSelection(bi.f1a04.getText().length());
+                            bi.f1a04.setInputType(InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS);
+
                         }
 
-                        bi.f1a02.setAdapter(new ArrayAdapter<>(F1SectionAActivity.this, android.R.layout.simple_spinner_dropdown_item, villagesNames));
-
                     }
-                } else {
-                    if (villagesList.size() != 0) {
-                        villagesMap.clear();
-                        villagesNames.clear();
-                        villagesList.clear();
-                    }
-
-
                 }
             }
 
@@ -103,79 +135,6 @@ public class F1SectionAActivity extends AppCompatActivity {
 
             }
         });
-
-//        ucsList = db.getUCsList();
-//        ucsName = new ArrayList<>();
-//        ucsMap = new HashMap<>();
-//        ucsName.add("-Select District-");
-//
-//        for (UCsContract dc : ucsList) {
-//            ucsName.add(dc.getUcsName());
-//            ucsMap.put(dc.getUcsName(), dc.getUccode());
-//        }
-//
-//        bi.f1a01.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, ucsName));
-//
-//        bi.f1a01.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//
-//                if (bi.f1a01.getSelectedItemPosition() != 0) {
-//
-////                    districtCode = ucsMap.get(bi.districtSpinner.getSelectedItem().toString());
-//                    villagesList = db.getVillages(ucsMap.get(bi.f1a01.getSelectedItem().toString()));
-//                    villagesMap = new HashMap<>();
-//                    villagesNames = new ArrayList<>();
-//                    villagesNames.add("Select Village Name-");
-//
-//                    for (VillagesContract hf : villagesList) {
-//                        villagesNames.add(hf.getVillageName());
-//                        villagesMap.put(hf.getVillageName(), hf.getVillageCode());
-//                    }
-//
-//                    bi.f1a02.setAdapter(new ArrayAdapter<>(F1SectionAActivity.this, android.R.layout.simple_spinner_dropdown_item, villagesNames));
-//
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
-
-        bi.f1a04.addTextChangedListener(new
-
-                                                TextWatcher() {
-                                                    @Override
-                                                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-//                bi.f1a04.setInputType(InputType.TYPE_CLASS_NUMBER);
-                                                        length = s.toString().length();
-                                                    }
-
-                                                    @Override
-                                                    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                                                        if (!bi.f1a04.getText().toString().isEmpty() && bi.f1a04.getText().toString().length() == 3) {
-                                                            if (bi.f1a04.getText().toString().substring(0, 3).matches("[0-9]+")) {
-                                                                if (length < 5) {
-                                                                    bi.f1a04.setText(bi.f1a04.getText().toString() + "-");
-                                                                    bi.f1a04.setSelection(bi.f1a04.getText().length());
-                                                                    bi.f1a04.setInputType(InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS);
-
-                                                                }
-
-                                                            }
-                                                        }
-                                                    }
-
-                                                    @Override
-                                                    public void afterTextChanged(Editable s) {
-
-                                                    }
-                                                });
 
     }
 
@@ -220,7 +179,7 @@ public class F1SectionAActivity extends AppCompatActivity {
         fc.setFormDate((DateFormat.format("dd-MM-yyyy HH:mm", new Date())).toString());
         fc.setDeviceID(MainApp.deviceId);
         fc.setUser(MainApp.userName);
-        fc.setUc(bi.f1a01.getText().toString());
+        fc.setUc(ucsMap.get(bi.f1a01.getSelectedItem().toString()));
         fc.setVillage(villagesMap.get(bi.f1a02.getSelectedItem().toString()));
         fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         fc.setHhNo(bi.f1a04.getText().toString());

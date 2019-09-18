@@ -36,14 +36,12 @@
                         style="@style/i_textview"
                         android:text="@string/f1a01" />
 
-                    <EditText
-                        android:inputType="number"
-                        style="@style/textInput"
+                    <Spinner
                         android:id="@+id/f1a01"
-                        android:hint="@string/f1a01"
+                        style="@style/spinnerStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:maxLength="2" />
+                        android:hint="@string/f1a01" />
 
 
                 </LinearLayout>

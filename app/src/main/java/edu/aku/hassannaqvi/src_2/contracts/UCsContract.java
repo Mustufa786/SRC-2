@@ -22,8 +22,6 @@ public class UCsContract {
     public UCsContract Sync(JSONObject jsonObject) throws JSONException {
         this.uccode = jsonObject.getString(UCsTable.COLUMN_UCCODE);
         this.ucs = jsonObject.getString(UCsTable.COLUMN_UCS_NAME);
-        this.taluka_code = jsonObject.getString(UCsTable.COLUMN_TALUKA_CODE);
-        this.study_arm = jsonObject.getString(UCsTable.COLUMN_STUDY_ARM);
         return this;
     }
 
@@ -70,8 +68,6 @@ public class UCsContract {
         JSONObject json = new JSONObject();
         json.put(UCsTable.COLUMN_UCCODE, this.uccode == null ? JSONObject.NULL : this.uccode);
         json.put(UCsTable.COLUMN_UCS_NAME, this.ucs == null ? JSONObject.NULL : this.ucs);
-        json.put(UCsTable.COLUMN_TALUKA_CODE, this.taluka_code == null ? JSONObject.NULL : this.taluka_code);
-        json.put(UCsTable.COLUMN_STUDY_ARM, this.study_arm == null ? JSONObject.NULL : this.study_arm);
         return json;
     }
 

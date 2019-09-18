@@ -280,6 +280,12 @@ public class SyncActivity extends AppCompatActivity {
                         list.add(model);
                     }
                     new GetAllData(mContext, "villages", syncListAdapter, list).execute();
+                    if (listActivityCreated) {
+                        model = new SyncModel();
+                        model.setstatusID(0);
+                        list.add(model);
+                    }
+                    new GetAllData(mContext, "ucs", syncListAdapter, list).execute();
 
                     listActivityCreated = false;
                 }
