@@ -130,6 +130,7 @@
                                 android:maxLength="2"
                                 android:tag="f1b03b"
                                 app:maxValue="12"
+                                app:defaultValue="99"
                                 app:minValue="1"
                                 app:type="range" />
 

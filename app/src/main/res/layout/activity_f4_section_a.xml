@@ -68,11 +68,11 @@
                         android:text="@string/f4a02" />
 
                     <LinearLayout
-                        android:tag="0"
                         android:id="@+id/f4a02check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/f4a02a"
@@ -160,23 +160,23 @@
 
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            app:maxValue="20"
-                            app:minValue="1"
-                            app:type="range"
                             android:id="@+id/f4a03x"
                             style="@style/textInput"
                             android:hint="@string/f4a03"
                             android:inputType="number"
                             android:tag="f4a03"
                             android:text='@{!f4a03.checked? f4a0296x.getText.toString : ""}'
-                            android:visibility='@{f4a03.checked? View.GONE : View.VISIBLE}' />
+                            android:visibility='@{f4a03.checked? View.GONE : View.VISIBLE}'
+                            app:maxValue="20"
+                            app:minValue="1"
+                            app:type="range" />
 
                         <CheckBox
-                            android:tag="-1"
                             android:id="@+id/f4a03"
                             style="@style/checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="-1"
                             android:text="@string/dkn" />
 
 
@@ -396,11 +396,11 @@
                             android:text="@string/f4a07" />
 
                         <LinearLayout
-                            android:tag="0"
                             android:id="@+id/f4a07check"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:tag="0">
 
                             <CheckBox
                                 android:id="@+id/f4a07a"
@@ -588,28 +588,26 @@
                                 android:text="@string/f4a10" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                app:defaultValue="0"
-                                app:maxValue="29"
-                                app:minValue="0"
-                                app:type="range"
                                 android:id="@+id/f4a10dd"
                                 style="@style/textInput"
                                 android:hint="@string/day"
                                 android:inputType="number"
                                 android:text='@{!f4a1098.checked? f4a10dd.getText.toString : ""}'
-                                android:visibility='@{f4a1098.checked? View.GONE : View.VISIBLE}' />
+                                android:visibility='@{f4a1098.checked? View.GONE : View.VISIBLE}'
+                                app:maxValue="29"
+                                app:minValue="0"
+                                app:type="range" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                app:defaultValue="0"
-                                app:maxValue="10"
-                                app:minValue="0"
-                                app:type="range"
                                 android:id="@+id/f4a10mm"
                                 style="@style/textInput"
                                 android:hint="@string/month"
                                 android:inputType="number"
                                 android:text='@{!f4a1098.checked? f4a10mm.getText.toString : ""}'
-                                android:visibility='@{f4a1098.checked? View.GONE : View.VISIBLE}' />
+                                android:visibility='@{f4a1098.checked? View.GONE : View.VISIBLE}'
+                                app:maxValue="10"
+                                app:minValue="0"
+                                app:type="range" />
 
                             <CheckBox
                                 android:id="@+id/f4a1098"
@@ -825,23 +823,23 @@
 
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            app:maxValue="5"
-                            app:minValue="1"
-                            app:type="range"
                             android:id="@+id/f4a16"
                             style="@style/textInput"
                             android:hint="@string/f4a16"
                             android:inputType="number"
                             android:tag="f4a03"
                             android:text='@{!f4a1698.checked? f4a16.getText.toString : ""}'
-                            android:visibility='@{f4a1698.checked? View.GONE : View.VISIBLE}' />
+                            android:visibility='@{f4a1698.checked? View.GONE : View.VISIBLE}'
+                            app:maxValue="5"
+                            app:minValue="1"
+                            app:type="range" />
 
                         <CheckBox
-                            android:tag="-1"
                             android:id="@+id/f4a1698"
                             style="@style/checkbox"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:tag="-1"
                             android:text="@string/dkn" />
 
 

@@ -581,16 +581,16 @@ public class F1SectionBActivity extends AppCompatActivity {
                             f1b03a3.clearFocus();
                         }
 
-                        if (f1b03a1.getText().toString().length() == 0) {
-                            f1b03a1.setError("Please Enter");
-                            f1b03a1.requestFocus();
-                            return;
-                        }
-                        if (f1b03a2.getText().toString().length() == 0) {
-                            f1b03a2.setError("Please Enter");
-                            f1b03a2.requestFocus();
-                            return;
-                        }
+//                        if (f1b03a1.getText().toString().length() == 0) {
+//                            f1b03a1.setError("Please Enter");
+//                            f1b03a1.requestFocus();
+//                            return;
+//                        }
+//                        if (f1b03a2.getText().toString().length() == 0) {
+//                            f1b03a2.setError("Please Enter");
+//                            f1b03a2.requestFocus();
+//                            return;
+//                        }
                     }
 
                     if (f1b03b.isChecked()) {
@@ -612,18 +612,18 @@ public class F1SectionBActivity extends AppCompatActivity {
                             return;
                         } else {
                             int agee = Integer.parseInt(f1b03b1.getText().toString());
-                            if (agee != 98 & agee > 30) {
+                            if (agee != 99 & agee > 30) {
                                 f1b03b1.setError("Please enter 1 30 in range ");
                                 f1b03b1.requestFocus();
                                 return;
                             }
 
                         }
-                        if (f1b03b2.getText().toString().length() == 0) {
-                            f1b03b2.setError("Please Enter");
-                            f1b03b2.requestFocus();
-                            return;
-                        }
+//                        if (f1b03b2.getText().toString().length() == 0) {
+//                            f1b03b2.setError("Please Enter");
+//                            f1b03b2.requestFocus();
+//                            return;
+//                        }
                     }
 
                     if (f1b06a.isChecked()) {
