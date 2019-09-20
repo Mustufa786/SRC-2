@@ -123,7 +123,7 @@
                                 android:tag="f1b03b"
                                 app:defaultValue="99"
                                 app:minValue="1"
-                                app:maxValue="12"
+                                app:maxValue="31"
                                 app:type="range" />
 
                             <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
@@ -137,8 +137,6 @@
                                 android:tag="f1b03b"
                                 app:maxValue="12"
                                 app:minValue="1"
-
-
                                 app:type="range" />
 
                             <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
@@ -506,7 +504,6 @@
                             android:tag="f1b08a"
                             app:maxValue="5000000"
                             app:minValue="1"
-
                             app:type="range" />
 
                         <!--android:visibility='@{f1b08a.checked?   View.VISIBLE : View.GONE}'-->
