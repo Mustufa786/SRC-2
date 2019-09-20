@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -159,7 +159,10 @@
                             android:text="@string/f4a03" />
 
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            app:maxValue="20"
+                            app:minValue="1"
+                            app:type="range"
                             android:id="@+id/f4a03x"
                             style="@style/textInput"
                             android:hint="@string/f4a03"
@@ -584,7 +587,11 @@
                                 style="@style/i_textview"
                                 android:text="@string/f4a10" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                app:defaultValue="0"
+                                app:maxValue="29"
+                                app:minValue="0"
+                                app:type="range"
                                 android:id="@+id/f4a10dd"
                                 style="@style/textInput"
                                 android:hint="@string/day"
@@ -592,7 +599,11 @@
                                 android:text='@{!f4a1098.checked? f4a10dd.getText.toString : ""}'
                                 android:visibility='@{f4a1098.checked? View.GONE : View.VISIBLE}' />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                app:defaultValue="0"
+                                app:maxValue="10"
+                                app:minValue="0"
+                                app:type="range"
                                 android:id="@+id/f4a10mm"
                                 style="@style/textInput"
                                 android:hint="@string/month"
@@ -813,7 +824,10 @@
                             android:text="@string/f4a16" />
 
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            app:maxValue="5"
+                            app:minValue="1"
+                            app:type="range"
                             android:id="@+id/f4a16"
                             style="@style/textInput"
                             android:hint="@string/f4a16"

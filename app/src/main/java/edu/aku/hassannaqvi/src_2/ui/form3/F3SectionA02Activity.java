@@ -17,7 +17,7 @@ import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF3SectionA02Binding;
 import edu.aku.hassannaqvi.src_2.other.JsonUtils;
 import edu.aku.hassannaqvi.src_2.ui.form4.F4SectionAActivity;
-import edu.aku.hassannaqvi.src_2.ui.form8.F8SectionAActivity;
+import edu.aku.hassannaqvi.src_2.ui.form9.F9SectionAActivity;
 import edu.aku.hassannaqvi.src_2.validation.ClearClass;
 import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
@@ -68,9 +68,11 @@ public class F3SectionA02Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 if (isChecked) {
+                    bi.f3a2397.setEnabled(false);
                     ClearClass.ClearAllFields(bi.f3a23check, false);
                 } else {
                     ClearClass.ClearAllFields(bi.f3a23check, true);
+                    bi.f3a2397.setEnabled(true);
                 }
             }
         });
@@ -79,9 +81,11 @@ public class F3SectionA02Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 if (isChecked) {
+                    bi.f3a2399.setEnabled(false);
                     ClearClass.ClearAllFields(bi.f3a23check, false);
                 } else {
                     ClearClass.ClearAllFields(bi.f3a23check, true);
+                    bi.f3a2399.setEnabled(true);
                 }
             }
         });
@@ -108,15 +112,6 @@ public class F3SectionA02Activity extends AppCompatActivity {
             }
         });
 
-        bi.f3a30e.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-                if (isChecked) {
-                    ClearClass.ClearAllFields(bi.fldGrpf3a31, null);
-                }
-            }
-        });
     }
 
     public void BtnContinue() {
@@ -126,7 +121,7 @@ public class F3SectionA02Activity extends AppCompatActivity {
                 if (UpdateDB()) {
                     finish();
                     startActivity(new Intent(getApplicationContext(),
-                            MainApp.Respondent_is_UnMarried ? F8SectionAActivity.class : F4SectionAActivity.class));
+                            MainApp.Respondent_is_UnMarried ? F9SectionAActivity.class : F4SectionAActivity.class));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }

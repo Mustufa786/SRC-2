@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -15,6 +16,7 @@ import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF2SectionBBinding;
 import edu.aku.hassannaqvi.src_2.other.JsonUtils;
 import edu.aku.hassannaqvi.src_2.ui.form3.F3SectionA01Activity;
+import edu.aku.hassannaqvi.src_2.validation.ClearClass;
 import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
 public class F2SectionBActivity extends AppCompatActivity {
@@ -31,6 +33,20 @@ public class F2SectionBActivity extends AppCompatActivity {
 
         setTitle(R.string.f2bHeading);
 
+        setupViews();
+
+    }
+
+    private void setupViews() {
+
+        bi.f2b02.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId != bi.f2b02b.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrp47, null);
+                }
+            }
+        });
     }
 
     public void BtnContinue() {
@@ -75,10 +91,15 @@ public class F2SectionBActivity extends AppCompatActivity {
                 : bi.f2b02c.isChecked() ? "3" : bi.f2b02d.isChecked() ? "4"
                 : bi.f2b02e.isChecked() ? "5" : bi.f2b02f.isChecked() ? "6"
                 : bi.f2b02g.isChecked() ? "7" : bi.f2b02h.isChecked() ? "8"
-                : bi.f2b0296.isChecked() ? "96" : "0");
+                : bi.f2b02i.isChecked() ? "9"
+                : bi.f2b0296.isChecked() ? "96"
+                : "0");
         f1.put("f2b0296x", bi.f2b0296x.getText().toString());
         f1.put("f2b03", bi.f2b03a.isChecked() ? "1" : bi.f2b03b.isChecked() ? "2" : bi.f2b0398.isChecked() ? "98" : "0");
+        f1.put("f2b03rupees", bi.f2b03ax.getText().toString());
         f1.put("f2b04", bi.f2b04a.isChecked() ? "1" : bi.f2b04b.isChecked() ? "2" : bi.f2b0496.isChecked() ? "96" : "0");
+
+
         f1.put("f2b0496x", bi.f2b0496x.getText().toString());
         f1.put("f2b05", bi.f2b05a.isChecked() ? "1" : bi.f2b05b.isChecked() ? "2" : "0");
         f1.put("f2b06", bi.f2b06a.isChecked() ? "1" : bi.f2b06b.isChecked() ? "2" : "0");
@@ -88,7 +109,9 @@ public class F2SectionBActivity extends AppCompatActivity {
                 : bi.f2b08c.isChecked() ? "3" : bi.f2b08d.isChecked() ? "4"
                 : bi.f2b08e.isChecked() ? "5" : bi.f2b08f.isChecked() ? "6"
                 : bi.f2b08g.isChecked() ? "7" : bi.f2b08h.isChecked() ? "8"
-                : bi.f2b0896.isChecked() ? "96" : "0");
+                : bi.f2b08i.isChecked() ? "9"
+                : bi.f2b0896.isChecked() ? "96"
+                : "0");
         f1.put("f2b0896x", bi.f2b0896x.getText().toString());
 
         f1.put("f2b09a", bi.f2b09a.isChecked() ? "1" : "0");

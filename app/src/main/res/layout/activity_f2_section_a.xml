@@ -324,6 +324,16 @@
                             style="@style/radiobutton"
                             android:text="@string/f2a05a" />
 
+                        <EditText
+                            android:id="@+id/f2a05ax"
+                            style="@style/textInput"
+                            android:hint="@string/f2a05a"
+                            android:inputType="number"
+                            android:tag="f2a05a"
+                            android:text='@{f2a05a.checked? f2a05ax.getText.toString : ""}'
+                            android:visibility='@{f2a05a.checked? View.VISIBLE : View.GONE}' />
+
+
                         <RadioButton
                             android:id="@+id/f2a05b"
                             style="@style/radiobutton"

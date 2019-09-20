@@ -4,7 +4,7 @@
     <string name="yes"> ھا </string>
     <string name="no"> نہ </string>
     <string name="no_answer"> ڪو به جواب نه ڏنو ويو </string>
-    <string name="none"> هنن جوابن مان ڪو به نه </string>
+    <string name="none">  ڪو به نه </string>
    <string name="nothing"> ڪجهه به نه
  </string>
     <string name="dkn"> خبر نه آھي </string>
@@ -46,13 +46,13 @@
     <!--    Headings-->
     <string name="f1aHeading">سماجي ڊيموگرافڪ معلومات </string>
     <string name="f1bHeading">سماجي ۽ معاشي معلومات</string>
-    <string name="f1cHeading">Housing Characteristics</string>
+    <string name="f1cHeading">Section C Housing Characteristics</string>
     <string name="f2aHeading">بنيادي معلومات</string>
     <string name="f2bHeading">عمل يا طريقا    </string>
     <string name="f3Heading">ماهواري جي دوران صفائي سٿرائي   </string>
-    <string name="f4aHeading">گذريل حمل جي معلومات   </string>
+    <string name="f4aHeading">حمل دوران سار سنڀال </string>
     <string name="f4bHeading">ويم   </string>
-    <string name="f5Heading">موجوده حمل   </string>
+    <string name="f5Heading">حمل جي باري ۾ معلومات   </string>
     <string name="f6Heading">نئين ڄاول ٻار جي سار سنڀال  </string>
     <string name="f7Heading">05 سالن کان گهٽ ٻار جي معلومات  </string>
     <string name="f8Heading">خانداني منصوبابندي  </string>
@@ -95,7 +95,7 @@
     <string name="f1b04e"> ماءُ </string>
     <string name="f1b04f"> ڀيڻُ </string>
     <string name="f1b04g"> ڀاءُ	 </string>
-    <string name="f1b05"> ڀيڻ </string>
+    <string name="f1b05"> تعليم </string>
     <string name="f1b05a"> اڻ پڙهيل </string>
     <string name="f1b05b"> مذهبي تعليم </string>
 
@@ -103,10 +103,10 @@
     <string name="f1b06a"> غير شادي شده </string>
     <string name="f1b06b"> شادي شده </string>
     <string name="f1b06c"> طلاق يافته </string>
-    <string name="f1b06d"> الگ، جدا </string>
+    <string name="f1b06d"> الڳ، جدا </string>
     <string name="f1b06e"> بيوهه </string>
     <string name="f1b07"> ڪاروبار </string>
-    <string name="f1b07a"> پروفيشنل /هنر مند/انتظاميا </string>
+    <string name="f1b07a"> پروفيشنل / ٽيڪنيڪل/انتظاميا </string>
     <string name="f1b07b"> ڪلارڪ </string>
     <string name="f1b07c"> خريد ۽ فروخت </string>
     <string name="f1b07d"> تربيت يافته مزدور </string>
@@ -165,11 +165,11 @@
     <string name="f2ah"> صاف پيئڻ جو پاڻي </string>
     <string name="f2ah1"> بنيادي معلومات </string>
     <string name="f2a01"> توهان جي گهر ۾ گهرڀاتين ۾ پيئڻ جي پاڻي جو اهم ذريعوڪهڙو آهي؟ </string>
-    <string name="f2a01a"> گهر جو نلڪو </string>
-    <string name="f2a01b"> ٻاهريون نلڪو </string>
+    <string name="f2a01a"> گهر جي اندر واٽر سپلائي جو نلڪو </string>
+    <string name="f2a01b"> ٻاهر ميدان ۾ لڳل واٽر سپلائي جو نلڪو </string>
     <string name="f2a01c"> گهٽي ۾ لڳل نلڪو </string>
     <string name="f2a01d"> ٽيوب ويل </string>
-    <string name="f2a01e"> نلڪوهت وارو </string>
+    <string name="f2a01e">  نلڪوهٿ وارو </string>
     <string name="f2a01f"> ڍڪيل کوهه </string>
     <string name="f2a01g"> اڻ ڍڪيل کوهه </string>
     <string name="f2a01h"> محفوظ چشمو </string>
@@ -183,13 +183,13 @@
     <string name="f2a02"> ڇا گذريل 6 مهينن ۾ توهان جي گهر کي اهم ذريعي مان پاڻيء جي فراهمي معطل ٿي؟ </string>
     <string name="f2a03"> پاڻيءَ جي اهم ذريعي مان معطليءَ دوران ڪيترا ڏينهن پاڻي موجود نه هيو؟ </string>
     <string name="f2a04"> توهان جي گهر ۾ ٻين ڪم ڪارين جهڙوڪ رڌ پچاءُ ، هٿن ڌوئڻ جي لاءِ استعمال ٿيندڙ پاڻيءَ جو اهم ذريعو ڪهڙوآهي؟ </string>
-    <string name="f2a04a"> گهر جو نلڪو </string>
-    <string name="f2a04b"> آڳر ۾ نلڪو </string>
+    <string name="f2a04a"> گهر جي اندر واٽر سپلائي جو نلڪو </string>
+    <string name="f2a04b"> ٻاهر ميدان ۾ لڳل واٽر سپلائي جو نلڪو </string>
     <string name="f2a04c"> گهٽي ۾ لڳل نلڪو </string>
     <string name="f2a04d"> ٽيوب ويل </string>
     <string name="f2a04e"> نلڪوهٿ وارو </string>
     <string name="f2a04f"> ڍڪيل کوهه </string>
-    <string name="f2a04g"> ڻ ڍڪيل کوهه </string>
+    <string name="f2a04g"> اڻ ڍڪيل کوهه </string>
     <string name="f2a04h"> محفوظ چشمو </string>
     <string name="f2a04i"> غير محفوظ چشمو </string>
     <string name="f2a04j"> برساتي پاڻي </string>
@@ -206,13 +206,14 @@
     <string name="f2b01"> ڇا توهان پنهنجي پاڻيءَ کي صاف ڪندا آهيو ڪنهن به طريقي سان جيئين اهو پيئڻ لاءِ محفوظ ۽ بهتر ٿئي؟ </string>
     <string name="f2b02"> پيئڻ جي پاڻي کي صاف ڪرڻ لاءِ توهان اڪثر ڪري ڪهڙو طريقو استعمال ڪندا آهيو؟ اڪثر استعمال ڪيل طريقو ٻڌايو </string>
     <string name="f2b02a"> اٻارڻ </string>
-    <string name="f2b02b"> ڪپڙي سان ڇاڻي </string>
-    <string name="f2b02c"> منرل وٽر واري بوتل </string>
-    <string name="f2b02d"> پاڻي فلٽر استعمال ڪندا آهيون </string>
-    <string name="f2b02e"> (ٺڪر،ريت،جامع وغيره) </string>
-    <string name="f2b02f"> اس تي رکڻ </string>
-    <string name="f2b02g"> آٺرائڻ </string>
-    <string name="f2b02h"> ڦٽڪي جو استعال </string>
+    <string name="f2b02b"> بليچ يا ڪلورين  شامل ڪرڻ </string>
+    <string name="f2b02c"> ڪپڙي سان ڇاڻي </string>
+    <string name="f2b02d"> منرل وٽر واري بوتل </string>
+    <string name="f2b02e"> پاڻي فلٽر استعمال ڪندا آهيون </string>
+    <string name="f2b02f"> (ٺڪر،ريت،جامع وغيره) </string>
+    <string name="f2b02g"> اس تي رکڻ </string>
+    <string name="f2b02h"> آٺرائڻ </string>
+    <string name="f2b02i"> ڦٽڪي جو استعال </string>
     <string name="f2b03"> ان طريقي ڪار جو مهيني ۾ خرچ ڪيترو آهي؟ </string>
     <string name="f2b03a"> رپيا </string>
     <string name="f2b03b"> ڪو به خرچ نه </string>
@@ -229,9 +230,10 @@
     <string name="f2b08c"> ڪپڙي سان ڇاڻي </string>
     <string name="f2b08d"> منرل وٽر واري بوتل </string>
     <string name="f2b08e"> پاڻي فلٽر استعمال ڪندا آهيون </string>
-    <string name="f2b08f"> اس تي رکڻ </string>
-    <string name="f2b08g"> آٺرائڻ </string>
-    <string name="f2b08h"> ڦٽڪي جو استعال </string>
+    <string name="f2b08f"> ٺڪر،ريت،جامع وغيره </string>
+    <string name="f2b08g"> اس تي رکڻ </string>
+    <string name="f2b08h"> آٺرائڻ </string>
+    <string name="f2b08i"> ڦٽڪي جو استعال </string>
     <string name="f2b09"> توهان ان طريقي ڪار کي ڇو ترجيح ڏيو ٿا؟ هڪ کان وڌيڪ جواب </string>
     <string name="f2b09a"> صحت جي لاءِ بهتر آهي </string>
     <string name="f2b09b"> استعمال ۾ آسان آهي </string>
@@ -240,7 +242,7 @@
 
     <string name="f2c01"> توهان جي گهر جا ڀاتي گهڻو ڪري ڪهڙي قسم جي ليٽرين استعمال ڪندا آهن؟ </string>
     <string name="f2c01a">نڪاسي جو باقاعدي نظام</string>
-    <string name="f2c01b">گٽر سان جڙيلنيڪال</string>
+    <string name="f2c01b">گٽر سان جڙيل  نيڪال</string>
     <string name="f2c01c">عارضي حاجت وارو نيڪال</string>
     <string name="f2c01d">ٻي ڪنهن جاءِ وارو نيڪال</string>
     <string name="f2c01e">ڪا به جاءِ</string>
@@ -249,7 +251,7 @@
     <string name="f2c01h">سليب کان بغير کليل حاجت واري جاءِ</string>
     <string name="f2c01i">بالٽي واري حاجت جي جاءِ</string>
     <string name="f2c01j">ٽنگيل حاجت واري جاء</string>
-    <string name="f2c01k">بغير سهولت جيزمين يا ٻوڙن۾</string>
+    <string name="f2c01k">ٽنگيل حاجت واري جاء</string>
 
     <string name="f2cHeading"> عمل يا طريقا     </string>
     <string name="f2c02">ڇا توهان اها ليٽرين ٻين گهرن کي به استعمال ڪرڻ ڏيندا آهيو؟</string>
@@ -262,14 +264,14 @@
     <string name="f7ah1"> شادي شده عورت جو ڀريوجنهن جو گهٽ ۾ گهٽ هڪ ٻار 5 سالن گهٽ عمر جو هجي </string>
     <string name="f7ah2"> نوٽ- فارم صرف جواب ڏيندڙ جي 0—5سالن کان گهٽ عمر جي ٻارجو ڀريو ويندو </string>
     <string name="f7a01Heading"> مجوده ٻار جي صحت      </string>
-    <string name="f7a01"> : ٻار جو نالو </string>
+    <string name="f7a01">  ٻار جو نالو </string>
     <string name="f7a02"> ٻار جي عمر </string>
     <string name="f7a03"> جنس </string>
     <string name="f7a03a"> مرد </string>
     <string name="f7a03b"> عورت </string>
-    <string name="f7a04"> ڇا گزريل 02 هفتن کان ٻار کي دست ٿيا آهن؟ </string>
+    <string name="f7a04"> ڇا گزريل 2 هفتن جي دوران 5 سالن کان گهٽ عمر  جي ٻار کي دست ٿيا آهن؟ </string>
     <string name="f7a05"> ڪاڪوس ۾ رت </string>
-    <string name="f7a06"> ڪنهن ذريعي کان دستن جي صلاح يا اعلاج مليو </string>
+    <string name="f7a06">ڪنهن ذريعي کان دستن جي صلاح يا علاج مليو </string>
     <string name="f7a07"> علاج جو ڪهڙو ذريعو </string>
     <string name="f7a07h1"> سرڪاري ذريعا </string>
     <string name="f7a07a"> سرڪاري اسپتال </string>
@@ -315,7 +317,7 @@
     <string name="f8a03a"> ٻن سالن کان گھٽ </string>
     <string name="f8a03b"> ٻه سال </string>
     <string name="f8a03c"> ٻن سالن کان وڌيڪ </string>
-    <string name="f8a04"> وقفعي جو مجوده استعمال </string>
+    <string name="f8a04">ڇا توهان هن وقت  خانداني منصوبابندي جو ڪوبه طريقو استعمال ڪري رهيا آهيو؟ </string>
     <string name="f8a04h1"> Current user: </string>
     <string name="f8a04a"> کير پيارڻ ماهواري نه اچڻ جو طريقو </string>
     <string name="f8a04b"> عزل </string>
@@ -327,14 +329,14 @@
     <string name="f8a04h"> بغل ۾ رکڻ وارو امپلائٽ </string>
     <string name="f8a04i"> عورت جو آپريشنل بندي </string>
     <string name="f8a04j"> مرد جو آپريشن / نس بندي </string>
-    <string name="f8a04k"> Not Current Use </string>
-    <string name="f8a04a01"> Have you ever used a family planing method?</string>
+    <string name="f8a04k"> موجوده وقت ۾ استعمال نه ڪندڙ </string>
+    <string name="f8a04a01"> ڇا توهان ڪڏهن خانداني منصوبابندي جي ڪنهن طريقيڪار جو استعمال ڪيو؟</string>
     <string name="f8a04h2"> ماضي ۾ وقفو ڪيو هو هاڻي نه </string>
     <string name="f8a04h3"> ڪڏهن به وقفي جو طريقو استعمال نه ڪيو </string>
     <string name="f8a05"> اگر وقفو پوئين ٽن مهينن جي اندر ڇڏيو آهي ته وجه؟ </string>
     <string name="f8a05a"> منفي نقصانڪار اثر </string>
     <string name="f8a05b"> وقفي جو طريقي ڪار يا سهولت موجود نه هئي </string>
-    <string name="f8a05c"> مانگو هو </string>
+    <string name="f8a05c"> مهانگو هو </string>
     <string name="f8a05d"> مطمئن نه هئاسين </string>
     <string name="f8a05e"> حمل آهي </string>
     <string name="f8a05f"> ٻئي حمل جو ارادو آهي </string>
@@ -352,7 +354,7 @@
     <string name="f8a06h"> بغل ۾ رکڻ وارو امپلائٽ </string>
     <string name="f8a06i"> عورت جو آپريشنل بندي </string>
     <string name="f8a06j"> مرد جو آپريشن / نس بندي </string>
-    <string name="f8a06k">Do not want to use/switch </string>
+    <string name="f8a06k">استعمال ڪرڻ نه ٿا چاهيون </string>
     <string name="f8a06h2"> نه </string>
     <string name="f8a07"> ڇا توهان کي ٻئي ٻار جي خواهش آهي؟ </string>
     <string name="f8a07a"> ٻيو ٻار ٻن سالن جي اندر چاهيان ٿي. </string>
@@ -382,13 +384,13 @@
     <string name="f9a03d"> حمل جو ضايح ڪرڻ يا ويم جي 24 ڪلاڪن ۾ موت </string>
     <string name="f9a03e"> ٻئي ڪا وجه </string>
     <string name="f9a04"> ماءُ جي موت جو سبب </string>
-    <string name="f9a04a"> بلند/فشار رت </string>
-    <string name="f9a04b"> انجماد رت شريان </string>
+    <string name="f9a04a"> حمل جي دوران جهٽڪن جو اچڻ </string>
+    <string name="f9a04b"> شريانين ۾ رت جو ڄمڻ</string>
     <string name="f9a04c"> حمل جي دوران رت جو ذياده وهڻ </string>
     <string name="f9a04d"> ويم جي عمل ۾ دير يا توسيح </string>
     <string name="f9a04e"> ويم جي دوران يا ويم کان پوءِ رت جو زياده وهڻ </string>
     <string name="f9a04f"> ويم کان پوءِ انفيڪشن </string>
-    <string name="f9a04g"> آنول جا مسئلا </string>
+    <string name="f9a04g"> اوڙه جا مسئلا</string>
     <string name="f9a04h"> ٻئي ڪا وجه </string>
     <string name="f9a04i"> ٻي ڪا وجهه </string>
    <string name="f9a05a"> هيپاٽائيٽس </string>
@@ -427,7 +429,7 @@
     <string name="f5nh"> نوٽ ؛ هي فارم صرف منتخب ٿيل جواب ڏيندڙ کان پڇو </string>
     <string name="f5h2"> شادي شده عورت جو ڀريوجنهن جو گهٽ ۾ گهٽ هڪ ٻار 5 سالن گهٽ عمر جو هجي </string>
     <string name="f5a01"> چا اوهان هاڻي حمل سان آهيو؟ </string>
-    <string name="f5a02"> موجوده ويمن جي مهينن جو تعداد </string>
+    <string name="f5a02"> موجوده  حمل جي مهينن جو تعداد </string>
 
     <string name="f5ah"> حمل جي باري ۾ معلومات </string>
     <string name="f5a03"> حمل جي سار سنڀال وصول ڪئي </string>
@@ -440,10 +442,11 @@
     <string name="f5a05e"> وزن جي جانچ ڪئي وئي </string>
     <string name="f5a05f"> الٽراسائونڊ ڪيو ويو </string>
     <string name="f5a05g"> جھٽڪن جي بيماري کان بچاءُ جو ٽڪو لڳرايو </string>
+    <string name="f5a05h">رت جو گروپ  </string>
     <string name="f5a06"> اگر توهان حمل جي سارسنڀال حاصل ڪئي هئي ته ڇا توهان کي هيٺين مان ڪنهن به پيچدگين جي باري ۾ ٻڌايو ويو هو </string>
     <string name="f5a07"> اگر توهان کي انهن مان ڪي پيچدگيون هيون ته مهرباني ٻڌايو </string>
     <string name="f5a07a"> جھٽڪا </string>
-    <string name="f5a07b"> بلند فشار رت </string>
+    <string name="f5a07b"> بلڊ پريشر جو وڌڻ </string>
     <string name="f5a07c"> شديد رت جي گھٽتائي ساھ کڻڻ ۾ تڪليف </string>
     <string name="f5a07d"> شگر </string>
     <string name="f5a07e"> شديد مٿي جو سور </string>
@@ -466,7 +469,7 @@
     <string name="f5b03a"> پنهنجي گاڏي </string>
     <string name="f5b03b"> ڪرائي جي گاڌي </string>
     <string name="f5b03c"> گاڌي جو انتظام ٿيل </string>
-    <string name="f5b03d"> جي طرفان مدد مليCHC </string>
+    <string name="f5b03d"> جي طرفان مدد مليCHC  </string>
     <string name="f5b04">ڪنهن به صحت مرڪز تي ويم جي لاءِ رجسٽريشن ڪرائي؟</string>
 
 
@@ -674,7 +677,7 @@
     <string name="f3a00"> منتخب ٿيل عورت جو نالو </string>
     <string name="f3a01"> ڇا توهان جي ماهواري شروع ٿي آهي؟ </string>
     <string name="f3a01a"> ڪڏهن نه ٻڌو </string>
-    <string name="f3a02"> جيڪڏهن جواب آپشن نمبر 05 آهي ته انٽرويو ڪندڙ پنهنجو ذاتي مشاهدو ٽڪ ڪندو </string>
+    <string name="f3a02"> جيڪڏهن جواب آپشن نمبر 99 آهي ته انٽرويو ڪندڙ پنهنجو ذاتي مشاهدو ٽڪ ڪندو </string>
     <string name="f3a02a"> ان شرم محسوس ڪيو ، بيچيني ، يا گهبراهٽ </string>
     <string name="f3a02b"> گهر وارن ان کي ڳالهائڻ جي اجازت نه ڏني </string>
     <string name="f3a02c"> ڪجهه ٻيو وضاحت ڪريو </string>
@@ -690,6 +693,7 @@
     <string name="f3a05f"> رکيل کاڌي کي هٿ لائڻ </string>
     <string name="f3a05g"> ڇوڪرن سان ڳالهائڻ </string>
     <string name="f3a05h"> ورزش </string>
+    <string name="f3a0597"> هنن جوابن مان ڪو به نه </string>
     <string name="f3a06"> ڇا توهان کي ماهواري جي دوران ڪي علامتون پيش آهيون؟ هڪ کان وڌيڪ جواب </string>
     <string name="f3a06a"> ٿڪاوٽ </string>
     <string name="f3a06b"> پيٽ ۾ سور </string>
@@ -755,7 +759,7 @@
     <string name="f3a14d"> ٻي ڪاجڳهه وضاحت ڪريو </string>
     <string name="f3a14e"> ڪو به جواب نه ڏنو ويو </string>
     <string name="f3a15"> جذب ڪرڻ واريون شيون توهان ڪيترا دفعا استعمال ڪندا آهيو؟ </string>
-    <string name="f3a15a"> هڪ دفعو روزانه </string>
+    <string name="f3a15a">هڪ دفعو روزانه </string>
     <string name="f3a15b"> ٻه دفعا روزانه </string>
     <string name="f3a15c"> ٽي دفعا يا ان کان وڌيڪ روزانه </string>
     <string name="f3a15d"> تبديل نه ڪندا آهيو </string>

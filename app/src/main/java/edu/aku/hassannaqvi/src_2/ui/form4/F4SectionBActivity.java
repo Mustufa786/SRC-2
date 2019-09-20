@@ -99,6 +99,7 @@ public class F4SectionBActivity extends AppCompatActivity {
                 : bi.f4b02d.isChecked() ? "4"
                 : bi.f4b02e.isChecked() ? "5"
                 : bi.f4b02f.isChecked() ? "6"
+                : bi.f4b02g.isChecked() ? "7"
                 : bi.f4b0298.isChecked() ? "98"
                 : bi.f4b0296.isChecked() ? "96"
                 : "0");

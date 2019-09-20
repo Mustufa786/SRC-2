@@ -37,6 +37,16 @@ public class F5SectionAActivity extends AppCompatActivity {
 
     private void setupViews() {
 
+        bi.f5a01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.f5a01a.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrpMain, null);
+                }
+            }
+        });
+
         bi.f5a03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -96,6 +106,7 @@ public class F5SectionAActivity extends AppCompatActivity {
         f1.put("f5a0505", bi.f5a0505a.isChecked() ? "1" : bi.f5a0505b.isChecked() ? "2" : "0");
         f1.put("f5a0506", bi.f5a0506a.isChecked() ? "1" : bi.f5a0506b.isChecked() ? "2" : "0");
         f1.put("f5a0507", bi.f5a0507a.isChecked() ? "1" : bi.f5a0507b.isChecked() ? "2" : "0");
+        f1.put("f5a0508", bi.f5a0508a.isChecked() ? "1" : bi.f5a0508b.isChecked() ? "2" : "0");
         f1.put("f5a06", bi.f5a06a.isChecked() ? "1" : bi.f5a06b.isChecked() ? "2" : "0");
         f1.put("f5a07a", bi.f5a07a.isChecked() ? "1" : "0");
         f1.put("f5a07b", bi.f5a07b.isChecked() ? "2" : "0");

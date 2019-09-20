@@ -16,6 +16,7 @@ import edu.aku.hassannaqvi.src_2.R;
 import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
 import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF3SectionA01Binding;
+import edu.aku.hassannaqvi.src_2.ui.form4.F4SectionAActivity;
 import edu.aku.hassannaqvi.src_2.validation.ClearClass;
 import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
@@ -23,6 +24,7 @@ public class F3SectionA01Activity extends AppCompatActivity {
 
 
     ActivityF3SectionA01Binding bi;
+    boolean isSkipped = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,16 +45,21 @@ public class F3SectionA01Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
                 if (checkedId == bi.f3a01a.getId()) {
+                    isSkipped = false;
+                    bi.fldGrpMain.setVisibility(View.VISIBLE);
                     bi.fldGrpf3a02.setVisibility(View.GONE);
                     bi.fldGrpf3a03.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllFields(bi.fldGrpf3a02, null);
                 } else if (checkedId == bi.f3a0199.getId()) {
+                    isSkipped = false;
+                    bi.fldGrpMain.setVisibility(View.VISIBLE);
                     bi.fldGrpf3a02.setVisibility(View.VISIBLE);
                     bi.fldGrpf3a03.setVisibility(View.GONE);
                 }
                 if (checkedId != bi.f3a01a.getId() && checkedId != bi.f3a0199.getId()) {
-                    bi.fldGrpf3a02.setVisibility(View.GONE);
-                    bi.fldGrpf3a03.setVisibility(View.GONE);
+                    bi.fldGrpMain.setVisibility(View.GONE);
+                    isSkipped = true;
+                    ClearClass.ClearAllFields(bi.fldGrpMain, null);
                 }
             }
         });
@@ -82,8 +89,26 @@ public class F3SectionA01Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
+                    bi.f3a0698.setEnabled(false);
+                    bi.f3a0697.setEnabled(false);
                     ClearClass.ClearAllFields(bi.f3a06check, false);
                 } else {
+                    bi.f3a0698.setEnabled(true);
+                    bi.f3a0697.setEnabled(true);
+                    ClearClass.ClearAllFields(bi.f3a06check, true);
+                }
+            }
+        });
+        bi.f3a0697.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    bi.f3a0698.setEnabled(false);
+                    bi.f3a0699.setEnabled(false);
+                    ClearClass.ClearAllFields(bi.f3a06check, false);
+                } else {
+                    bi.f3a0698.setEnabled(true);
+                    bi.f3a0699.setEnabled(true);
                     ClearClass.ClearAllFields(bi.f3a06check, true);
                 }
             }
@@ -92,8 +117,12 @@ public class F3SectionA01Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
+                    bi.f3a0699.setEnabled(false);
+                    bi.f3a0697.setEnabled(false);
                     ClearClass.ClearAllFields(bi.f3a06check, false);
                 } else {
+                    bi.f3a0699.setEnabled(true);
+                    bi.f3a0697.setEnabled(true);
                     ClearClass.ClearAllFields(bi.f3a06check, true);
                 }
             }
@@ -103,8 +132,10 @@ public class F3SectionA01Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     ClearClass.ClearAllFields(bi.f3a05check, false);
+                    bi.f3a0599.setEnabled(false);
                 } else {
                     ClearClass.ClearAllFields(bi.f3a05check, true);
+                    bi.f3a0599.setEnabled(true);
                 }
             }
         });
@@ -112,9 +143,11 @@ public class F3SectionA01Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
+                    bi.f3a0597.setEnabled(false);
                     ClearClass.ClearAllFields(bi.f3a05check, false);
                 } else {
                     ClearClass.ClearAllFields(bi.f3a05check, true);
+                    bi.f3a0597.setEnabled(true);
                 }
             }
         });
@@ -162,8 +195,10 @@ public class F3SectionA01Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 if (isChecked) {
+                    bi.f3a1797.setEnabled(false);
                     ClearClass.ClearAllFields(bi.f3a17check, false);
                 } else {
+                    bi.f3a1797.setEnabled(true);
                     ClearClass.ClearAllFields(bi.f3a17check, true);
                 }
             }
@@ -173,8 +208,10 @@ public class F3SectionA01Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 if (isChecked) {
+                    bi.f3a1799.setEnabled(false);
                     ClearClass.ClearAllFields(bi.f3a17check, false);
                 } else {
+                    bi.f3a1799.setEnabled(true);
                     ClearClass.ClearAllFields(bi.f3a17check, true);
                 }
             }
@@ -202,6 +239,26 @@ public class F3SectionA01Activity extends AppCompatActivity {
                 }
             }
         });
+        bi.f3a1399.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.f3a13check, false);
+                } else {
+                    ClearClass.ClearAllFields(bi.f3a13check, true);
+                }
+            }
+        });
+        bi.f3a1499.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    ClearClass.ClearAllFields(bi.f3a14check, false);
+                } else {
+                    ClearClass.ClearAllFields(bi.f3a14check, true);
+                }
+            }
+        });
     }
 
     public void BtnContinue() {
@@ -210,7 +267,8 @@ public class F3SectionA01Activity extends AppCompatActivity {
                 SaveDraft();
                 if (UpdateDB()) {
                     finish();
-                    startActivity(new Intent(getApplicationContext(), F3SectionA02Activity.class));
+                    startActivity(new Intent(getApplicationContext(), (isSkipped && !MainApp.Respondent_is_UnMarried) ? F4SectionAActivity.class
+                            : F3SectionA02Activity.class));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }

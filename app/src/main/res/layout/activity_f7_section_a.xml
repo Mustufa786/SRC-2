@@ -119,9 +119,7 @@
                             android:inputType="number"
                             android:maxLength="2"
                             app:maxValue="29"
-                            app:minValue="1"
-
-
+                            app:minValue="0"
                             app:type="range" />
 
                         <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
@@ -133,9 +131,7 @@
                             android:inputType="number"
                             android:maxLength="2"
                             app:maxValue="12"
-                            app:minValue="1"
-
-
+                            app:minValue="0"
                             app:type="range" />
                         <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
 
@@ -145,7 +141,7 @@
                             android:hint="Year"
                             android:inputType="number"
                             android:maxLength="2"
-                            app:maxValue="80"
+                            app:maxValue="4"
                             app:minValue="0"
 
 

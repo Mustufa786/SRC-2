@@ -121,10 +121,9 @@
                                 android:inputType="number"
                                 android:maxLength="2"
                                 android:tag="f1b03b"
-                                app:maxValue="99"
+                                app:defaultValue="99"
                                 app:minValue="1"
-
-
+                                app:maxValue="12"
                                 app:type="range" />
 
                             <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
@@ -170,7 +169,7 @@
                                 android:maxLength="2"
                                 android:tag="f1b03a"
                                 app:maxValue="29"
-                                app:minValue="1"
+                                app:minValue="0"
 
 
                                 app:type="range" />
@@ -184,8 +183,7 @@
                                 android:inputType="number"
                                 android:maxLength="2"
                                 android:tag="f1b03a"
-                                app:maxValue="12"
-
+                                app:maxValue="11"
                                 app:minValue="1"
 
 
@@ -506,7 +504,7 @@
                             android:inputType="number"
                             android:maxLength="5"
                             android:tag="f1b08a"
-                            app:maxValue="100000"
+                            app:maxValue="5000000"
                             app:minValue="1"
 
                             app:type="range" />

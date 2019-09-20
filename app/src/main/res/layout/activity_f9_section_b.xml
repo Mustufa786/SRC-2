@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <data>
@@ -81,14 +81,17 @@
                             style="@style/i_textview"
                             android:text="@string/f9b02" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:maxLength="1"
+                            app:maxValue="9"
+                            app:minValue="1"
                             android:id="@+id/f9b02"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/number"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            app:type="range" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -145,14 +148,17 @@
                                 style="@style/i_textview"
                                 android:text="@string/f9b04" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:maxLength="1"
+                                app:maxValue="9"
+                                app:minValue="1"
                                 android:id="@+id/f9b04"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/number"
                                 android:inputType="number"
-                                android:maxLength="2" />
+                                app:type="range" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
 
@@ -199,14 +205,17 @@
                                 style="@style/i_textview"
                                 android:text="@string/f9b06" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:maxLength="1"
+                                app:maxValue="9"
+                                app:minValue="1"
                                 android:id="@+id/f9b06"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/f9b06"
                                 android:inputType="number"
-                                android:maxLength="2" />
+                                app:type="range" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
 
@@ -252,14 +261,17 @@
                                 style="@style/i_textview"
                                 android:text="@string/f9b08" />
 
-                            <EditText
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:maxLength="1"
+                                app:maxValue="9"
+                                app:minValue="1"
                                 android:id="@+id/f9b08"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/number"
                                 android:inputType="number"
-                                android:maxLength="2" />
+                                app:type="range" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
 
@@ -309,14 +321,17 @@
                             style="@style/i_textview"
                             android:text="@string/f9b10" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:maxLength="1"
+                            app:maxValue="9"
+                            app:minValue="1"
                             android:id="@+id/f9b10"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/number"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            app:type="range" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 
@@ -360,14 +375,17 @@
                             style="@style/i_textview"
                             android:text="@string/f9b12" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:maxLength="1"
+                            app:maxValue="9"
+                            app:minValue="1"
                             android:id="@+id/f9b12"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/number"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            app:type="range" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
 

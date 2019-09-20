@@ -130,8 +130,24 @@ public class F7SectionAActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpF7)) {
+            return false;
+        }
+        if (Integer.parseInt(bi.f7a02a.getText().toString()) == 0
+                && Integer.parseInt(bi.f7a02a.getText().toString()) == 0
+                && Integer.parseInt(bi.f7a02a.getText().toString()) == 0) {
+            bi.f7a02a.setError("Can not be 0 at the same time");
+            bi.f7a02a.requestFocus();
+            return false;
 
-        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpF7);
+        } else {
+            bi.f7a02a.setError(null);
+            bi.f7a02a.clearFocus();
+        }
+
+
+        return true;
+
     }
 
     public void BtnEnd() {

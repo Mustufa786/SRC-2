@@ -87,6 +87,7 @@ public class F2SectionAActivity extends AppCompatActivity {
                 : bi.f2a0496.isChecked() ? "96" : "0");
         f1.put("f2a0496x", bi.f2a0496x.getText().toString());
         f1.put("f2a05", bi.f2a05a.isChecked() ? "1" : bi.f2a05b.isChecked() ? "2" : bi.f2a0598.isChecked() ? "98" : "0");
+        f1.put("f2a05min", bi.f2a05ax.getText().toString());
 
         MainApp.fc.setF2(String.valueOf(f1));
 

@@ -228,11 +228,11 @@
                         android:text="@string/f3a23" />
 
                     <LinearLayout
-                        android:tag="0"
                         android:id="@+id/f3a23check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/f3a23a"
@@ -431,7 +431,7 @@
                         style="@style/textInput"
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/other"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:text='@{f3a25a.checked? f3a26.getText.toString : ""}' />
 
 
@@ -486,11 +486,11 @@
                         android:text="@string/f3a28" />
 
                     <LinearLayout
-                        android:tag="0"
                         android:id="@+id/f3a28check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/f3a28a"
@@ -584,8 +584,6 @@
 
                     </LinearLayout>
 
-
-
                     <CheckBox
                         android:id="@+id/f3a2899"
                         style="@style/checkbox"
@@ -645,11 +643,11 @@
                         android:text="@string/f3a30" />
 
                     <LinearLayout
-                        android:tag="0"
                         android:id="@+id/f3a30check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/f3a30a"
@@ -726,11 +724,11 @@
                         android:text="@string/f3a31" />
 
                     <LinearLayout
-                        android:tag="0"
                         android:id="@+id/f3a31check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/f3a31a"
@@ -832,11 +830,11 @@
                         android:text="@string/f3a33" />
 
                     <LinearLayout
-                        android:tag="0"
                         android:id="@+id/f3a33check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:tag="0">
 
                         <CheckBox
                             android:id="@+id/f3a33a"
@@ -873,7 +871,7 @@
                             android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
                             android:inputType="text"
-                            android:tag="f3a3196"
+                            android:tag="f3a3396"
                             android:text='@{f3a3396.checked? f3a3396x.getText.toString : ""}'
                             android:visibility='@{f3a3396.checked? View.VISIBLE : View.GONE}' />
 
