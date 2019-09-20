@@ -25,8 +25,6 @@
             android:orientation="vertical">
 
             <LinearLayout
-
-
                 android:id="@+id/lvmain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -104,10 +102,6 @@
                             style="@style/radiogroup">
 
 
-
-
-
-
                             <RadioButton
                                 android:id="@+id/f1b03b"
                                 style="@style/radiobutton"
@@ -117,13 +111,13 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/f1b03b1"
                                 style="@style/textInput"
-                                android:hint="Day"
+                                android:hint="Write 99 if not remember"
                                 android:inputType="number"
                                 android:maxLength="2"
                                 android:tag="f1b03b"
                                 app:defaultValue="99"
-                                app:minValue="1"
                                 app:maxValue="31"
+                                app:minValue="1"
                                 app:type="range" />
 
                             <!--android:visibility='@{f1b03b.checked? View.VISIBLE : View.GONE}'-->
@@ -131,7 +125,7 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/f1b03b2"
                                 style="@style/textInput"
-                                android:hint="Month"
+                                android:hint="Write 99 if not remember"
                                 android:inputType="number"
                                 android:maxLength="2"
                                 android:tag="f1b03b"
@@ -162,14 +156,13 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/f1b03a1"
                                 style="@style/textInput"
-                                android:hint="Days"
+                                android:hint="Write 99 if not remember"
                                 android:inputType="number"
                                 android:maxLength="2"
                                 android:tag="f1b03a"
                                 app:maxValue="29"
+                                app:defaultValue="99"
                                 app:minValue="0"
-
-
                                 app:type="range" />
 
                             <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
@@ -177,12 +170,13 @@
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/f1b03a2"
                                 style="@style/textInput"
-                                android:hint="Month"
+                                android:hint="Write 99 if not remember"
                                 android:inputType="number"
                                 android:maxLength="2"
                                 android:tag="f1b03a"
+                                app:defaultValue="99"
                                 app:maxValue="11"
-                                app:minValue="1"
+                                app:minValue="0"
 
 
                                 app:type="range" />
@@ -199,8 +193,6 @@
                                 app:minValue="0"
                                 app:type="range" />
                             <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
-
-
 
 
                         </RadioGroup>
@@ -288,19 +280,17 @@
                             <RadioButton
                                 android:id="@+id/f1b05a"
                                 style="@style/radiobutton"
-                                android:text="@string/f1b05" />
+                                android:text="@string/f1b05a" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/f1b05x"
                                 style="@style/textInput"
-                                android:hint="@string/f1b05"
+                                android:hint="@string/year"
                                 android:inputType="number"
                                 android:maxLength="2"
                                 android:tag="f1b05a"
                                 app:maxValue="16"
                                 app:minValue="1"
-
-
                                 app:type="range" />
 
 
@@ -308,13 +298,13 @@
                             <RadioButton
                                 android:id="@+id/f1b05b"
                                 style="@style/radiobutton"
-                                android:text="@string/f1b05a" />
+                                android:text="@string/f1b05b" />
 
 
                             <RadioButton
                                 android:id="@+id/f1b05c"
                                 style="@style/radiobutton"
-                                android:text="@string/f1b05b" />
+                                android:text="@string/f1b05c" />
 
 
                         </RadioGroup>
@@ -500,7 +490,7 @@
                             style="@style/textInput"
                             android:hint="@string/f1b08"
                             android:inputType="number"
-                            android:maxLength="5"
+                            android:maxLength="7"
                             android:tag="f1b08a"
                             app:maxValue="5000000"
                             app:minValue="1"
@@ -567,7 +557,6 @@
                 <Button
                     android:id="@+id/btn_Continue"
                     style="@style/button"
-
                     android:background="#1c84c6"
                     android:text="Add" />
 

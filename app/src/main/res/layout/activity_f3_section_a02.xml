@@ -431,7 +431,7 @@
                         style="@style/textInput"
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/other"
-                        android:inputType="number"
+                        android:inputType="text"
                         android:text='@{f3a25a.checked? f3a26.getText.toString : ""}' />
 
 

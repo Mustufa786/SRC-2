@@ -563,14 +563,11 @@ public class F1SectionBActivity extends AppCompatActivity {
         btn_Continue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 if (!ValidatorClass.EmptyCheckingContainer(F1SectionBActivity.this, lvmain)) {
                     return;
                 }
 
-                if (iam_respondent == true) {
-
+                if (iam_respondent) {
                     if (f1b03a.isChecked()) {
                         if (f1b03a3.getText().toString().length() > 0) {
                             int age = Integer.parseInt(f1b03a3.getText().toString());
@@ -580,9 +577,8 @@ public class F1SectionBActivity extends AppCompatActivity {
                                 return;
                             }
                         } else {
-                            f1b03a3.setError("Please Enter");
-                            f1b03a3.requestFocus();
-                            return;
+                            f1b03a3.setError(null);
+                            f1b03a3.clearFocus();
                         }
 
                         if (f1b03a1.getText().toString().length() == 0) {
@@ -601,14 +597,13 @@ public class F1SectionBActivity extends AppCompatActivity {
                         if (!f1b03b3.getText().toString().equals("") && f1b03b3.getText().toString().length() > 0) {
                             int age = Integer.parseInt(f1b03b3.getText().toString());
                             if (age > 2005 || age < 1970) {
-                                f1b03b3.setError("Respondent age Muste be Between 14 to 49 Years");
+                                f1b03b3.setError("Respondent age must be between 14 to 49 Years");
                                 f1b03b3.requestFocus();
                                 return;
                             }
                         } else {
-                            f1b03b3.setError("Please Enter");
-                            f1b03b3.requestFocus();
-                            return;
+                            f1b03b3.setError(null);
+                            f1b03b3.clearFocus();
                         }
 
                         if (f1b03b1.getText().toString().length() == 0) {

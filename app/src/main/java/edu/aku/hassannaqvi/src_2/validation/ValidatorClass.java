@@ -154,7 +154,7 @@ public abstract class ValidatorClass {
     }
 
     public static boolean EmptySpinner(Context context, Spinner spin, String msg) {
-        if (spin.getSelectedItem() == "....") {
+        if (spin.getSelectedItemPosition() == 0) {
             FancyToast.makeText(context, "ERROR(Empty)" + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
             ((TextView) spin.getSelectedView()).setText("This Data is Required");
             ((TextView) spin.getSelectedView()).setTextColor(Color.RED);
@@ -181,6 +181,11 @@ public abstract class ValidatorClass {
             boolean rdbFlag = true;
             for (int j = 0; j < rdGrp.getChildCount(); j++) {
                 View innerV = rdGrp.getChildAt(j);
+
+                if (innerV instanceof RadioButton) {
+                    if (!((RadioButton) innerV).isChecked()) continue;
+                }
+
                 if (innerV instanceof EditText) {
                     if (getIDComponent(rdGrp.findViewById(rdGrp.getCheckedRadioButtonId())).equals(innerV.getTag()))
                         if (innerV instanceof EditTextPicker)
@@ -188,6 +193,7 @@ public abstract class ValidatorClass {
                         else
                             rdbFlag = EmptyTextBox(context, (EditText) innerV, getString(context, getIDComponent(innerV)));
                 }
+                if (!rdbFlag) break;
             }
 
             if (rdbFlag) {

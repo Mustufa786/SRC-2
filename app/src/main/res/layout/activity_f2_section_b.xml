@@ -163,7 +163,7 @@
                             <EditText
                                 android:id="@+id/f2b03ax"
                                 style="@style/textInput"
-                                android:hint="@string/other"
+                                android:hint="@string/f2b03a"
                                 android:inputType="number"
                                 android:tag="f2b03a"
                                 android:text='@{f2b03a.checked? f2b03ax.getText.toString : ""}'

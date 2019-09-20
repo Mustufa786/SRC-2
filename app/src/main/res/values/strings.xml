@@ -96,8 +96,9 @@
     <string name="f1b04f"> ڀيڻُ </string>
     <string name="f1b04g"> ڀاءُ	 </string>
     <string name="f1b05"> تعليم </string>
-    <string name="f1b05a"> اڻ پڙهيل </string>
-    <string name="f1b05b"> مذهبي تعليم </string>
+    <string name="f1b05a"> ڪيترا سال اسڪول ۾ پڙهيو</string>
+    <string name="f1b05b">اڻ پڙهيل</string>
+    <string name="f1b05c"> مذهبي تعليم </string>
 
     <string name="f1b06"> ازواد جي حيثيت </string>
     <string name="f1b06a"> غير شادي شده </string>
