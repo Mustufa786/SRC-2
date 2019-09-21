@@ -429,9 +429,8 @@
                     <EditText
                         android:id="@+id/f3a26"
                         style="@style/textInput"
-                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/other"
-                        android:inputType="text"
+                        android:inputType="number"
                         android:text='@{f3a25a.checked? f3a26.getText.toString : ""}' />
 
 
@@ -713,8 +712,7 @@
             <!--f3a31-->
             <android.support.v7.widget.CardView
                 android:id="@+id/fldGrpf3a31"
-                style="@style/cardView"
-                android:visibility='@{f3a30e.checked? View.GONE : View.VISIBLE}'>
+                style="@style/cardView">
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">

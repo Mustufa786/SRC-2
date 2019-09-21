@@ -47,6 +47,7 @@
     <string name="f1aHeading">سماجي ڊيموگرافڪ معلومات </string>
     <string name="f1bHeading">سماجي ۽ معاشي معلومات</string>
     <string name="f1cHeading">Section C Housing Characteristics</string>
+    <string name="f2Heading">صاف پيئڻ جو پاڻي</string>
     <string name="f2aHeading">بنيادي معلومات</string>
     <string name="f2bHeading">عمل يا طريقا    </string>
     <string name="f3Heading">ماهواري جي دوران صفائي سٿرائي   </string>
@@ -77,7 +78,8 @@
     <string name="f1bh"> سماجي ۽ معاشي معلومات </string>
     <string name="f1bh1">   نوٽ؛ هي فارم ان جو ڀريو ويندو:  </string>
     <string name="f1bh2">  شادي شده عورت جو ڀريوجنهن جو گهٽ ۾ گهٽ هڪ ٻار 5 سالن گهٽ عمر جو هجي يا منتخب نوجوان ڇوڪري جي ماءُ    </string>
-    <string name="f1bh3"> منتخب ڪيو شروعات عورت کان    </string>
+    <string name="f1bh3"> منتخب عورت کان شروعات ڪيو
+ </string>
 
     <string name="f1b01"> گهر ڀاتي جو نالو </string>
     <string name="f1b02"> جنس </string>
@@ -242,6 +244,8 @@
 
 
     <string name="f2c01"> توهان جي گهر جا ڀاتي گهڻو ڪري ڪهڙي قسم جي ليٽرين استعمال ڪندا آهن؟ </string>
+    <string name="f2c01h1"> نيڪا ل  </string>
+    <string name="f2c01h2"> حاجت واري جاء </string>
     <string name="f2c01a">نڪاسي جو باقاعدي نظام</string>
     <string name="f2c01b">گٽر سان جڙيل  نيڪال</string>
     <string name="f2c01c">عارضي حاجت وارو نيڪال</string>
@@ -252,7 +256,7 @@
     <string name="f2c01h">سليب کان بغير کليل حاجت واري جاءِ</string>
     <string name="f2c01i">بالٽي واري حاجت جي جاءِ</string>
     <string name="f2c01j">ٽنگيل حاجت واري جاء</string>
-    <string name="f2c01k">ٽنگيل حاجت واري جاء</string>
+    <string name="f2c01k"> بغير سهولت جي   زمين يا ٻوڙن۾</string>
 
     <string name="f2cHeading"> عمل يا طريقا     </string>
     <string name="f2c02">ڇا توهان اها ليٽرين ٻين گهرن کي به استعمال ڪرڻ ڏيندا آهيو؟</string>
@@ -470,7 +474,7 @@
     <string name="f5b03a"> پنهنجي گاڏي </string>
     <string name="f5b03b"> ڪرائي جي گاڌي </string>
     <string name="f5b03c"> گاڌي جو انتظام ٿيل </string>
-    <string name="f5b03d"> جي طرفان مدد مليCHC  </string>
+    <string name="f5b03d">  CHC جي طرفان مدد ملي  </string>
     <string name="f5b04">ڪنهن به صحت مرڪز تي ويم جي لاءِ رجسٽريشن ڪرائي؟</string>
 
 
@@ -722,7 +726,8 @@
     <string name="f3a09g"> آغاخان اسپتال جي هيلٿ ورڪر </string>
     <string name="f3a09h"> سرڪاري ڊاڪٽر / ٻيو ڪو ڊاڪٽر، هيلٿ ورڪر / مڊوائيف </string>
     <string name="f3a09i"> انٽرنيٽ </string>
-    <string name="f3a10"> وهان ماهواري دوران جذب ڪرڻ لاءِ ڪهڙي شيءَ جو استعمال ڪندا آهيو؟ڪو به هڪ جواب ڏيو </string>
+    <string name="f3a10">توهان ماهواري دوران جذب ڪرڻ لاءِ ڪهڙي شيءَ جو استعمال ڪندا آهيو
+</string>
     <string name="f3a10a"> نئون ڪپڙو </string>
     <string name="f3a10b"> پراڻو ڪپڙو </string>
     <string name="f3a10c"> ڊسپوزل پيڊ </string>
@@ -810,7 +815,8 @@
     <string name="f3a28h"> هيلٿ ورڪرAKU </string>
     <string name="f3a28i"> سرڪاري ڊاڪٽر / هيلٿ ورڪر / مڊوائيف </string>
     <string name="f3a28j"> انٽرنيٽ </string>
-    <string name="f3a29"> جيڪڏهن نه، ته ڇا توهان ٻيهر استعمال ٿيندڙ شين ۾ دلچسپي رکو ٿا جيڪڏهن توهان کي ٺاهڻ جو اهيو هنر سيکاريو وڃي.هڪ کان وڌيڪ جواب </string>
+    <string name="f3a29">جيڪڏهن نه، ته ڇا توهان ٻيهر استعمال ٿيندڙ شين ۾ دلچسپي رکو ٿا جيڪڏهن توهان کي ٺاهڻ جو اهيو هنر سيکاريو وڃي.
+</string>
     <string name="f3a30"> ماهواري دوران ڇوڪرين سان ڪهڙا مسئلا پيش ايندا آهن؟ </string>
     <string name="f3a30a"> گهبراٽ ۽ پريشاني </string>
     <string name="f3a30b"> هو سمجهندي آهي ته هي هڪ بيماري آهي. </string>

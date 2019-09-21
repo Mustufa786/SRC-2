@@ -78,7 +78,10 @@ public class F3SectionA01Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                if (!isChecked) {
+                if (isChecked) {
+                    bi.fldGrpf3a07.setVisibility(View.VISIBLE);
+                }else{
+                    bi.fldGrpf3a07.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldGrpf3a07, null);
                 }
             }

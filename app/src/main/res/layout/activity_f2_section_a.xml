@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -23,6 +23,11 @@
             android:layout_height="wrap_content"
             android:layoutDirection="rtl"
             android:orientation="vertical">
+
+            <TextView
+                style="@style/textView3Head"
+                android:text="@string/f2aHeading" />
+
 
             <!--f2a01-->
             <android.support.v7.widget.CardView style="@style/cardView">
@@ -127,8 +132,8 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f2a0196"
-                            android:visibility='@{f2a0196.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f2a0196.checked? f2a0196x.getText.toString : ""}' />
+                            android:text='@{f2a0196.checked? f2a0196x.getText.toString : ""}'
+                            android:visibility='@{f2a0196.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
 
@@ -169,8 +174,8 @@
 
             <!--f2a03-->
             <android.support.v7.widget.CardView
-                android:visibility='@{f2a02a.checked? View.VISIBLE : View.GONE}'
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{f2a02a.checked? View.VISIBLE : View.GONE}'>
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">
@@ -179,15 +184,18 @@
                         style="@style/i_textview"
                         android:text="@string/f2a03" />
 
-                    <EditText
-                        android:tag="f2a02a"
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/f2a03"
-                        android:text='@{f2a02a.checked? f2a03.getText.toString: ""}'
-                        android:maxLength="2"
-                        android:inputType="number"
                         style="@style/textInput"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:tag="f2a02a"
+                        android:text='@{f2a02a.checked? f2a03.getText.toString: ""}'
+                        app:maxValue="90"
+                        app:minValue="1"
+                        app:type="range" />
 
 
                 </LinearLayout>
@@ -296,8 +304,8 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f2a0496"
-                            android:visibility='@{f2a0496.checked? View.VISIBLE : View.GONE}'
-                            android:text='@{f2a0496.checked? f2a0496x.getText.toString : ""}' />
+                            android:text='@{f2a0496.checked? f2a0496x.getText.toString : ""}'
+                            android:visibility='@{f2a0496.checked? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
 
@@ -324,7 +332,10 @@
                             style="@style/radiobutton"
                             android:text="@string/f2a05a" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            app:type="range"
+                            app:maxValue="90"
+                            app:minValue="1"
                             android:id="@+id/f2a05ax"
                             style="@style/textInput"
                             android:hint="@string/f2a05a"

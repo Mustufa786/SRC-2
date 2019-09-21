@@ -592,6 +592,7 @@
                                 style="@style/textInput"
                                 android:hint="@string/day"
                                 android:inputType="number"
+                                android:maxLength="2"
                                 android:text='@{!f4a1098.checked? f4a10dd.getText.toString : ""}'
                                 android:visibility='@{f4a1098.checked? View.GONE : View.VISIBLE}'
                                 app:maxValue="29"
@@ -603,6 +604,7 @@
                                 style="@style/textInput"
                                 android:hint="@string/month"
                                 android:inputType="number"
+                                android:maxLength="2"
                                 android:text='@{!f4a1098.checked? f4a10mm.getText.toString : ""}'
                                 android:visibility='@{f4a1098.checked? View.GONE : View.VISIBLE}'
                                 app:maxValue="10"
@@ -827,6 +829,7 @@
                             style="@style/textInput"
                             android:hint="@string/f4a16"
                             android:inputType="number"
+                            android:maxLength="1"
                             android:tag="f4a03"
                             android:text='@{!f4a1698.checked? f4a16.getText.toString : ""}'
                             android:visibility='@{f4a1698.checked? View.GONE : View.VISIBLE}'

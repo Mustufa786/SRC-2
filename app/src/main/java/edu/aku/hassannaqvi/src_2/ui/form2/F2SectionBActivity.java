@@ -31,13 +31,23 @@ public class F2SectionBActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f2_section_b);
         bi.setCallback(this);
 
-        setTitle(R.string.f2bHeading);
+        setTitle(R.string.f2Heading);
 
         setupViews();
 
     }
 
     private void setupViews() {
+
+        bi.f2b01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId != bi.f2b01a.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrp27, null);
+                }
+            }
+        });
 
         bi.f2b02.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

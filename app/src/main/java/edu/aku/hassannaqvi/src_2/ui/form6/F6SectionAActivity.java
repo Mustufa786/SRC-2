@@ -60,7 +60,7 @@ public class F6SectionAActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-                if (checkedId != bi.f6a05a.getId()) {
+                if (checkedId == bi.f6a05a.getId()) {
                     ClearClass.ClearAllFields(bi.fldGrpf6a06, null);
                 }
             }

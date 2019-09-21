@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -174,7 +175,21 @@ public class F4SectionAActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpF4A);
+        if (!ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpF4A)) {
+            return false;
+        }
+
+        if (bi.fldGrpMain.getVisibility() != View.GONE && bi.fldGrp0910.getVisibility() != View.GONE) {
+            if (Integer.parseInt(bi.f4a10dd.getText().toString()) == 0 && Integer.parseInt(bi.f4a10mm.getText().toString()) == 0) {
+                bi.f4a10dd.setError("Both can not be 0  at the same time");
+                bi.f4a10dd.requestFocus();
+            } else {
+                bi.f4a10dd.setError(null);
+                bi.f4a10dd.clearFocus();
+            }
+        }
+
+        return true;
     }
 
     public void BtnEnd() {

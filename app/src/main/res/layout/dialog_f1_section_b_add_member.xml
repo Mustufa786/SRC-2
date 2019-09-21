@@ -494,7 +494,7 @@
                             android:maxLength="7"
                             android:tag="f1b08a"
                             app:maxValue="5000000"
-                            app:minValue="1"
+                            app:minValue="1000"
                             app:type="range" />
 
                         <!--android:visibility='@{f1b08a.checked?   View.VISIBLE : View.GONE}'-->

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -46,8 +47,11 @@ public class F3SectionA02Activity extends AppCompatActivity {
 
                 if (isChecked) {
                     ClearClass.ClearAllFields(bi.f3a30check, false);
+                    bi.fldGrpf3a31.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.fldGrpf3a31, null);
                 } else {
                     ClearClass.ClearAllFields(bi.f3a30check, true);
+                    bi.fldGrpf3a31.setVisibility(View.VISIBLE);
                 }
             }
         });

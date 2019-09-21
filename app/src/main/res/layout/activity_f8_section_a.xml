@@ -267,7 +267,7 @@
                             android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="@string/other"
                             android:inputType="text"
-                            android:tag="f8a04a96"
+                            android:tag="f8a0496"
                             android:text='@{f8a0496.checked? f8a0496x.getText.toString : ""}'
                             android:visibility='@{f8a0496.checked? View.VISIBLE : View.GONE}' />
 

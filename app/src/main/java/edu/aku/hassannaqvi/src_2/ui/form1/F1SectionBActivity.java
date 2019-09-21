@@ -540,8 +540,6 @@ public class F1SectionBActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 if (f1b08a.isChecked()) {
-
-
                     f1b08.setVisibility(View.GONE);
                     f1b08.setText("");
                     lvf1b09.setVisibility(View.GONE);

@@ -26,7 +26,7 @@ public class F2SectionAActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_f2_section_a);
         bi.setCallback(this);
 
-        setTitle(R.string.f2aHeading);
+        setTitle(R.string.f2Heading);
     }
 
     public void BtnContinue() {
