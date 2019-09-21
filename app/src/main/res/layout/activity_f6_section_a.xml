@@ -469,7 +469,7 @@
                             android:hint="@string/other"
                             android:inputType="text"
                             android:tag="f6a0996"
-                            android:text='@{f6a0996.checked? f6a0796x.getText.toString : ""}'
+                            android:text='@{f6a0996.checked? f6a0996x.getText.toString : ""}'
                             android:visibility='@{f6a0996.checked? View.VISIBLE : View.GONE}' />
 
 
