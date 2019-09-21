@@ -666,7 +666,7 @@
                             android:hint="@string/f6a13c"
                             android:inputType="number"
                             android:maxLength="2"
-                            android:tag="f6a13b"
+                            android:tag="f6a13c"
                             android:text='@{f6a13c.checked? f6a13cx.getText.toString : ""}'
                             android:visibility='@{f6a13c.checked? View.VISIBLE : View.GONE}' />
 

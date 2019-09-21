@@ -25,12 +25,13 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ui.SplashscreenActivity">
 
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
         <activity
             android:name=".ui.LoginActivity"
@@ -50,7 +51,9 @@
 
 
         </activity>
-        <activity android:name=".ui.form6.F6SectionAActivity" />
+        <activity android:name=".ui.form6.F6SectionAActivity">
+
+        </activity>
         <activity android:name=".ui.form5.F5SectionAActivity" />
         <activity android:name=".ui.form4.F4SectionBActivity" />
         <activity android:name=".ui.form4.F4SectionAActivity">
