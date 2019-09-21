@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -133,16 +134,20 @@ public class F7SectionAActivity extends AppCompatActivity {
         if (!ValidatorClass.EmptyCheckingContainer(this, bi.fldGrpF7)) {
             return false;
         }
-        if (Integer.parseInt(bi.f7a02a.getText().toString()) == 0
-                && Integer.parseInt(bi.f7a02a.getText().toString()) == 0
-                && Integer.parseInt(bi.f7a02a.getText().toString()) == 0) {
-            bi.f7a02a.setError("Can not be 0 at the same time");
-            bi.f7a02a.requestFocus();
-            return false;
 
-        } else {
-            bi.f7a02a.setError(null);
-            bi.f7a02a.clearFocus();
+        if (bi.fldGrp5678.getVisibility() != View.GONE) {
+            if (Integer.parseInt(bi.f7a02a.getText().toString()) == 0
+                    && Integer.parseInt(bi.f7a02b.getText().toString()) == 0
+                    && Integer.parseInt(bi.f7a02c.getText().toString()) == 0) {
+                bi.f7a02a.setError("Can not be 0 at the same time");
+                bi.f7a02a.requestFocus();
+                return false;
+
+            } else {
+                bi.f7a02a.setError(null);
+                bi.f7a02a.clearFocus();
+            }
+
         }
 
 

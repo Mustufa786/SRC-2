@@ -68,6 +68,8 @@ public class F1SectionAActivity extends AppCompatActivity {
         ucsName = new ArrayList<>();
         ucsMap = new HashMap<>();
         ucsName.add("-Select UCs -");
+        ucsName.add("Test UC");
+        ucsMap.put("Test UC ", "1");
 
         for (UCsContract dc : ucsList) {
             ucsName.add(dc.getUcsName());
@@ -87,10 +89,11 @@ public class F1SectionAActivity extends AppCompatActivity {
                     villagesMap = new HashMap<>();
                     villagesNames = new ArrayList<>();
                     villagesNames.add("Select Village Name-");
+                    villagesNames.add("Test Village");
 
                     for (VillagesContract hf : villagesList) {
                         villagesNames.add(hf.getVillageName());
-                        villagesMap.put(hf.getVillageName(), hf.getVillageCode());
+                        villagesMap.put("Test Village", "2");
                     }
 
                     bi.f1a02.setAdapter(new ArrayAdapter<>(F1SectionAActivity.this, android.R.layout.simple_spinner_dropdown_item, villagesNames));
