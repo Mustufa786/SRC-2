@@ -71,7 +71,6 @@ public class F2SectionAActivity extends AppCompatActivity {
                 : bi.f2a01j.isChecked() ? "10" : bi.f2a01k.isChecked() ? "11" : bi.f2a01l.isChecked() ? "12"
                 : bi.f2a01m.isChecked() ? "13" : bi.f2a01n.isChecked() ? "14" : bi.f2a01o.isChecked() ? "15"
                 : bi.f2a0196.isChecked() ? "96" : "0");
-        f1.put("f2a0196x", bi.f2a0196x.getText().toString());
         f1.put("f2a02", bi.f2a02a.isChecked() ? "1" : bi.f2a02b.isChecked() ? "2" : "0");
         f1.put("f2a03", bi.f2a03.getText().toString());
 
