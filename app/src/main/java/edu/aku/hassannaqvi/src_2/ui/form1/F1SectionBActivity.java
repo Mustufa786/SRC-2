@@ -611,7 +611,7 @@ public class F1SectionBActivity extends AppCompatActivity {
                         } else {
                             int agee = Integer.parseInt(f1b03b1.getText().toString());
                             if (agee != 99 & agee > 30) {
-                                f1b03b1.setError("Please enter 1 30 in range ");
+                                f1b03b1.setError("Please enter 1 31 in range ");
                                 f1b03b1.requestFocus();
                                 return;
                             }
