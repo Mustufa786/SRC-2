@@ -230,11 +230,11 @@ public class F3SectionA02Activity extends AppCompatActivity {
                 : bi.f3a3298.isChecked() ? "98"
                 : "0");
         f1.put("f3a3396x", bi.f3a3396x.getText().toString());
-        f1.put("f3a33", bi.f3a33a.isChecked() ? "1"
-                : bi.f3a33b.isChecked() ? "2"
-                : bi.f3a33c.isChecked() ? "3"
-                : bi.f3a3396.isChecked() ? "96"
-                : "0");
+        f1.put("f3a33a", bi.f3a33a.isChecked() ? "1" : "0");
+        f1.put("f3a33b", bi.f3a33b.isChecked() ? "2" : "0");
+        f1.put("f3a33c", bi.f3a33c.isChecked() ? "3" : "0");
+        f1.put("f3a3396", bi.f3a3396.isChecked() ? "96" : "0");
+        f1.put("f3a3396x", bi.f3a3396x.getText().toString());
         f1.put("f3a34", bi.f3a34.getText().toString());
 
 
