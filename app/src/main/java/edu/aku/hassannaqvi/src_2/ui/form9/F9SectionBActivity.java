@@ -166,22 +166,28 @@ public class F9SectionBActivity extends AppCompatActivity {
                 bi.f9b04.setError(null);
                 bi.f9b04.clearFocus();
             }
-            if (Integer.parseInt(bi.f9b06.getText().toString()) > Integer.parseInt(bi.f9b04.getText().toString())) {
-                bi.f9b06.setError("Can not be greater than " + Integer.parseInt(bi.f9b04.getText().toString()));
-                bi.f9b06.requestFocus();
-                return false;
-            } else {
-                bi.f9b06.setError(null);
-                bi.f9b06.clearFocus();
+            if (bi.f9b05a.isChecked()) {
+                if (Integer.parseInt(bi.f9b06.getText().toString()) > Integer.parseInt(bi.f9b04.getText().toString())) {
+                    bi.f9b06.setError("Can not be greater than " + Integer.parseInt(bi.f9b04.getText().toString()));
+                    bi.f9b06.requestFocus();
+                    return false;
+                } else {
+                    bi.f9b06.setError(null);
+                    bi.f9b06.clearFocus();
+                }
             }
-            if (Integer.parseInt(bi.f9b08.getText().toString()) > Integer.parseInt(bi.f9b04.getText().toString())) {
-                bi.f9b08.setError("Can not be greater than " + Integer.parseInt(bi.f9b04.getText().toString()));
-                bi.f9b08.requestFocus();
-                return false;
-            } else {
-                bi.f9b08.setError(null);
-                bi.f9b08.clearFocus();
+
+            if (bi.f9b07a.isChecked()) {
+                if (Integer.parseInt(bi.f9b08.getText().toString()) > Integer.parseInt(bi.f9b04.getText().toString())) {
+                    bi.f9b08.setError("Can not be greater than " + Integer.parseInt(bi.f9b04.getText().toString()));
+                    bi.f9b08.requestFocus();
+                    return false;
+                } else {
+                    bi.f9b08.setError(null);
+                    bi.f9b08.clearFocus();
+                }
             }
+
         }
 
         return true;

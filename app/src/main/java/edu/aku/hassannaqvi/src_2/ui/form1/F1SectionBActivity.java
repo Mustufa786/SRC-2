@@ -23,6 +23,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 
 import edu.aku.hassannaqvi.src_2.R;
@@ -30,6 +31,7 @@ import edu.aku.hassannaqvi.src_2.contracts.FamilyMembersContract;
 import edu.aku.hassannaqvi.src_2.core.DatabaseHelper;
 import edu.aku.hassannaqvi.src_2.core.MainApp;
 import edu.aku.hassannaqvi.src_2.databinding.ActivityF1SectionBBinding;
+import edu.aku.hassannaqvi.src_2.other.DateUtils;
 import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 
 import static edu.aku.hassannaqvi.src_2.core.MainApp.fc;
@@ -41,6 +43,8 @@ public class F1SectionBActivity extends AppCompatActivity {
     ActivityF1SectionBBinding bi;
     boolean iam_respondent;
     String respondent_type = "";
+    Calendar dob = Calendar.getInstance();
+    long age;
 
     ArrayList<String>
             lstf1b01,
@@ -679,14 +683,16 @@ public class F1SectionBActivity extends AppCompatActivity {
 
 
                     if (f1b03b3.getText().toString().length() > 0) {
-                        int age = Integer.parseInt(f1b03b3.getText().toString());
-                        if (age > 2017) {
+//                        int age = Integer.parseInt(f1b03b3.getText().toString());
+                        dob = DateUtils.getCalendarDate(f1b03b1.getText().toString(), f1b03b2.getText().toString(), f1b03b3.getText().toString());
+                        age = DateUtils.ageInYearByDOB(dob);
+                        if (age < 2) {
                             MainApp.two_year_child = true;
                             MainApp.lst_U2.add(f1b01.getText().toString());
 
                         }
 
-                        if (age > 2014) {
+                        if (age < 5) {
                             MainApp.lst_U5.add(f1b01.getText().toString());
 
                         }
