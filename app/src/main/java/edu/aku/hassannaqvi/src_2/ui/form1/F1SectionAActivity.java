@@ -89,11 +89,10 @@ public class F1SectionAActivity extends AppCompatActivity {
                     villagesMap = new HashMap<>();
                     villagesNames = new ArrayList<>();
                     villagesNames.add("Select Village Name-");
-//                    villagesNames.add("Test Village");
 
                     for (VillagesContract hf : villagesList) {
                         villagesNames.add(hf.getVillageName());
-//                        villagesMap.put("Test Village", "2");
+                        villagesMap.put(hf.getVillageName(), hf.getVillageCode());
                     }
 
                     bi.f1a02.setAdapter(new ArrayAdapter<>(F1SectionAActivity.this, android.R.layout.simple_spinner_dropdown_item, villagesNames));
