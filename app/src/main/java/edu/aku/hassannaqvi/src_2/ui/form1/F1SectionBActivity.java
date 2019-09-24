@@ -665,7 +665,6 @@ public class F1SectionBActivity extends AppCompatActivity {
                         }
 
                         if (age < 5) {
-
                             MainApp.lst_U5.add(f1b01.getText().toString());
 
                         }
@@ -687,8 +686,7 @@ public class F1SectionBActivity extends AppCompatActivity {
 
                         }
 
-                        if (age > 2015) {
-
+                        if (age > 2014) {
                             MainApp.lst_U5.add(f1b01.getText().toString());
 
                         }

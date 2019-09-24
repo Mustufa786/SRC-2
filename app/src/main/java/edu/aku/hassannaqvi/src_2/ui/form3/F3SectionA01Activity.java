@@ -80,7 +80,7 @@ public class F3SectionA01Activity extends AppCompatActivity {
 
                 if (isChecked) {
                     bi.fldGrpf3a07.setVisibility(View.VISIBLE);
-                }else{
+                } else {
                     bi.fldGrpf3a07.setVisibility(View.GONE);
                     ClearClass.ClearAllFields(bi.fldGrpf3a07, null);
                 }
@@ -167,12 +167,15 @@ public class F3SectionA01Activity extends AppCompatActivity {
                         || checkedId == bi.f3a10g.getId()) {
                     bi.fldGrp1016.setVisibility(View.VISIBLE);
                     bi.fldGrpf3a11.setVisibility(View.VISIBLE);
+                    bi.fldGrpf3a12.setVisibility(View.GONE);
+                    ClearClass.ClearAllFields(bi.fldGrpf3a12, null);
                 }
                 if (checkedId == bi.f3a10h.getId()
                         || checkedId == bi.f3a10i.getId()
                         || checkedId == bi.f3a10j.getId()) {
                     bi.fldGrp1016.setVisibility(View.VISIBLE);
                     bi.fldGrpf3a11.setVisibility(View.GONE);
+                    bi.fldGrpf3a12.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllFields(bi.fldGrpf3a11, null);
                 }
                 if (checkedId == bi.f3a1097.getId()

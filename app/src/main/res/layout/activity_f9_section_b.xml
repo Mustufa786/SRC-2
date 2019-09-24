@@ -82,15 +82,15 @@
                             android:text="@string/f9b02" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:maxLength="1"
-                            app:maxValue="9"
-                            app:minValue="1"
                             android:id="@+id/f9b02"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/number"
                             android:inputType="number"
+                            android:maxLength="1"
+                            app:maxValue="9"
+                            app:minValue="1"
                             app:type="range" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -149,15 +149,15 @@
                                 android:text="@string/f9b04" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:maxLength="1"
-                                app:maxValue="9"
-                                app:minValue="1"
                                 android:id="@+id/f9b04"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/number"
                                 android:inputType="number"
+                                android:maxLength="1"
+                                app:maxValue="9"
+                                app:minValue="1"
                                 app:type="range" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
@@ -206,15 +206,15 @@
                                 android:text="@string/f9b06" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:maxLength="1"
-                                app:maxValue="9"
-                                app:minValue="1"
                                 android:id="@+id/f9b06"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/f9b06"
                                 android:inputType="number"
+                                android:maxLength="1"
+                                app:maxValue="9"
+                                app:minValue="1"
                                 app:type="range" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
@@ -262,15 +262,15 @@
                                 android:text="@string/f9b08" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                android:maxLength="1"
-                                app:maxValue="9"
-                                app:minValue="1"
                                 android:id="@+id/f9b08"
                                 style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/number"
                                 android:inputType="number"
+                                android:maxLength="1"
+                                app:maxValue="9"
+                                app:minValue="1"
                                 app:type="range" />
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
@@ -312,7 +312,10 @@
                 </android.support.v7.widget.CardView>
 
                 <!--f9b10-->
-                <android.support.v7.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fldGrpf9b10"
+                    style="@style/cardView"
+                    android:visibility='@{f9b09b.checked? View.GONE : View.VISIBLE}'>
 
 
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
@@ -322,15 +325,15 @@
                             android:text="@string/f9b10" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:maxLength="1"
-                            app:maxValue="9"
-                            app:minValue="1"
                             android:id="@+id/f9b10"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/number"
                             android:inputType="number"
+                            android:maxLength="1"
+                            app:maxValue="9"
+                            app:minValue="1"
                             app:type="range" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -366,7 +369,10 @@
                 </android.support.v7.widget.CardView>
 
                 <!--f9b12-->
-                <android.support.v7.widget.CardView style="@style/cardView">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fldGrpf9b12"
+                    style="@style/cardView"
+                    android:visibility='@{f9b11b.checked? View.GONE : View.VISIBLE}'>
 
 
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
@@ -376,15 +382,15 @@
                             android:text="@string/f9b12" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            android:maxLength="1"
-                            app:maxValue="9"
-                            app:minValue="1"
                             android:id="@+id/f9b12"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/number"
                             android:inputType="number"
+                            android:maxLength="1"
+                            app:maxValue="9"
+                            app:minValue="1"
                             app:type="range" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>

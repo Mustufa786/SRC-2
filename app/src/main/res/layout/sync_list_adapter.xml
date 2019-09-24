@@ -52,7 +52,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:textSize="20sp"
+                        android:textSize="25sp"
                         tools:text="Table Name" />
 
                     <TextView
@@ -60,7 +60,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:textSize="20dp"
+                        android:textSize="25sp"
                         tools:text="Status" />
 
                     <ProgressBar
@@ -84,7 +84,7 @@
                     android:layout_marginStart="7dp"
                     android:layout_marginEnd="7dp"
                     android:layout_marginBottom="7dp"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     tools:text="Results:    " />
             </LinearLayout>
         </LinearLayout>

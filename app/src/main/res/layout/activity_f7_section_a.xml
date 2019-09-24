@@ -115,11 +115,12 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f7a02a"
                             style="@style/textInput"
-                            android:hint="Days"
+                            android:hint="Days (Write 99 if not remember)"
                             android:inputType="number"
                             android:maxLength="2"
-                            app:maxValue="29"
-                            app:minValue="0"
+                            app:defaultValue="99"
+                            app:maxValue="31"
+                            app:minValue="1"
                             app:type="range" />
 
                         <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
@@ -127,11 +128,12 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f7a02b"
                             style="@style/textInput"
-                            android:hint="Month"
+                            android:hint="Month (Write 99 if not remember)"
                             android:inputType="number"
                             android:maxLength="2"
-                            app:maxValue="11"
-                            app:minValue="0"
+                            app:defaultValue="99"
+                            app:maxValue="12"
+                            app:minValue="1"
                             app:type="range" />
                         <!--android:visibility='@{f1b03a.checked? View.VISIBLE : View.GONE}'-->
 
@@ -143,8 +145,6 @@
                             android:maxLength="1"
                             app:maxValue="4"
                             app:minValue="0"
-
-
                             app:type="range" />
 
                     </LinearLayout>

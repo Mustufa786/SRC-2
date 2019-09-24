@@ -74,6 +74,23 @@ public class F9SectionBActivity extends AppCompatActivity {
                 }
             }
         });
+
+        bi.f9b09.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == bi.f9b09b.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrpf9b10, null);
+                }
+            }
+        });
+        bi.f9b11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == bi.f9b11b.getId()) {
+                    ClearClass.ClearAllFields(bi.fldGrpf9b12, null);
+                }
+            }
+        });
     }
 
     public void BtnContinue() {

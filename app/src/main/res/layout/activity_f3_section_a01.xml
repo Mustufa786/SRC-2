@@ -196,8 +196,8 @@
                             style="@style/textInput"
                             android:hint="@string/year"
                             android:inputType="number"
-                            app:maxValue="49"
                             android:maxLength="2"
+                            app:maxValue="49"
                             app:minValue="14"
                             app:type="range" />
 
@@ -414,10 +414,9 @@
 
                 <!--f3a07-->
                 <android.support.v7.widget.CardView
-                    android:visibility="gone"
                     android:id="@+id/fldGrpf3a07"
                     style="@style/cardView"
-                  >
+                    android:visibility="gone">
 
                     <LinearLayout style="@style/linearlayout_view_wt_bound">
 
@@ -811,7 +810,9 @@
                     </android.support.v7.widget.CardView>
 
                     <!--f3a12-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/fldGrpf3a12"
+                        style="@style/cardView">
 
 
                         <LinearLayout style="@style/linearlayout_view_wt_bound">
