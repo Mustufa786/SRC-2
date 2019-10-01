@@ -475,7 +475,7 @@
             <android.support.v7.widget.CardView
                 android:id="@+id/fldGrpf3a28"
                 style="@style/cardView"
-                android:visibility='@{f3a27b.checked? View.GONE : View.VISIBLE}'>
+                android:visibility='@{f3a27a.checked? View.VISIBLE : View.GONE}'>
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">
@@ -597,7 +597,10 @@
 
 
             <!--f3a29-->
-            <android.support.v7.widget.CardView style="@style/cardView">
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldGrpf3a29"
+                style="@style/cardView"
+                android:visibility='@{f3a27b.checked? View.VISIBLE : View.GONE}'>
 
 
                 <LinearLayout style="@style/linearlayout_view_wt_bound">

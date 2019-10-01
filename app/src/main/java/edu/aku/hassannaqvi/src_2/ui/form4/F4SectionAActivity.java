@@ -180,13 +180,17 @@ public class F4SectionAActivity extends AppCompatActivity {
         }
 
         if (bi.fldGrpMain.getVisibility() != View.GONE && bi.fldGrp0910.getVisibility() != View.GONE) {
-            if (Integer.parseInt(bi.f4a10dd.getText().toString()) == 0 && Integer.parseInt(bi.f4a10mm.getText().toString()) == 0) {
-                bi.f4a10dd.setError("Both can not be 0  at the same time");
-                bi.f4a10dd.requestFocus();
-            } else {
-                bi.f4a10dd.setError(null);
-                bi.f4a10dd.clearFocus();
+            if (!bi.f4a1098.isChecked()) {
+                if (Integer.parseInt(bi.f4a10dd.getText().toString()) == 0 && Integer.parseInt(bi.f4a10mm.getText().toString()) == 0) {
+                    bi.f4a10dd.setError("Both can not be 0  at the same time");
+                    bi.f4a10dd.requestFocus();
+                    return false;
+                } else {
+                    bi.f4a10dd.setError(null);
+                    bi.f4a10dd.clearFocus();
+                }
             }
+
         }
 
         return true;

@@ -112,6 +112,8 @@ public class F3SectionA02Activity extends AppCompatActivity {
 
                 if (checkedId == bi.f3a27b.getId()) {
                     ClearClass.ClearAllFields(bi.fldGrpf3a28, null);
+                } else {
+                    ClearClass.ClearAllFields(bi.fldGrpf3a29, null);
                 }
             }
         });

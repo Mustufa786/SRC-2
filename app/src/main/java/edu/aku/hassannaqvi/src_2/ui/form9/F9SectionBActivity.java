@@ -158,14 +158,17 @@ public class F9SectionBActivity extends AppCompatActivity {
 
         if (bi.fldGrpMain.getVisibility() != View.GONE) {
 
-            if (Integer.parseInt(bi.f9b04.getText().toString()) > Integer.parseInt(bi.f9b02.getText().toString())) {
-                bi.f9b04.setError("Can not be greater than " + Integer.parseInt(bi.f9b02.getText().toString()));
-                bi.f9b04.requestFocus();
-                return false;
-            } else {
-                bi.f9b04.setError(null);
-                bi.f9b04.clearFocus();
+            if (bi.f9b03a.isChecked()) {
+                if (Integer.parseInt(bi.f9b04.getText().toString()) > Integer.parseInt(bi.f9b02.getText().toString())) {
+                    bi.f9b04.setError("Can not be greater than " + Integer.parseInt(bi.f9b02.getText().toString()));
+                    bi.f9b04.requestFocus();
+                    return false;
+                } else {
+                    bi.f9b04.setError(null);
+                    bi.f9b04.clearFocus();
+                }
             }
+
             if (bi.f9b05a.isChecked()) {
                 if (Integer.parseInt(bi.f9b06.getText().toString()) > Integer.parseInt(bi.f9b04.getText().toString())) {
                     bi.f9b06.setError("Can not be greater than " + Integer.parseInt(bi.f9b04.getText().toString()));
