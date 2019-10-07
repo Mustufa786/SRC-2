@@ -85,6 +85,7 @@ public class Util {
             MainApp.fc.setGpsAcc(GPSPref.getString("Accuracy", "0"));
 //            AppMain.fc.setGpsTime(GPSPref.getString(date, "0")); // Timestamp is converted to date above
             MainApp.fc.setGpsTime(date); // Timestamp is converted to date above
+            MainApp.fc.setGpsDT(date); // Timestamp is converted to date above
 
             // Toast.makeText(this, "GPS set", Toast.LENGTH_SHORT).show();
 

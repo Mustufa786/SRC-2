@@ -770,10 +770,8 @@ public class F1SectionBActivity extends AppCompatActivity {
                 } else if (f1b07n.isChecked()) {
                     lstf1b07.add("14");
                 } else if (f1b07o.isChecked()) {
-                    lstf1b07.add("15");
-
-                } else {
                     lstf1b07.add("97");
+
                 }
 
                 if (f1b07ox.getText().toString().length() > 0) {

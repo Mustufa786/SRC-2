@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 
 /**
  * Created by ali.azaz on 03/19/18.
@@ -93,6 +94,10 @@ public class ClearClass {
                     v.setEnabled(flag);
 
             } else if (v instanceof RadioButton) {
+                if (flag != null)
+                    v.setEnabled(flag);
+            } else if (v instanceof Spinner) {
+                ((Spinner) v).setSelection(0);
                 if (flag != null)
                     v.setEnabled(flag);
             } else if (v instanceof CardView) {

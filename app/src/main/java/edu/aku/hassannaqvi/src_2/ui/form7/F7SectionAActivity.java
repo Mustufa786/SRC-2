@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -26,6 +27,7 @@ import edu.aku.hassannaqvi.src_2.validation.ValidatorClass;
 public class F7SectionAActivity extends AppCompatActivity {
 
     ActivityF7SectionABinding bi;
+    String childName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +44,25 @@ public class F7SectionAActivity extends AppCompatActivity {
     private void setupViews() {
 
         List<String> list = new ArrayList<>();
-        list.add("-Select Child-");
+        list.add("....");
         assert MainApp.lst_U5 != null;
         list.addAll(MainApp.lst_U5);
-
         bi.f7a01.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list));
+
+        bi.f7a01.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (bi.f7a01.getSelectedItemPosition() != 0) {
+                    childName = bi.f7a01.getSelectedItem().toString();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
         bi.f7a04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -96,7 +112,7 @@ public class F7SectionAActivity extends AppCompatActivity {
 
         JSONObject f1 = new JSONObject();
 //        f1.put("f7a01", bi.f7a01.getText().toString());
-        f1.put("f7a01", bi.f7a01.getSelectedItem().toString());
+        f1.put("f7a01", childName);
         f1.put("f7a02a", bi.f7a02a.getText().toString());
         f1.put("f7a02b", bi.f7a02b.getText().toString());
         f1.put("f7a02c", bi.f7a02c.getText().toString());

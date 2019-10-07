@@ -348,6 +348,7 @@ public class F3SectionA01Activity extends AppCompatActivity {
 
         f1.put("f3a0699", bi.f3a0699.isChecked() ? "99" : "0");
         f1.put("f3a0698", bi.f3a0698.isChecked() ? "98" : "0");
+        f1.put("f3a0697", bi.f3a0697.isChecked() ? "97" : "0");
 
 
         f1.put("f3a0696x", bi.f3a0696x.getText().toString());
@@ -359,7 +360,7 @@ public class F3SectionA01Activity extends AppCompatActivity {
         f1.put("f3a08e", bi.f3a08e.isChecked() ? "5" : "0");
         f1.put("f3a0896", bi.f3a0896.isChecked() ? "96" : "0");
         f1.put("f3a0896x", bi.f3a0896x.getText().toString());
-        f1.put("f3a0897", bi.f3a0898.isChecked() ? "97" : "0");
+        f1.put("f3a0898", bi.f3a0898.isChecked() ? "98" : "0");
 
         f1.put("f3a09a", bi.f3a09a.isChecked() ? "1" : "0");
         f1.put("f3a09b", bi.f3a09b.isChecked() ? "2" : "0");

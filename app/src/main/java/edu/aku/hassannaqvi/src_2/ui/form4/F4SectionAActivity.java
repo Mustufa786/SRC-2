@@ -165,6 +165,7 @@ public class F4SectionAActivity extends AppCompatActivity {
                 : bi.f4a14b.isChecked() ? "2"
                 : bi.f4a14c.isChecked() ? "3"
                 : bi.f4a14d.isChecked() ? "4"
+                : bi.f4a14e.isChecked() ? "5"
                 : "0");
         f1.put("f4a15", bi.f4a15a.isChecked() ? "1" : bi.f4a15b.isChecked() ? "2" : bi.f4a1598.isChecked() ? "98" : "0");
         f1.put("f4a16", bi.f4a16.getText().toString());

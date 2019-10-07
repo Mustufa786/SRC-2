@@ -70,7 +70,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             FormsTable.COLUMN_FORMDATE + " TEXT," +
             FormsTable.COLUMN_USER + " TEXT," +
             FormsTable.COLUMN_HH_NO + " TEXT," +
-            FormsTable.COLUMN_GPSELEV + " TEXT," +
             FormsTable.COLUMN_F1 + " TEXT," +
             FormsTable.COLUMN_F2 + " TEXT," +
             FormsTable.COLUMN_F3 + " TEXT," +
@@ -226,8 +225,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_F7, fc.getF7());
         values.put(FormsTable.COLUMN_F8, fc.getF8());
         values.put(FormsTable.COLUMN_F9, fc.getF9());
-        values.put(FormsTable.COLUMN_GPSELEV, fc.getGpsElev());
-        values.put(FormsTable.COLUMN_GPSTIME, fc.getGpsElev());
+//        values.put(FormsTable.COLUMN_GPSELEV, fc.getGpsElev());
+        values.put(FormsTable.COLUMN_GPSTIME, fc.getGpsTime());
         values.put(FormsTable.COLUMN_ISTATUS, fc.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS88x, fc.getIstatus88x());
         values.put(FormsTable.COLUMN_GPSLAT, fc.getGpsLat());
@@ -307,7 +306,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_GPSLNG,
                 FormsTable.COLUMN_GPSDATE,
                 FormsTable.COLUMN_GPSACC,
-                FormsTable.COLUMN_GPSELEV,
                 FormsTable.COLUMN_GPSTIME,
                 FormsTable.COLUMN_DEVICEID,
                 FormsTable.COLUMN_DEVICETAGID,
@@ -377,7 +375,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_GPSLNG,
                 FormsTable.COLUMN_GPSDATE,
                 FormsTable.COLUMN_GPSACC,
-                FormsTable.COLUMN_GPSELEV,
                 FormsTable.COLUMN_GPSTIME,
                 FormsTable.COLUMN_DEVICEID,
                 FormsTable.COLUMN_DEVICETAGID,
@@ -547,7 +544,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_GPSLNG,
                 FormsTable.COLUMN_GPSDATE,
                 FormsTable.COLUMN_GPSACC,
-                FormsTable.COLUMN_GPSELEV,
                 FormsTable.COLUMN_GPSTIME,
                 FormsTable.COLUMN_DEVICEID,
                 FormsTable.COLUMN_DEVICETAGID,

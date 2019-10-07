@@ -78,7 +78,6 @@ public class FormsContract {
         this.istatus = jsonObject.getString(FormsTable.COLUMN_ISTATUS);
         this.istatus88x = jsonObject.getString(FormsTable.COLUMN_ISTATUS88x);
         this.istatusHH = jsonObject.getString(FormsTable.COLUMN_ISTATUSHH);
-        this.gpsElev = jsonObject.getString(FormsTable.COLUMN_GPSELEV);
         this.f1 = jsonObject.getString(FormsTable.COLUMN_F1);
         this.f2 = jsonObject.getString(FormsTable.COLUMN_F2);
         this.f3 = jsonObject.getString(FormsTable.COLUMN_F3);
@@ -114,7 +113,6 @@ public class FormsContract {
         this.hhNo = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_HH_NO));
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
         this.istatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS88x));
-        this.gpsElev = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSELEV));
         this.f1 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_F1));
         this.f2 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_F2));
         this.f3 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_F3));
@@ -477,7 +475,6 @@ public class FormsContract {
         json.put(FormsTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
         json.put(FormsTable.COLUMN_ISTATUS88x, this.istatus88x == null ? JSONObject.NULL : this.istatus88x);
         json.put(FormsTable.COLUMN_ISTATUSHH, this.istatusHH == null ? JSONObject.NULL : this.istatusHH);
-        json.put(FormsTable.COLUMN_GPSELEV, this.gpsElev == null ? JSONObject.NULL : this.gpsElev);
         if (!this.f1.equals("")) {
 
             json.put(FormsTable.COLUMN_F1, this.f1.equals("") ? JSONObject.NULL : new JSONObject(this.f1));
@@ -567,7 +564,6 @@ public class FormsContract {
         public static final String COLUMN_GPSLNG = "gpslng";
         public static final String COLUMN_GPSDATE = "gpsdate";
         public static final String COLUMN_GPSACC = "gpsacc";
-        public static final String COLUMN_GPSELEV = "gpselev";
         public static final String COLUMN_GPSTIME = "gpstime";
         public static final String COLUMN_DEVICEID = "deviceid";
         public static final String COLUMN_DEVICETAGID = "devicetagid";
